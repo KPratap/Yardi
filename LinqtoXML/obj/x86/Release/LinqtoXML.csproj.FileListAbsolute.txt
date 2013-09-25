@@ -1,0 +1,6 @@
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Release\Clients.xml
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Release\Config.xml
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Release\LinqtoXML.exe
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Release\LinqtoXML.pdb
+C:\Docs\Pers\YardiConfig\LinqtoXML\obj\x86\Release\LinqtoXML.exe
+C:\Docs\Pers\YardiConfig\LinqtoXML\obj\x86\Release\LinqtoXML.pdb

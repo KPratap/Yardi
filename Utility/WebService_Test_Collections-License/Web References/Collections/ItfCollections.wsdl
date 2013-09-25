@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections">
+      <s:element name="GetPropertyConfigurations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceEntity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceLicense" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyConfigurationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyConfigurationsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_GetPropertyConfigurations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceEntity" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_GetPropertyConfigurationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_x0028_Deprecated_x0029_GetPropertyConfigurationsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CollectionsLeaseInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionsAgency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceLicense" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="YardiPropertyId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CollectionsLeaseInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_CollectionsLeaseInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionsAgency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="YardiPropertyId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CollectionsLeaseInfo_View">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionsAgency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceLicense" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="YardiPropertyId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CollectionsLeaseInfo_ViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_CollectionsLeaseInfo_ViewResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_View">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionsAgency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="YardiPropertyId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_ViewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_ViewResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Import_CollectionsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionsAgency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceLicense" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlDoc">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Import_CollectionsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Import_CollectionsInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_Import_CollectionsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Database" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Platform" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionsAgency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XmlDoc">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_Import_CollectionsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_x0028_Deprecated_x0029_Import_CollectionsInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_GetVersionNumber_Str">
+        <s:complexType />
+      </s:element>
+      <s:element name="_x0028_Deprecated_x0029_GetVersionNumber_StrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_x0028_Deprecated_x0029_GetVersionNumber_StrResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVersionNumber">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPropertyConfigurationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropertyConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyConfigurationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropertyConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_GetPropertyConfigurationsSoapIn">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_GetPropertyConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_GetPropertyConfigurationsSoapOut">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_GetPropertyConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_CollectionsLeaseInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_CollectionsLeaseInfo" />
+  </wsdl:message>
+  <wsdl:message name="Get_CollectionsLeaseInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_CollectionsLeaseInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_CollectionsLeaseInfo_ViewSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_CollectionsLeaseInfo_View" />
+  </wsdl:message>
+  <wsdl:message name="Get_CollectionsLeaseInfo_ViewSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_CollectionsLeaseInfo_ViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_ViewSoapIn">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_View" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_ViewSoapOut">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_ViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="Import_CollectionsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:Import_CollectionsInfo" />
+  </wsdl:message>
+  <wsdl:message name="Import_CollectionsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:Import_CollectionsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_Import_CollectionsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_Import_CollectionsInfo" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_Import_CollectionsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_Import_CollectionsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_GetVersionNumber_StrSoapIn">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_GetVersionNumber_Str" />
+  </wsdl:message>
+  <wsdl:message name="_x0028_Deprecated_x0029_GetVersionNumber_StrSoapOut">
+    <wsdl:part name="parameters" element="tns:_x0028_Deprecated_x0029_GetVersionNumber_StrResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersionNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ItfCollectionsSoap">
+    <wsdl:operation name="GetPropertyConfigurations">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Allows the export of a list of properties from the Yardi Voyager database that are associated with an agency for Collections. </documentation>
+      <wsdl:input message="tns:GetPropertyConfigurationsSoapIn" />
+      <wsdl:output message="tns:GetPropertyConfigurationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyConfigurations">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">(Deprecated) Can be used thru 1/1/13. See documentation.  Does not require License Key.</documentation>
+      <wsdl:input name="_x0028_Deprecated_x0029_GetPropertyConfigurations" message="tns:_x0028_Deprecated_x0029_GetPropertyConfigurationsSoapIn" />
+      <wsdl:output name="_x0028_Deprecated_x0029_GetPropertyConfigurations" message="tns:_x0028_Deprecated_x0029_GetPropertyConfigurationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Allows export of newly delinquent lease charges and associated tenants from a Yardi Voyager database for the purpose of Collections. These records will be marked as 'Sent to Collections' and will not be sent again unless resubmitted or cleared. </documentation>
+      <wsdl:input message="tns:Get_CollectionsLeaseInfoSoapIn" />
+      <wsdl:output message="tns:Get_CollectionsLeaseInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">(Deprecated) Can be used thru 1/1/13. See documentation.  Does not require License Key.</documentation>
+      <wsdl:input name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo" message="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfoSoapIn" />
+      <wsdl:output name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo" message="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo_View">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Allows export of newly delinquent lease charges and associated tenants from a Yardi Voyager database for the purpose of Collections. Collections records will not be modified regardless of how often this method is called. </documentation>
+      <wsdl:input message="tns:Get_CollectionsLeaseInfo_ViewSoapIn" />
+      <wsdl:output message="tns:Get_CollectionsLeaseInfo_ViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo_View">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">(Deprecated) Can be used thru 1/1/13. See documentation.  Does not require License Key.</documentation>
+      <wsdl:input name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_View" message="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_ViewSoapIn" />
+      <wsdl:output name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_View" message="tns:_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_ViewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Import_CollectionsInfo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Allows export of newly delinquent lease charges and associated tenants from a Yardi Voyager database for the purpose of Collections. These records will be marked as 'Sent to Collections' and will not be sent again unless resubmitted or cleared. </documentation>
+      <wsdl:input message="tns:Import_CollectionsInfoSoapIn" />
+      <wsdl:output message="tns:Import_CollectionsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Import_CollectionsInfo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">(Deprecated) Can be used thru 1/1/13. See documentation.  Does not require License Key.</documentation>
+      <wsdl:input name="_x0028_Deprecated_x0029_Import_CollectionsInfo" message="tns:_x0028_Deprecated_x0029_Import_CollectionsInfoSoapIn" />
+      <wsdl:output name="_x0028_Deprecated_x0029_Import_CollectionsInfo" message="tns:_x0028_Deprecated_x0029_Import_CollectionsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionNumber_Str">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">(Deprecated)</documentation>
+      <wsdl:input name="_x0028_Deprecated_x0029_GetVersionNumber_Str" message="tns:_x0028_Deprecated_x0029_GetVersionNumber_StrSoapIn" />
+      <wsdl:output name="_x0028_Deprecated_x0029_GetVersionNumber_Str" message="tns:_x0028_Deprecated_x0029_GetVersionNumber_StrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionNumber">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns current version number of Interfaces concatenated with Collections Plugin version (XX_Y)</documentation>
+      <wsdl:input message="tns:GetVersionNumberSoapIn" />
+      <wsdl:output message="tns:GetVersionNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ItfCollectionsSoap" type="tns:ItfCollectionsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="GetPropertyConfigurations">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/GetPropertyConfigurations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyConfigurations">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/(Deprecated)GetPropertyConfigurations" style="document" />
+      <wsdl:input name="_x0028_Deprecated_x0029_GetPropertyConfigurations">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="_x0028_Deprecated_x0029_GetPropertyConfigurations">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/Get_CollectionsLeaseInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/(Deprecated)Get_CollectionsLeaseInfo" style="document" />
+      <wsdl:input name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo_View">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/Get_CollectionsLeaseInfo_View" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_CollectionsLeaseInfo_View">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/(Deprecated)Get_CollectionsLeaseInfo_View" style="document" />
+      <wsdl:input name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_View">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="_x0028_Deprecated_x0029_Get_CollectionsLeaseInfo_View">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Import_CollectionsInfo">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/Import_CollectionsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Import_CollectionsInfo">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/(Deprecated)Import_CollectionsInfo" style="document" />
+      <wsdl:input name="_x0028_Deprecated_x0029_Import_CollectionsInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="_x0028_Deprecated_x0029_Import_CollectionsInfo">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionNumber_Str">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/(Deprecated)GetVersionNumber_Str" style="document" />
+      <wsdl:input name="_x0028_Deprecated_x0029_GetVersionNumber_Str">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="_x0028_Deprecated_x0029_GetVersionNumber_Str">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionNumber">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/GetVersionNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ItfCollections">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="ItfCollectionsSoap" binding="tns:ItfCollectionsSoap">
+      <soap:address location="http://localhost/Voyager60_dev/Webservices/ItfCollections.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

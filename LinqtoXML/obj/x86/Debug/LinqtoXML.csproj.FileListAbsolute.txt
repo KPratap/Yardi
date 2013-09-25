@@ -1,0 +1,7 @@
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Debug\LinqtoXML.exe
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Debug\LinqtoXML.pdb
+C:\Docs\Pers\YardiConfig\LinqtoXML\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\LinqtoXML\obj\x86\Debug\LinqtoXML.exe
+C:\Docs\Pers\YardiConfig\LinqtoXML\obj\x86\Debug\LinqtoXML.pdb
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Debug\Clients.xml
+C:\Docs\Pers\YardiConfig\LinqtoXML\bin\Debug\Config.xml

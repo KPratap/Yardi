@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://www.iyardiasp.com/8223thirddev/Webservices/itfcollections.asmx?wsdl" docRef="http://www.iyardiasp.com/8223thirddev/Webservices/itfcollections.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.iyardiasp.com/8223thirddev/Webservices/itfcollections.asmx" xmlns:q1="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections" binding="q1:ItfCollectionsSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

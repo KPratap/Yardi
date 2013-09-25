@@ -1,0 +1,16 @@
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\YardiClients.exe.config
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\YardiClients.exe
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\YardiClients.pdb
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiClients\obj\x86\Release\YardiClients.frmClients.resources
+C:\Docs\Pers\YardiConfig\YardiClients\obj\x86\Release\YardiClients.Properties.Resources.resources
+C:\Docs\Pers\YardiConfig\YardiClients\obj\x86\Release\YardiClients.exe
+C:\Docs\Pers\YardiConfig\YardiClients\obj\x86\Release\YardiClients.pdb
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\YardiInterface.dll
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\YardiInterface.pdb
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\YardiInterface.XmlSerializers.dll
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\V100055004.lic
+C:\Docs\Pers\YardiConfig\YardiClients\bin\Release\Clients3.xml
+C:\Docs\Pers\YardiConfig\YardiClients\obj\x86\Release\YardiClients.csprojResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\YardiClients\obj\x86\Release\YardiClients.csproj.GenerateResource.Cache

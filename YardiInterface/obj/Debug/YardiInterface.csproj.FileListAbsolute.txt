@@ -1,0 +1,7 @@
+C:\Docs\Pers\YardiConfig\YardiInterface\obj\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Debug\YardiInterface.dll
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Debug\YardiInterface.pdb
+C:\Docs\Pers\YardiConfig\YardiInterface\obj\Debug\YardiInterface.dll
+C:\Docs\Pers\YardiConfig\YardiInterface\obj\Debug\YardiInterface.pdb
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Debug\YardiInterface.dll.config
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Debug\V100055004.lic

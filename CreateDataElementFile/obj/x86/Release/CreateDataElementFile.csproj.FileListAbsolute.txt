@@ -1,0 +1,7 @@
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Release\Collections Sample.xml
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Release\CreateDataElementFile.exe
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Release\CreateDataElementFile.pdb
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\obj\x86\Release\CreateDataElementFile.exe
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\obj\x86\Release\CreateDataElementFile.pdb

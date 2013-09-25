@@ -1,0 +1,8 @@
+C:\Docs\Pers\YardiConfig\YardiData\bin\Release\DataElements.xml
+C:\Docs\Pers\YardiConfig\YardiData\bin\Release\YardiData.dll
+C:\Docs\Pers\YardiConfig\YardiData\bin\Release\YardiData.pdb
+C:\Docs\Pers\YardiConfig\YardiData\bin\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\YardiData\bin\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiData\obj\Release\YardiData.dll
+C:\Docs\Pers\YardiConfig\YardiData\obj\Release\YardiData.pdb
+C:\Docs\Pers\YardiConfig\YardiData\obj\Release\YardiData.csprojResolveAssemblyReference.cache

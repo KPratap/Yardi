@@ -1,0 +1,8 @@
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Debug\Collections Sample.xml
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Debug\CreateDataElementFile.exe
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Debug\CreateDataElementFile.pdb
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Debug\NSConfig.dll
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Debug\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\obj\x86\Debug\CreateDataElementFile.exe
+C:\Docs\Pers\YardiConfig\CreateDataElementFile\obj\x86\Debug\CreateDataElementFile.pdb

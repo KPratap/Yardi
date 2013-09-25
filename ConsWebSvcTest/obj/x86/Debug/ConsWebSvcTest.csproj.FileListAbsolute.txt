@@ -1,0 +1,9 @@
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\bin\Debug\ConsWebSvcTest.exe.config
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\bin\Debug\ConsWebSvcTest.exe
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\bin\Debug\ConsWebSvcTest.pdb
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\obj\x86\Debug\ConsWebSvcTest.exe
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\obj\x86\Debug\ConsWebSvcTest.pdb
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\bin\Debug\YardiInterface.dll
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\bin\Debug\YardiInterface.pdb
+C:\Docs\Pers\YardiConfig\ConsWebSvcTest\bin\Debug\V100055004.lic

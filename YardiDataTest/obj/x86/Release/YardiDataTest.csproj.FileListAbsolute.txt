@@ -1,0 +1,10 @@
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\YardiDataTest.exe.config
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\Collections Sample.xml
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\Copy of DataElements.xml
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\DataElements.xml
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\YardiDataTest.exe
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\YardiDataTest.pdb
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiDataTest\obj\x86\Release\YardiDataTest.exe
+C:\Docs\Pers\YardiConfig\YardiDataTest\obj\x86\Release\YardiDataTest.pdb

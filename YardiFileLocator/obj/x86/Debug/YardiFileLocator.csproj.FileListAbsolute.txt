@@ -1,0 +1,14 @@
+C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\YardiFileLocator.exe
+C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\YardiFileLocator.pdb
+C:\Docs\Pers\YardiConfig\YardiFileLocator\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\YardiFileLocator\obj\x86\Debug\YardiFileLocator.frmMain.resources
+C:\Docs\Pers\YardiConfig\YardiFileLocator\obj\x86\Debug\YardiFileLocator.Properties.Resources.resources
+C:\Docs\Pers\YardiConfig\YardiFileLocator\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Docs\Pers\YardiConfig\YardiFileLocator\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Docs\Pers\YardiConfig\YardiFileLocator\obj\x86\Debug\YardiFileLocator.exe
+C:\Docs\Pers\YardiConfig\YardiFileLocator\obj\x86\Debug\YardiFileLocator.pdb
+C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\Config.xml
+C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\YardiFileLocator.exe.config
+C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\NSConfig.dll
+C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\App.config

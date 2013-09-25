@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<yardi>
+  <connection url="http://www.testurl.com/api" userid="Testuser" password="passw0rd" />
+  <clientconfig filename="clients.xml" />
+</yardi>

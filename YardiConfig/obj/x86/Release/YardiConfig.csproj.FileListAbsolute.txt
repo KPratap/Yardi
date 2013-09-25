@@ -1,0 +1,12 @@
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Release\Clients.xml
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Release\Config.xml
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Release\YardiConfig.exe.config
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Release\YardiConfig.exe
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Release\YardiConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.frmConfig.resources
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.Properties.Resources.resources
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.exe
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.csproj.GenerateResource.Cache

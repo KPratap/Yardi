@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ConsWebSvcTest.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConsWebSvcTest_YardiWebRef_ItfCollections" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.iyardiasp.com/8223thirddev/Webservices/itfcollections.asmx</Value>
+    </Setting>
+    <Setting Name="ConsWebSvcTest_com_iyardiasp_www_ItfCollections" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.iyardiasp.com/8223thirdqa/webservices/itfcollections.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

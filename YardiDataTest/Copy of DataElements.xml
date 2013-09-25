@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataelements>
+  <dataelement location="PropertyFile/Property/Identification/IDValue" outputname="PropertyId" enabled="1" />
+  <dataelement location="PropertyFile/Property/Address/Address" outputname="Addresss" enabled="1" />
+  <dataelement location="PropertyFile/Property/Address/City" outputname="City" enabled="1" />
+  <dataelement location="PropertyFile/Property/Address/State" outputname="St" enabled="1" />
+  <dataelement location="PropertyFile/Property/Address/PostalCode" outputname="Zip" enabled="1" />
+  <dataelement location="PropertyFile/Property/Address/Country" outputname="Country" enabled="0" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/Identification/IDValue" outputname="PrimaryTenantCode" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/Identification/OrganizationName" outputname="TenantCode" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/Identification/IDValue" outputname="UnitCode" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/Identification/OrganizationName" outputname="Unit Code" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/CollectionStatus" outputname="CollectionStatus" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/MoveInDate" outputname="MoveInDate" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/MoveOutDate" outputname="MoveOutDate" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/LeaseBegin" outputname="LeaseBegin" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/LeaseEnd" outputname="LeaseEnd" enabled="1" />
+  <dataelement location="PropertyFile/LeaseFiles/LeaseFile/MonthlyRentAmount" outputname="MonthlyRentAmount" enabled="1" />
+</dataelements>

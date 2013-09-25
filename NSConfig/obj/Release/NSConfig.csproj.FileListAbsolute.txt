@@ -1,0 +1,5 @@
+C:\Docs\Pers\YardiConfig\NSConfig\bin\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\NSConfig\bin\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\NSConfig\obj\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\NSConfig\obj\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\NSConfig\obj\Release\NSConfig.csprojResolveAssemblyReference.cache

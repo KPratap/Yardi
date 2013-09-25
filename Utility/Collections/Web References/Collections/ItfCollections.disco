@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://agraf-lt2/Voyager60/Webservices/ItfCollections.asmx?wsdl" docRef="http://agraf-lt2/Voyager60/Webservices/ItfCollections.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://agraf-lt2/Voyager60/Webservices/ItfCollections.asmx" xmlns:q1="http://tempuri.org/YSI.Interfaces.WebServices/ItfCollections" binding="q1:ItfCollectionsSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

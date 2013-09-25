@@ -1,0 +1,14 @@
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\YardiConfig.exe.config
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\YardiConfig.exe
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\YardiConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Debug\YardiConfig.frmConfig.resources
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Debug\YardiConfig.Properties.Resources.resources
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Debug\YardiConfig.exe
+C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Debug\YardiConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\Config.xml
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\Clients.xml
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\NSConfig.dll
+C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\NSConfig.pdb

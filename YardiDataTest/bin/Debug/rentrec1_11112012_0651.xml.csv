@@ -1,0 +1,27 @@
+SUMMARY|TotalProperties|TotalLeaseFiles|TotalTenants|TotalOpenAmount
+SUMMARY|1|3|4|3587.50
+PROPERTY|PropId|MarketingName|PropAddress|City|State
+PROPERTY|rentrec1||Rent Recovery 1 Test Property 3232 Plano Road|Santa Barbara|CA
+LEASE|LeaseTenantId|UnitCode|CollectionStatus|LastChangeDate|MonthlyRentAmount|MoveInDate|MoveOutDate|LeaseBegin|LeaseEnd
+LEASE|t0006846|111|true|2012-11-11|825.00|2005-08-01|2005-10-31|2005-08-01|2005-10-31
+FTRANS|AssignedAmount|TransId|TransDate|TransType|TransTypeDesc|OpenAmount|CustChargeCode|CustChargeCodeDesc
+FTRANS|837.50|700073148|2012-10-01|Charge|Rent|825.00|Charge Code Desc|Base Rent
+FTRANS|837.50|700073149|2012-10-01|Charge|CAM Recovery|12.50|Charge Code Desc|Utilities
+TENANT|TenantId|TenantFirstName|TenantLastName|CurrAddr|City|State|Zip|HomePh|CellPh|OfficePh|Tenant SSN|Tenant DOB|Tenant DL|ContactFN|ContactLN|Contact Phone|EmpName|EmpPhone
+TENANT|t0006846|Bill|Clinton|50 Milky Way 111|Dallas|TX|75081|5555565585|5556554444||585-55-6666||MT kki554844|jack black||(555) 855-8855||
+LEASE|LeaseTenantId|UnitCode|CollectionStatus|LastChangeDate|MonthlyRentAmount|MoveInDate|MoveOutDate|LeaseBegin|LeaseEnd
+LEASE|t0006877|114|true|2012-11-11|850.00|2005-06-01|2012-06-01|2005-06-01|2005-12-31
+FTRANS|AssignedAmount|TransId|TransDate|TransType|TransTypeDesc|OpenAmount|CustChargeCode|CustChargeCodeDesc
+FTRANS|2700.00|700073245|2012-10-01|Charge|CAM Recovery|75.00|Charge Code Desc|Janitorial Services
+FTRANS|2700.00|700073246|2012-10-01|Charge|Passthru Management|125.00|Charge Code Desc|Administration
+FTRANS|2700.00|700073247|2012-10-01|Charge|Miscellaneous Income|2500.00|Charge Code Desc|Misc. Expense
+TENANT|TenantId|TenantFirstName|TenantLastName|CurrAddr|City|State|Zip|HomePh|CellPh|OfficePh|Tenant SSN|Tenant DOB|Tenant DL|ContactFN|ContactLN|Contact Phone|EmpName|EmpPhone
+TENANT|t0006877|John|Doe|50 Milky Way 114|Dallas|TX|75081||5545255588|8858554545|888-99-8989||IN iio8457544|mama mia||(445) 774-5545||
+TENANT|r0001321|jane|tarzan||(455) 447-7878||454-77-7777|||||||
+LEASE|LeaseTenantId|UnitCode|CollectionStatus|LastChangeDate|MonthlyRentAmount|MoveInDate|MoveOutDate|LeaseBegin|LeaseEnd
+LEASE|t0007056|101|true|2012-11-11|890.00|2012-11-01|2012-11-08|2012-11-01|2013-11-30
+FTRANS|AssignedAmount|TransId|TransDate|TransType|TransTypeDesc|OpenAmount|CustChargeCode|CustChargeCodeDesc
+FTRANS|50.00|700073804|2012-10-30|Charge|Passthru Management|25.00|Charge Code Desc|Administration
+FTRANS|50.00|700073805|2012-10-30|Charge|Passthru Management|25.00|Charge Code Desc|Administration
+TENANT|TenantId|TenantFirstName|TenantLastName|CurrAddr|City|State|Zip|HomePh|CellPh|OfficePh|Tenant SSN|Tenant DOB|Tenant DL|ContactFN|ContactLN|Contact Phone|EmpName|EmpPhone
+TENANT|t0007056|Gladys|Knight|100 one way st|puppy|WI|11212|4455554445|4455255555|445554454|222-52-5555|1975-10-01|WI xxx2225222|mama knight||(445) 555-2525|random gate|(444) 554-5444

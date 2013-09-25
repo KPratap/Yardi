@@ -1,0 +1,5 @@
+C:\Docs\Pers\YardiConfig\Configurator\bin\Release\Configurator.dll
+C:\Docs\Pers\YardiConfig\Configurator\bin\Release\Configurator.pdb
+C:\Docs\Pers\YardiConfig\Configurator\obj\Release\Configurator.dll
+C:\Docs\Pers\YardiConfig\Configurator\obj\Release\Configurator.pdb
+C:\Docs\Pers\YardiConfig\Configurator\obj\Release\Configurator.csprojResolveAssemblyReference.cache

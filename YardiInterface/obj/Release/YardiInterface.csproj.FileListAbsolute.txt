@@ -1,0 +1,9 @@
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Release\YardiInterface.dll.config
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Release\YardiInterface.dll
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Release\YardiInterface.XmlSerializers.dll
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Release\YardiInterface.pdb
+C:\Docs\Pers\YardiConfig\YardiInterface\obj\Release\YardiInterface.dll
+C:\Docs\Pers\YardiConfig\YardiInterface\obj\Release\YardiInterface.pdb
+C:\Docs\Pers\YardiConfig\YardiInterface\obj\Release\YardiInterface.XmlSerializers.dll
+C:\Docs\Pers\YardiConfig\YardiInterface\bin\Release\V100055004.lic
+C:\Docs\Pers\YardiConfig\YardiInterface\obj\Release\YardiInterface.csprojResolveAssemblyReference.cache

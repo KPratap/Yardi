@@ -1,0 +1,9 @@
+C:\Docs\Pers\YardiConfig\LinqRWExample\bin\Release\Players.xml
+C:\Docs\Pers\YardiConfig\LinqRWExample\bin\Release\LinqRWExample.exe
+C:\Docs\Pers\YardiConfig\LinqRWExample\bin\Release\LinqRWExample.pdb
+C:\Docs\Pers\YardiConfig\LinqRWExample\obj\x86\Release\LinqRWExample.Form1.resources
+C:\Docs\Pers\YardiConfig\LinqRWExample\obj\x86\Release\LinqRWExample.Properties.Resources.resources
+C:\Docs\Pers\YardiConfig\LinqRWExample\obj\x86\Release\LinqRWExample.exe
+C:\Docs\Pers\YardiConfig\LinqRWExample\obj\x86\Release\LinqRWExample.pdb
+C:\Docs\Pers\YardiConfig\LinqRWExample\bin\Release\LinqRWExample.exe.config
+C:\Docs\Pers\YardiConfig\LinqRWExample\obj\x86\Release\LinqRWExample.csproj.GenerateResource.Cache

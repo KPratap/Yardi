@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clients>
+  <client keyword="RRSClientNew">
+    <name>New Client</name>
+    <url>https://www.iyardiasp.com/8223thirddev/Webservices/itfcollections.asmx</url>
+    <user>rentrecoveryws</user>
+    <password>55004</password>
+    <server>afqoml_live</server>
+    <database>aspdb04</database>
+    <platform>SQL Server</platform>
+    <enabled>true</enabled>
+    <yardipropid>rentrec1</yardipropid>
+  </client>
+  <client keyword="RRSClientold">
+    <name>Old Client</name>
+    <url>https://www.iyardiasp.com/8223thirdqa/webservices/itfcollections.asmx</url>
+    <user>rentrecoveryws</user>
+    <password>55004</password>
+    <server>afqoml_live</server>
+    <database>aspdb04</database>
+    <platform>SQL Server</platform>
+    <enabled>true</enabled>
+    <yardipropid>rentrec2</yardipropid>
+  </client>
+  <client keyword="TestClient">
+    <name>Old Client</name>
+    <url>https://www.iyardiasp.com/8223thirdqa/webservices/itfcollections.asmx</url>
+    <user>rentrecoveryws</user>
+    <password>55004</password>
+    <server>afqoml_live</server>
+    <database>aspdb04</database>
+    <platform>SQL Server</platform>
+    <enabled>false</enabled>
+    <yardipropid>rentrec2</yardipropid>
+  </client>
+  <client keyword="test01">
+    <name>pcr_test</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>rr123</password>
+    <server>NSQL20TEST_2K8R2</server>
+    <database>bqjbope_test</database>
+    <platform>Sql Server</platform>
+    <yardipropid>pcr</yardipropid>
+  </client>
+  <client keyword="tsr">
+    <name>trade street residential</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbo_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>trade</yardipropid>
+  </client>
+</clients>

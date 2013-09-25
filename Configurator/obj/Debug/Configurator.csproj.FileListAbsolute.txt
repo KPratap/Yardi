@@ -1,0 +1,10 @@
+C:\Docs\Pers\RentRecSol\ConfigTEst\Configurator\bin\Debug\Configurator.dll
+C:\Docs\Pers\RentRecSol\ConfigTEst\Configurator\bin\Debug\Configurator.pdb
+C:\Docs\Pers\RentRecSol\ConfigTEst\Configurator\obj\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\RentRecSol\ConfigTEst\Configurator\obj\Debug\Configurator.dll
+C:\Docs\Pers\RentRecSol\ConfigTEst\Configurator\obj\Debug\Configurator.pdb
+C:\Docs\Pers\YardiConfig\Configurator\bin\Debug\Configurator.dll
+C:\Docs\Pers\YardiConfig\Configurator\bin\Debug\Configurator.pdb
+C:\Docs\Pers\YardiConfig\Configurator\obj\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\Configurator\obj\Debug\Configurator.dll
+C:\Docs\Pers\YardiConfig\Configurator\obj\Debug\Configurator.pdb

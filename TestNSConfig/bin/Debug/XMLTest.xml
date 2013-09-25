@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<clients>
+  <client keyword="FirstClient" name="Collingwood" intid="1" yardiid="111" enabled="true" />
+  <client keyword="2ndClient" name="amli" intid="1" yardiid="222" enabled="false" />
+  <client keyword="3rdclient" name="Post Alpharetta" intid="45" yardiid="111" enabled="true" />
+</clients>

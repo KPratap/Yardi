@@ -1,0 +1,7 @@
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Release\XMLTest.xml
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Release\TestNSConfig.exe
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Release\TestNSConfig.pdb
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Release\NSConfig.dll
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Release\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\TestNSConfig\obj\x86\Release\TestNSConfig.exe
+C:\Docs\Pers\YardiConfig\TestNSConfig\obj\x86\Release\TestNSConfig.pdb

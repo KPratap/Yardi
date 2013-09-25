@@ -1,0 +1,8 @@
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Debug\TestNSConfig.exe
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Debug\TestNSConfig.pdb
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Debug\NSConfig.dll
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Debug\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\TestNSConfig\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\TestNSConfig\obj\x86\Debug\TestNSConfig.exe
+C:\Docs\Pers\YardiConfig\TestNSConfig\obj\x86\Debug\TestNSConfig.pdb
+C:\Docs\Pers\YardiConfig\TestNSConfig\bin\Debug\XMLTest.xml

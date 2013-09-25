@@ -1,0 +1,5 @@
+C:\Docs\Pers\YardiConfig\LinqXMLExample\bin\Debug\LinqXMLExample.exe
+C:\Docs\Pers\YardiConfig\LinqXMLExample\bin\Debug\LinqXMLExample.pdb
+C:\Docs\Pers\YardiConfig\LinqXMLExample\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\LinqXMLExample\obj\x86\Debug\LinqXMLExample.exe
+C:\Docs\Pers\YardiConfig\LinqXMLExample\obj\x86\Debug\LinqXMLExample.pdb

@@ -1,0 +1,483 @@
+<MITS-Collections xsi:noNamespaceSchemaLocation="Itf_MITS_Collections3.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="">
+  <Summary>
+    <MITSDocVersion />
+    <GenerationTimeStamp>2009-11-24T16:09:45</GenerationTimeStamp>
+    <SourceOrganization />
+    <TotalProperties>1</TotalProperties>
+    <TotalLeaseFiles>2</TotalLeaseFiles>
+    <TotalTenants>7</TotalTenants>
+    <TotalOpenAmount>2405.44</TotalOpenAmount>
+  </Summary>
+  <PropertyFiles>
+    <PropertyFile>
+      <Property>
+        <Identification>
+          <IDValue>ares319</IDValue>
+        </Identification>
+        <MarketingName />
+        <LegalName />
+        <Address AddressType="property">
+          <Description>PropertyAddress</Description>
+          <Address>Anapamu Villas 319 E. Anapamu</Address>
+          <City>Santa Barbara</City>
+          <State>CA</State>
+          <PostalCode>93101</PostalCode>
+          <Country>USA</Country>
+        </Address>
+      </Property>
+      <LeaseFiles>
+        <LeaseFile>
+          <Identification>
+            <IDValue>harkim</IDValue>
+            <OrganizationName>Primary Tenant Code</OrganizationName>
+          </Identification>
+          <Identification>
+            <IDValue>129</IDValue>
+            <OrganizationName>Unit Code</OrganizationName>
+          </Identification>
+          <CollectionStatus>true</CollectionStatus>
+          <CollectionStatusLastChangeDate>2009-11-24</CollectionStatusLastChangeDate>
+          <MoveInDate>2004-10-12</MoveInDate>
+          <MoveOutDate>2006-03-31</MoveOutDate>
+          <LeaseBegin>2004-10-01</LeaseBegin>
+          <LeaseEnd>2006-03-31</LeaseEnd>
+          <MonthlyRentAmount>1350.00</MonthlyRentAmount>
+          <Tenants>
+            <PersonDetails>
+              <Identification>
+                <IDValue>harkim</IDValue>
+              </Identification>
+              <Name>
+                <NamePrefix>Kim</NamePrefix>
+                <FirstName>Kim</FirstName>
+                <LastName>Harrison</LastName>
+              </Name>
+              <Address AddressType="current">
+                <Description>current</Description>
+                <Address>Anapamu Villas</Address>
+              </Address>
+              <Phone PhoneType="home">
+                <PhoneDescription>Home</PhoneDescription>
+                <PhoneNumber>8055559765</PhoneNumber>
+              </Phone>
+            </PersonDetails>
+          </Tenants>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700003710</IDValue>
+            </Identification>
+            <TransDate>2006-02-01</TransDate>
+            <TransTypeDesc>Rent</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>1350.00</TransAmount>
+            <OpenAmount>350.00</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700003804</IDValue>
+            </Identification>
+            <TransDate>2006-02-07</TransDate>
+            <TransTypeDesc>Late Fee</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>67.50</TransAmount>
+            <OpenAmount>67.50</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700003835</IDValue>
+            </Identification>
+            <TransDate>2006-03-01</TransDate>
+            <TransTypeDesc>Rent</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>1350.00</TransAmount>
+            <OpenAmount>1350.00</OpenAmount>
+          </FileTransactions>
+        </LeaseFile>
+        <LeaseFile>
+          <Identification>
+            <IDValue>t0000373</IDValue>
+            <OrganizationName>Primary Tenant Code</OrganizationName>
+          </Identification>
+          <Identification>
+            <IDValue>230</IDValue>
+            <OrganizationName>Unit Code</OrganizationName>
+          </Identification>
+          <CollectionStatus>true</CollectionStatus>
+          <CollectionStatusLastChangeDate>2009-11-24</CollectionStatusLastChangeDate>
+          <MoveInDate>2006-03-20</MoveInDate>
+          <MoveOutDate>2009-06-30</MoveOutDate>
+          <LeaseBegin>2006-03-20</LeaseBegin>
+          <LeaseEnd>2006-12-31</LeaseEnd>
+          <MonthlyRentAmount>1120.00</MonthlyRentAmount>
+          <Tenants>
+            <PersonDetails>
+              <Identification>
+                <IDValue>t0000373</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Ernesto</FirstName>
+                <LastName>Moneta</LastName>
+              </Name>
+              <Address AddressType="current">
+                <Description>current</Description>
+                <Address>Investor 2</Address>
+              </Address>
+              <Address AddressType="other">
+                <Email>eMoneta@howdy.com</Email>
+              </Address>
+              <Address AddressType="other">
+                <Email>ernestoM@howdy.com</Email>
+              </Address>
+              <Phone PhoneType="office">
+                <PhoneDescription>Office</PhoneDescription>
+                <PhoneNumber>123123123</PhoneNumber>
+              </Phone>
+              <Phone PhoneType="home">
+                <PhoneDescription>Home</PhoneDescription>
+                <PhoneNumber>234234234</PhoneNumber>
+              </Phone>
+            </PersonDetails>
+            <DriversLicense>AR MARCO</DriversLicense>
+            <Contact>
+              <Identification>
+                <IDValue>Brian Bryerson</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Brian Bryerson</FirstName>
+                <LastName />
+              </Name>
+              <Address AddressType="other">
+                <Description>Residents Contact Address</Description>
+                <Address>1234 Brian Lane</Address>
+                <City>King City</City>
+                <State>CA</State>
+                <PostalCode />
+              </Address>
+              <Phone PhoneType="other">
+                <PhoneNumber>(888) 888-8888</PhoneNumber>
+              </Phone>
+            </Contact>
+          </Tenants>
+          <Tenants>
+            <PersonDetails>
+              <Identification>
+                <IDValue>r0000034</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Patricia</FirstName>
+                <MiddleName>M</MiddleName>
+                <LastName>Montoya</LastName>
+              </Name>
+              <Address AddressType="previous">
+                <Description>Prospect Previous Address 1</Description>
+                <Address>1234 Spring Rd</Address>
+                <City>Season City</City>
+                <State>CA</State>
+                <PostalCode>93111</PostalCode>
+              </Address>
+              <Address AddressType="current">
+                <Description>Prospect Current Address</Description>
+                <Address>1234 Karate Rd Apt. #Awesome</Address>
+                <City>Lincoln</City>
+                <State>CA</State>
+                <PostalCode>93111</PostalCode>
+              </Address>
+              <Address AddressType="other">
+                <Email>pMontoya@howdy.com</Email>
+              </Address>
+              <Address AddressType="other">
+                <Email>pMontoya2@howdy.net</Email>
+              </Address>
+              <Phone PhoneType="home">
+                <PhoneDescription>Home</PhoneDescription>
+                <PhoneNumber>4323443223</PhoneNumber>
+              </Phone>
+              <Phone PhoneType="office">
+                <PhoneDescription>Office</PhoneDescription>
+                <PhoneNumber>1239043232</PhoneNumber>
+              </Phone>
+              <Phone PhoneType="office">
+                <PhoneDescription>Office</PhoneDescription>
+                <PhoneNumber>(123) 456-7890</PhoneNumber>
+              </Phone>
+            </PersonDetails>
+            <DateOfBirth>1979-09-30</DateOfBirth>
+            <SSN>123-45-6889</SSN>
+            <DriversLicense>CA IHEART2DR</DriversLicense>
+            <Guarantor>true</Guarantor>
+            <Employer>
+              <EmployerDetails>
+                <Identification>
+                  <IDValue>Jiffy Lube</IDValue>
+                </Identification>
+                <CompanyName>Jiffy Lube</CompanyName>
+                <Address AddressType="other">
+                  <Description>Office Address</Description>
+                  <Address>1234 Jiffy Rd</Address>
+                  <City>Casho</City>
+                  <State>CO</State>
+                  <PostalCode>93111</PostalCode>
+                </Address>
+              </EmployerDetails>
+            </Employer>
+            <Contact>
+              <Identification>
+                <IDValue>Henry Henderson</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Henry Henderson</FirstName>
+                <LastName />
+              </Name>
+              <Phone PhoneType="other">
+                <PhoneNumber>(805) 123-1232</PhoneNumber>
+              </Phone>
+            </Contact>
+            <CustomRecords>
+              <Record>
+                <Name>Car Model/Color</Name>
+                <Value>Honda Civic</Value>
+              </Record>
+              <Record>
+                <Name>License #</Name>
+                <Value>123456</Value>
+              </Record>
+              <Record>
+                <Name>Employer</Name>
+                <Value>Burger King</Value>
+              </Record>
+              <Record>
+                <Name>Work Phone</Name>
+                <Value>123123123</Value>
+              </Record>
+              <Record>
+                <Name>Work Hours</Name>
+                <Value>9-5</Value>
+              </Record>
+            </CustomRecords>
+          </Tenants>
+          <Tenants>
+            <PersonDetails>
+              <Identification>
+                <IDValue>r0000036</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Heather</FirstName>
+                <MiddleName>N</MiddleName>
+                <LastName>Montoya</LastName>
+              </Name>
+              <Address AddressType="current">
+                <Description>Prospect Current Address</Description>
+                <Address>543 Sleepy St Apt #3</Address>
+                <City>Dreamland</City>
+                <State>CA</State>
+                <PostalCode>93111</PostalCode>
+              </Address>
+              <Address AddressType="other">
+                <Email>hMontoya@howdy.com</Email>
+              </Address>
+              <Phone PhoneType="home">
+                <PhoneDescription>Home</PhoneDescription>
+                <PhoneNumber>1231231232</PhoneNumber>
+              </Phone>
+              <Phone PhoneType="office">
+                <PhoneDescription>Office</PhoneDescription>
+                <PhoneNumber>2342342344</PhoneNumber>
+              </Phone>
+            </PersonDetails>
+            <DateOfBirth>1978-10-01</DateOfBirth>
+            <SSN>123-09-8345</SSN>
+            <Guarantor>false</Guarantor>
+          </Tenants>
+          <Tenants>
+            <PersonDetails>
+              <Identification>
+                <IDValue>r0000037</IDValue>
+              </Identification>
+              <Name>
+                <NamePrefix>Miss</NamePrefix>
+                <FirstName>Lisa</FirstName>
+                <MiddleName>K</MiddleName>
+                <LastName>Montoya</LastName>
+              </Name>
+              <Address AddressType="current">
+                <Description>Prospect Current Address</Description>
+                <Address>1234 Linda St</Address>
+                <City>Dreamland</City>
+                <State>CA</State>
+                <PostalCode>93111</PostalCode>
+              </Address>
+              <Phone PhoneType="office">
+                <PhoneDescription>Office</PhoneDescription>
+                <PhoneNumber>9872349874</PhoneNumber>
+              </Phone>
+              <Phone PhoneType="cell">
+                <PhoneDescription>Cell</PhoneDescription>
+                <PhoneNumber>2349872343</PhoneNumber>
+              </Phone>
+            </PersonDetails>
+            <DateOfBirth>1980-04-14</DateOfBirth>
+            <Guarantor>false</Guarantor>
+          </Tenants>
+          <Tenants>
+            <PersonDetails>
+              <Identification>
+                <IDValue>r0000038</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Liza</FirstName>
+                <LastName>Montoya</LastName>
+              </Name>
+              <Address AddressType="current">
+                <Description>Prospect Current Address</Description>
+                <Address>1234 Main St</Address>
+                <City>Goleta</City>
+              </Address>
+              <Address AddressType="other">
+                <Email>liza@howdy.com</Email>
+              </Address>
+            </PersonDetails>
+            <DateOfBirth>1980-05-10</DateOfBirth>
+            <SSN>687-67-8678</SSN>
+            <Guarantor>false</Guarantor>
+            <Employer>
+              <EmployerDetails>
+                <Identification>
+                  <IDValue>Ninja</IDValue>
+                </Identification>
+                <CompanyName>Ninja</CompanyName>
+                <Address AddressType="other">
+                  <Description>Office Address</Description>
+                  <Address>1234 Main St</Address>
+                  <City>Goleta</City>
+                </Address>
+                <Phone PhoneType="office">
+                  <PhoneDescription>Office</PhoneDescription>
+                  <PhoneNumber>259-0000</PhoneNumber>
+                </Phone>
+              </EmployerDetails>
+            </Employer>
+            <Contact>
+              <Identification>
+                <IDValue>Tom Brady</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Tom Brady</FirstName>
+                <LastName />
+              </Name>
+              <Address AddressType="current">
+                <Description>Prospects Contact Address</Description>
+                <Address>1234 Total Ln Apt 4</Address>
+                <City>Clover City</City>
+                <State>CA</State>
+                <PostalCode>30230</PostalCode>
+              </Address>
+              <Phone PhoneType="other">
+                <PhoneNumber>(123) 234-234</PhoneNumber>
+              </Phone>
+            </Contact>
+          </Tenants>
+          <Tenants>
+            <PersonDetails>
+              <Identification>
+                <IDValue>r0000039</IDValue>
+              </Identification>
+              <Name>
+                <FirstName>Moneta</FirstName>
+                <LastName>Jose</LastName>
+              </Name>
+              <Address AddressType="other">
+                <Email>Jose@howdy.com</Email>
+              </Address>
+              <Phone PhoneType="office">
+                <PhoneDescription>Office</PhoneDescription>
+                <PhoneNumber>(234) 234-2344</PhoneNumber>
+              </Phone>
+              <Phone PhoneType="home">
+                <PhoneDescription>Home</PhoneDescription>
+                <PhoneNumber>(987) 234-2344</PhoneNumber>
+              </Phone>
+            </PersonDetails>
+            <SSN>432-43-2432</SSN>
+            <Guarantor>false</Guarantor>
+            <CustomRecords>
+              <Record>
+                <Name>Employer</Name>
+                <Value>Big-O Tires</Value>
+              </Record>
+            </CustomRecords>
+          </Tenants>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700012687</IDValue>
+            </Identification>
+            <TransDate>2006-01-21</TransDate>
+            <TransTypeDesc>Miscellaneous Income</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>35.00</TransAmount>
+            <OpenAmount>35.00</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700012688</IDValue>
+            </Identification>
+            <TransDate>2006-01-21</TransDate>
+            <TransTypeDesc>Miscellaneous Income</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>20.00</TransAmount>
+            <OpenAmount>20.00</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700023614</IDValue>
+            </Identification>
+            <TransDate>2006-03-20</TransDate>
+            <TransTypeDesc>Tenant Deposits</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>1.00</TransAmount>
+            <OpenAmount>1.00</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700023615</IDValue>
+            </Identification>
+            <TransDate>2006-03-20</TransDate>
+            <TransTypeDesc>Rent</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>433.55</TransAmount>
+            <OpenAmount>433.55</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700023616</IDValue>
+            </Identification>
+            <TransDate>2006-03-20</TransDate>
+            <TransTypeDesc>Other Monthly Charges</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>38.71</TransAmount>
+            <OpenAmount>38.71</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700023617</IDValue>
+            </Identification>
+            <TransDate>2006-03-20</TransDate>
+            <TransTypeDesc>Miscellaneous Income</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>9.68</TransAmount>
+            <OpenAmount>9.68</OpenAmount>
+          </FileTransactions>
+          <FileTransactions>
+            <Identification>
+              <IDValue>700023618</IDValue>
+            </Identification>
+            <TransDate>2009-06-30</TransDate>
+            <TransTypeDesc>Miscellaneous Income</TransTypeDesc>
+            <TransType>Charge</TransType>
+            <TransAmount>100.00</TransAmount>
+            <OpenAmount>100.00</OpenAmount>
+          </FileTransactions>
+        </LeaseFile>
+      </LeaseFiles>
+    </PropertyFile>
+  </PropertyFiles>
+</MITS-Collections>

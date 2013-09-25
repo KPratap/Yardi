@@ -1,0 +1,8 @@
+C:\Docs\Pers\YardiConfig\YardiData\obj\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\YardiData\bin\Debug\YardiData.dll
+C:\Docs\Pers\YardiConfig\YardiData\bin\Debug\YardiData.pdb
+C:\Docs\Pers\YardiConfig\YardiData\bin\Debug\NSConfig.dll
+C:\Docs\Pers\YardiConfig\YardiData\bin\Debug\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\YardiData\obj\Debug\YardiData.dll
+C:\Docs\Pers\YardiConfig\YardiData\obj\Debug\YardiData.pdb
+C:\Docs\Pers\YardiConfig\YardiData\bin\Debug\DataElements.xml

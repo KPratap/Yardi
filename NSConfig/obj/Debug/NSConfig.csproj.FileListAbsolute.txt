@@ -1,0 +1,5 @@
+C:\Docs\Pers\YardiConfig\NSConfig\bin\Debug\NSConfig.dll
+C:\Docs\Pers\YardiConfig\NSConfig\bin\Debug\NSConfig.pdb
+C:\Docs\Pers\YardiConfig\NSConfig\obj\Debug\ResolveAssemblyReference.cache
+C:\Docs\Pers\YardiConfig\NSConfig\obj\Debug\NSConfig.dll
+C:\Docs\Pers\YardiConfig\NSConfig\obj\Debug\NSConfig.pdb
