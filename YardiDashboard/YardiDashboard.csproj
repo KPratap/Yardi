@@ -110,8 +110,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Clients.xml" />
     <Content Include="Clients.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Clients_save2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

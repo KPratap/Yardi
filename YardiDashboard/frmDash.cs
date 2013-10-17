@@ -397,6 +397,7 @@ namespace YardiDashboard
                    );
                 if (XmlNodeResponse != null)
                     collData = XElement.Parse(XmlNodeResponse.OuterXml);
+
                 else
                     MessageBox.Show("Null response returned", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -549,10 +550,27 @@ namespace YardiDashboard
                 AddMessage("There are no properties");
                 return;
             }
+            string res = ErrorMessage(props);
+            if (!String.IsNullOrEmpty(res))
+            {
+                AddMessage(res);
+                return;
+            }
+                
             foreach ( XElement prop in props.Descendants("Property"))
             {
                     AddMessage(GetPropInfo(prop));
             }
+        }
+
+        private string ErrorMessage(XElement props)
+        {
+            string rc = string.Empty;
+            foreach (XElement prop in props.Descendants("Message"))
+            {
+                rc = prop.Value;
+            }
+            return rc;
         }
 
         private string GetPropInfo(XElement prop)

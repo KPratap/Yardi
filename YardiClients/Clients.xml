@@ -50,9 +50,20 @@
     <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
     <user>rentrecovery</user>
     <password>yardi123</password>
-    <server>nsql28_2k8r2</server>
-    <database>bqjbo_live</database>
+    <database>nsql28_2k8r2</database>
+    <server>bqjbo_live</server>
     <platform>Sql Server</platform>
     <yardipropid>trade</yardipropid>
+  </client>
+  <client keyword="RRSClient708">
+    <name>RRSClient708</name>
+    <enabled>true</enabled>
+    <url>https://www.iyardiasp.com/8223thirdparty708dev/webservices/itfcollections.asmx</url>
+    <user>rentrecoveryws</user>
+    <password>55004</password>
+    <server>afqoml_live</server>
+    <database>aspdb04</database>
+    <platform>Sql Server</platform>
+    <yardipropid>rentrec1</yardipropid>
   </client>
 </clients>

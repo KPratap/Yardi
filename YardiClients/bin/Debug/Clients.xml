@@ -55,4 +55,15 @@
     <platform>Sql Server</platform>
     <yardipropid>trade</yardipropid>
   </client>
+  <client keyword="RRSClient708">
+    <name>RRSClient708</name>
+    <enabled>true</enabled>
+    <url>https://www.iyardiasp.com/8223thirdparty708dev/webservices/itfcollections.asmx</url>
+    <user>rentrecoveryws</user>
+    <password>55004</password>
+    <server>afqoml_live</server>
+    <database>aspdb04</database>
+    <platform>Sql Server</platform>
+    <yardipropid>rentrec1</yardipropid>
+  </client>
 </clients>
