@@ -50,20 +50,559 @@
     <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
     <user>rentrecovery</user>
     <password>yardi123</password>
-    <database>nsql28_2k8r2</database>
-    <server>bqjbo_live</server>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
     <platform>Sql Server</platform>
-    <yardipropid>trade</yardipropid>
+    <yardipropid>pcr</yardipropid>
   </client>
-  <client keyword="RRSClient708">
-    <name>RRSClient708</name>
+  <client keyword="002146">
+    <name>ARBORS RIVER OAKS/TSR</name>
     <enabled>true</enabled>
-    <url>https://www.iyardiasp.com/8223thirdparty708dev/webservices/itfcollections.asmx</url>
-    <user>rentrecoveryws</user>
-    <password>55004</password>
-    <server>sdb17\SQL2K8_R2</server>
-    <database>afqoml_70dev</database>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
     <platform>Sql Server</platform>
-    <yardipropid>rentrec1</yardipropid>
+    <yardipropid>ARO</yardipropid>
+  </client>
+  <client keyword="002111">
+    <name>Beckanna on Glenwood</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>BEC</yardipropid>
+  </client>
+  <client keyword="002184">
+    <name>Merce Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>MER</yardipropid>
+  </client>
+  <client keyword="002246">
+    <name>Estates at Mellenia Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>MIL</yardipropid>
+  </client>
+  <client keyword="002148">
+    <name>Oak Reserve at Winter Park</name>
+    <enabled>false</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>OAK</yardipropid>
+  </client>
+  <client keyword="002082">
+    <name>Pointe at Canyon Ridge</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>PCR</yardipropid>
+  </client>
+  <client keyword="002102">
+    <name>Post Oak Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>POP</yardipropid>
+  </client>
+  <client keyword="002247">
+    <name>Fox Trails Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>FOX</yardipropid>
+  </client>
+  <client keyword="002248">
+    <name>Lakeshore on the Hill Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>LOH</yardipropid>
+  </client>
+  <client keyword="002223">
+    <name>Terrace at River Oaks Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>TRO</yardipropid>
+  </client>
+  <client keyword="002103">
+    <name>Trails of Signal Mountain Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>TSM</yardipropid>
+  </client>
+  <client keyword="002249">
+    <name>Westmont Commons Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>WES</yardipropid>
+  </client>
+  <client keyword="000732">
+    <name>Pencil Factory Loft_Perennial</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx10.com/23378Perennial/Webservices/ItfCollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>JSQL25_2K8</server>
+    <database>zfcezmvyz_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>pencil</yardipropid>
+  </client>
+  <client keyword="002492">
+    <name>Vintage at Madison Crossing Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>VMC</yardipropid>
+  </client>
+  <client keyword="002587">
+    <name>Creekstone at RTD</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>CRE</yardipropid>
+  </client>
+  <client keyword="002588">
+    <name>St James at Goose Creek</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>STJ</yardipropid>
+  </client>
+  <client keyword="002629">
+    <name>Talison Row at Daniel Island</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>TAL</yardipropid>
+  </client>
+  <client keyword="002630">
+    <name>Fountains Southend</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <user>rentrecovery</user>
+    <password>yardi123</password>
+    <server>nsql28_2k8r2</server>
+    <database>bqjbope_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>FOU</yardipropid>
+  </client>
+  <client keyword="001233">
+    <name>Barrington Place</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>KSQL22_2K5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>4660</yardipropid>
+  </client>
+  <client keyword="001687">
+    <name>Bradford Square</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>11805</yardipropid>
+  </client>
+  <client keyword="001234">
+    <name>Bristol Place Townhomes</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1600</yardipropid>
+  </client>
+  <client keyword="002628">
+    <name>Blair School</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1806</yardipropid>
+  </client>
+  <client keyword="002634">
+    <name>CONECT</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1808</yardipropid>
+  </client>
+  <client keyword="002646">
+    <name>Crown LIHTC</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1810</yardipropid>
+  </client>
+  <client keyword="002647">
+    <name>Crown NMTC</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1812</yardipropid>
+  </client>
+  <client keyword="001688">
+    <name>Drake Plaza</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1120</yardipropid>
+  </client>
+  <client keyword="001690">
+    <name>Fairmont/Monticello</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1700</yardipropid>
+  </client>
+  <client keyword="001691">
+    <name>Grand View Towers</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>KSQL22_2K5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1470</yardipropid>
+  </client>
+  <client keyword="001692">
+    <name>Greentree</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>5170</yardipropid>
+  </client>
+  <client keyword="001236">
+    <name>Heatherstone</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>11810</yardipropid>
+  </client>
+  <client keyword="001694">
+    <name>Hickory Trace</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1200</yardipropid>
+  </client>
+  <client keyword="001237">
+    <name>Jackson Park Place</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1590</yardipropid>
+  </client>
+  <client keyword="001238">
+    <name>Livermore Heights</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>5230</yardipropid>
+  </client>
+  <client keyword="001239">
+    <name>Montclair on the Park Apts</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1915</yardipropid>
+  </client>
+  <client keyword="001697">
+    <name>Murphy Blair Gardens</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1310</yardipropid>
+  </client>
+  <client keyword="001698">
+    <name>Oakbrook Gardens</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1340</yardipropid>
+  </client>
+  <client keyword="001699">
+    <name>Oakhill Manor</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>2350</yardipropid>
+  </client>
+  <client keyword="002648">
+    <name>Park East</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1814</yardipropid>
+  </client>
+  <client keyword="001240">
+    <name>Pine Gardens</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>3390</yardipropid>
+  </client>
+  <client keyword="001700">
+    <name>Quail Valley</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>3400</yardipropid>
+  </client>
+  <client keyword="001241">
+    <name>Rivertrails</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1750</yardipropid>
+  </client>
+  <client keyword="002615">
+    <name>Shannon Fox</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1480</yardipropid>
+  </client>
+  <client keyword="001242">
+    <name>Senate Square</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>9675</yardipropid>
+  </client>
+  <client keyword="001243">
+    <name>Shenandoah Valley</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>11820</yardipropid>
+  </client>
+  <client keyword="001704">
+    <name>Tamarack Place</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>11800</yardipropid>
+  </client>
+  <client keyword="001245">
+    <name>University Plaza</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1530</yardipropid>
+  </client>
+  <client keyword="001705">
+    <name>Vineyards</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1640</yardipropid>
+  </client>
+  <client keyword="001707">
+    <name>Weatherholt Hills</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>5540</yardipropid>
+  </client>
+  <client keyword="001710">
+    <name>Windham Chase</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1570</yardipropid>
+  </client>
+  <client keyword="001711">
+    <name>Woodlands</name>
+    <enabled>true</enabled>
+    <url>https://www.yardiasptx11.com/70644kohner/webservices/itfcollections.asmx</url>
+    <user>rentreco</user>
+    <password>rentkoh</password>
+    <server>ksql22_2k5</server>
+    <database>rmpknn_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>1580</yardipropid>
   </client>
 </clients>

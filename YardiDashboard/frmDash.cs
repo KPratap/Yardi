@@ -316,7 +316,21 @@ namespace YardiDashboard
                     strLic,
                     ccfg.GetElement(el, "yardipropid").Value
                    );
+
+
                 XElement xE2 = XElement.Parse(XmlNodeResponse.OuterXml);
+
+                string res = ErrorMessage(xE2);
+                if (!String.IsNullOrEmpty(res))
+                {
+                    AddMessage(res);
+                    return;
+                }
+                if (LeaseFileCount(xE2) <= 0)
+                {
+                    AddMessage("No lease files found in " + keyword + ", file not created");
+                    return;
+                }
                 string shortName = ccfg.GetElement(el, "name").Value.Replace(" ", "_");
                 string dir = txtRawXML.Text + @"\" + shortName;
                 if (!Directory.Exists(dir))
@@ -457,6 +471,7 @@ namespace YardiDashboard
                 keyword = row.SubItems[0].Text;
                 AddMessage("Retrieving data for " + keyword);
                 GetCollections_Local(keyword);
+
                 AddMessage("Retrieval complete " + keyword);
             }
         }
@@ -556,7 +571,7 @@ namespace YardiDashboard
                 AddMessage(res);
                 return;
             }
-                
+            AddMessage(String.Format("---- Property Configurations for {0} properties for {1}",props.Descendants("Property").Count(), keyword));
             foreach ( XElement prop in props.Descendants("Property"))
             {
                     AddMessage(GetPropInfo(prop));
@@ -572,7 +587,15 @@ namespace YardiDashboard
             }
             return rc;
         }
-
+        private int LeaseFileCount(XElement props)
+        {
+            int rc = 0;
+            foreach (XElement prop in props.Descendants("TotalLeaseFiles"))
+            {
+                int.TryParse(prop.Value, out rc); ;
+            }
+            return rc;
+        }
         private string GetPropInfo(XElement prop)
         {
             StringBuilder s= new StringBuilder();

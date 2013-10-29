@@ -61,8 +61,8 @@
     <url>https://www.iyardiasp.com/8223thirdparty708dev/webservices/itfcollections.asmx</url>
     <user>rentrecoveryws</user>
     <password>55004</password>
-    <server>afqoml_live</server>
-    <database>aspdb04</database>
+    <server>sdb17\SQL2K8_R2</server>
+    <database>afqoml_70dev</database>
     <platform>Sql Server</platform>
     <yardipropid>rentrec1</yardipropid>
   </client>

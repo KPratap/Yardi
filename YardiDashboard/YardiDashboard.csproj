@@ -89,6 +89,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="V100055004.lic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Web References\YardiWebRef\itfcollections.wsdl" />
     <None Include="Web References\YardiWebRef\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -105,7 +108,7 @@
       <Name>YardiData</Name>
     </ProjectReference>
     <ProjectReference Include="..\YardiInterface\YardiInterface.csproj">
-      <Project>{DCB9D13B-5D4A-47AF-991C-2539D0018582}</Project>
+      <Project>{dcb9d13b-5d4a-47af-991c-2539d0018582}</Project>
       <Name>YardiInterface</Name>
     </ProjectReference>
   </ItemGroup>
@@ -113,6 +116,7 @@
     <Content Include="bin\Debug\Clients.xml" />
     <Content Include="Clients.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Clients_save2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

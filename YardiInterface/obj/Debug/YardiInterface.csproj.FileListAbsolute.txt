@@ -9,6 +9,6 @@ C:\Development\Yardi\YardiInterface\bin\Debug\V100055004.lic
 C:\Development\Yardi\YardiInterface\bin\Debug\YardiInterface.dll.config
 C:\Development\Yardi\YardiInterface\bin\Debug\YardiInterface.dll
 C:\Development\Yardi\YardiInterface\bin\Debug\YardiInterface.pdb
-C:\Development\Yardi\YardiInterface\obj\Debug\YardiInterface.csprojResolveAssemblyReference.cache
 C:\Development\Yardi\YardiInterface\obj\Debug\YardiInterface.dll
 C:\Development\Yardi\YardiInterface\obj\Debug\YardiInterface.pdb
+C:\Development\Yardi\YardiInterface\obj\Debug\YardiInterface.csprojResolveAssemblyReference.cache

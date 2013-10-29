@@ -20,14 +20,13 @@ C:\Docs\Pers\YardiConfig\YardiDashboard\bin\Debug\DataElements.xml
 C:\Docs\Pers\YardiConfig\YardiDashboard\bin\Debug\Config.xml
 C:\Docs\Pers\YardiConfig\YardiDashboard\bin\Debug\Clients_save2.xml
 C:\Docs\Pers\YardiConfig\YardiDashboard\bin\Debug\Clients.xml
-C:\Development\Yardi\YardiDashboard\bin\Debug\YardiDashboard.exe.config
-C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.exe
-C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.pdb
+C:\Development\Yardi\YardiDashboard\bin\Debug\Clients.xml
 C:\Development\Yardi\YardiDashboard\bin\Debug\App.config
 C:\Development\Yardi\YardiDashboard\bin\Debug\DataElements.xml
 C:\Development\Yardi\YardiDashboard\bin\Debug\V100055004.lic
 C:\Development\Yardi\YardiDashboard\bin\Debug\Clients_save2.xml
 C:\Development\Yardi\YardiDashboard\bin\Debug\Config.xml
+C:\Development\Yardi\YardiDashboard\bin\Debug\YardiDashboard.exe.config
 C:\Development\Yardi\YardiDashboard\bin\Debug\YardiDashboard.exe
 C:\Development\Yardi\YardiDashboard\bin\Debug\YardiDashboard.pdb
 C:\Development\Yardi\YardiDashboard\bin\Debug\NSConfig.dll
@@ -40,4 +39,5 @@ C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.csprojResolveAs
 C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.frmDash.resources
 C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.Properties.Resources.resources
 C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.csproj.GenerateResource.Cache
-C:\Development\Yardi\YardiDashboard\bin\Debug\Clients.xml
+C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.exe
+C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.pdb
