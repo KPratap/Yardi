@@ -52,9 +52,11 @@
             this.getVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getPropertyConfigurationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retrieveCollectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.retrieveAllCollectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabRetrieval = new System.Windows.Forms.TabPage();
             this.btnClear = new System.Windows.Forms.Button();
             this.lvMsg = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabFileLocations = new System.Windows.Forms.TabPage();
             this.txtLicFile = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -175,7 +177,7 @@
             this.tabCtl.Controls.Add(this.tabRetrieval);
             this.tabCtl.Controls.Add(this.tabFileLocations);
             this.tabCtl.Location = new System.Drawing.Point(16, 53);
-            this.tabCtl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCtl.Margin = new System.Windows.Forms.Padding(4);
             this.tabCtl.Name = "tabCtl";
             this.tabCtl.SelectedIndex = 0;
             this.tabCtl.Size = new System.Drawing.Size(1049, 503);
@@ -185,9 +187,9 @@
             // 
             this.tabClients.Controls.Add(this.lvClients);
             this.tabClients.Location = new System.Drawing.Point(4, 25);
-            this.tabClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabClients.Margin = new System.Windows.Forms.Padding(4);
             this.tabClients.Name = "tabClients";
-            this.tabClients.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabClients.Padding = new System.Windows.Forms.Padding(4);
             this.tabClients.Size = new System.Drawing.Size(1041, 474);
             this.tabClients.TabIndex = 1;
             this.tabClients.Text = "Client List";
@@ -210,7 +212,7 @@
             this.lvClients.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvClients.HideSelection = false;
             this.lvClients.Location = new System.Drawing.Point(13, 25);
-            this.lvClients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvClients.Margin = new System.Windows.Forms.Padding(4);
             this.lvClients.Name = "lvClients";
             this.lvClients.Size = new System.Drawing.Size(1009, 420);
             this.lvClients.TabIndex = 21;
@@ -246,9 +248,10 @@
             this.cMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.getVersionToolStripMenuItem,
             this.getPropertyConfigurationsToolStripMenuItem,
-            this.retrieveCollectionsToolStripMenuItem});
+            this.retrieveCollectionsToolStripMenuItem,
+            this.retrieveAllCollectionsToolStripMenuItem});
             this.cMenu.Name = "cMenu";
-            this.cMenu.Size = new System.Drawing.Size(263, 76);
+            this.cMenu.Size = new System.Drawing.Size(263, 100);
             // 
             // getVersionToolStripMenuItem
             // 
@@ -271,12 +274,19 @@
             this.retrieveCollectionsToolStripMenuItem.Text = "Retrieve Collections";
             this.retrieveCollectionsToolStripMenuItem.Click += new System.EventHandler(this.retrieveCollectionsToolStripMenuItem_Click);
             // 
+            // retrieveAllCollectionsToolStripMenuItem
+            // 
+            this.retrieveAllCollectionsToolStripMenuItem.Name = "retrieveAllCollectionsToolStripMenuItem";
+            this.retrieveAllCollectionsToolStripMenuItem.Size = new System.Drawing.Size(262, 24);
+            this.retrieveAllCollectionsToolStripMenuItem.Text = "Retrieve All Collections";
+            this.retrieveAllCollectionsToolStripMenuItem.Click += new System.EventHandler(this.retrieveAllCollectionsToolStripMenuItem_Click);
+            // 
             // tabRetrieval
             // 
             this.tabRetrieval.Controls.Add(this.btnClear);
             this.tabRetrieval.Controls.Add(this.lvMsg);
             this.tabRetrieval.Location = new System.Drawing.Point(4, 25);
-            this.tabRetrieval.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabRetrieval.Margin = new System.Windows.Forms.Padding(4);
             this.tabRetrieval.Name = "tabRetrieval";
             this.tabRetrieval.Size = new System.Drawing.Size(1041, 474);
             this.tabRetrieval.TabIndex = 2;
@@ -286,7 +296,7 @@
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(27, 9);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(128, 28);
             this.btnClear.TabIndex = 2;
@@ -300,13 +310,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvMsg.BackColor = System.Drawing.SystemColors.Info;
+            this.lvMsg.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6});
+            this.lvMsg.FullRowSelect = true;
+            this.lvMsg.GridLines = true;
+            this.lvMsg.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvMsg.HideSelection = false;
             this.lvMsg.Location = new System.Drawing.Point(27, 44);
-            this.lvMsg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvMsg.Margin = new System.Windows.Forms.Padding(4);
             this.lvMsg.Name = "lvMsg";
             this.lvMsg.Size = new System.Drawing.Size(984, 398);
             this.lvMsg.TabIndex = 1;
             this.lvMsg.UseCompatibleStateImageBehavior = false;
-            this.lvMsg.View = System.Windows.Forms.View.List;
+            this.lvMsg.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Message";
+            this.columnHeader6.Width = 700;
             // 
             // tabFileLocations
             // 
@@ -322,9 +343,9 @@
             this.tabFileLocations.Controls.Add(this.txtRawXML);
             this.tabFileLocations.Controls.Add(this.lblRawXML);
             this.tabFileLocations.Location = new System.Drawing.Point(4, 25);
-            this.tabFileLocations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabFileLocations.Margin = new System.Windows.Forms.Padding(4);
             this.tabFileLocations.Name = "tabFileLocations";
-            this.tabFileLocations.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabFileLocations.Padding = new System.Windows.Forms.Padding(4);
             this.tabFileLocations.Size = new System.Drawing.Size(1041, 474);
             this.tabFileLocations.TabIndex = 0;
             this.tabFileLocations.Text = "File Locations";
@@ -334,7 +355,7 @@
             // 
             this.txtLicFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLicFile.Location = new System.Drawing.Point(237, 210);
-            this.txtLicFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLicFile.Margin = new System.Windows.Forms.Padding(4);
             this.txtLicFile.Name = "txtLicFile";
             this.txtLicFile.ReadOnly = true;
             this.txtLicFile.Size = new System.Drawing.Size(629, 26);
@@ -353,7 +374,7 @@
             // btnOpenCollFalse
             // 
             this.btnOpenCollFalse.Location = new System.Drawing.Point(892, 162);
-            this.btnOpenCollFalse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpenCollFalse.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpenCollFalse.Name = "btnOpenCollFalse";
             this.btnOpenCollFalse.Size = new System.Drawing.Size(100, 28);
             this.btnOpenCollFalse.TabIndex = 30;
@@ -364,7 +385,7 @@
             // btnOpenColl
             // 
             this.btnOpenColl.Location = new System.Drawing.Point(892, 117);
-            this.btnOpenColl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpenColl.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpenColl.Name = "btnOpenColl";
             this.btnOpenColl.Size = new System.Drawing.Size(100, 28);
             this.btnOpenColl.TabIndex = 29;
@@ -375,7 +396,7 @@
             // btnOpenRaw
             // 
             this.btnOpenRaw.Location = new System.Drawing.Point(892, 71);
-            this.btnOpenRaw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOpenRaw.Margin = new System.Windows.Forms.Padding(4);
             this.btnOpenRaw.Name = "btnOpenRaw";
             this.btnOpenRaw.Size = new System.Drawing.Size(100, 28);
             this.btnOpenRaw.TabIndex = 28;
@@ -387,7 +408,7 @@
             // 
             this.txtCollFalse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCollFalse.Location = new System.Drawing.Point(237, 162);
-            this.txtCollFalse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCollFalse.Margin = new System.Windows.Forms.Padding(4);
             this.txtCollFalse.Name = "txtCollFalse";
             this.txtCollFalse.ReadOnly = true;
             this.txtCollFalse.Size = new System.Drawing.Size(629, 26);
@@ -407,7 +428,7 @@
             // 
             this.txtColl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColl.Location = new System.Drawing.Point(237, 118);
-            this.txtColl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtColl.Margin = new System.Windows.Forms.Padding(4);
             this.txtColl.Name = "txtColl";
             this.txtColl.ReadOnly = true;
             this.txtColl.Size = new System.Drawing.Size(629, 26);
@@ -427,7 +448,7 @@
             // 
             this.txtRawXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRawXML.Location = new System.Drawing.Point(237, 74);
-            this.txtRawXML.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRawXML.Margin = new System.Windows.Forms.Padding(4);
             this.txtRawXML.Name = "txtRawXML";
             this.txtRawXML.ReadOnly = true;
             this.txtRawXML.Size = new System.Drawing.Size(629, 26);
@@ -451,7 +472,7 @@
             this.Controls.Add(this.tabCtl);
             this.Controls.Add(this.menuMain);
             this.MainMenuStrip = this.menuMain;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1110, 624);
             this.Name = "frmDash";
@@ -511,6 +532,8 @@
         private System.Windows.Forms.ToolStripMenuItem includeHeadersToolStripMenuItem;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem retrieveAllCollectionsToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 

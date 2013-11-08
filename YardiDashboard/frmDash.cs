@@ -460,6 +460,8 @@ namespace YardiDashboard
         private void retrieveCollectionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string keyword;
+            string propCode;
+            string propName;
             if (lvClients.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Please select a client", "Error", MessageBoxButtons.OK);
@@ -469,6 +471,7 @@ namespace YardiDashboard
             foreach (ListViewItem row in lvClients.SelectedItems)
             {
                 keyword = row.SubItems[0].Text;
+
                 AddMessage("Retrieving data for " + keyword);
                 GetCollections_Local(keyword);
 
@@ -481,7 +484,8 @@ namespace YardiDashboard
         }
         private void AddMessage(string msg)
         {
-            lvMsg.Items.Add(DateTime.Now.ToString("MM/dd/yyyy hh:mm ")  + msg);
+            ListViewItem lvi = new ListViewItem(DateTime.Now.ToString("MM/dd/yyyy hh:mm ") + msg);
+            lvMsg.Items.Add(lvi);
         }
 
         private void DoExtract(bool outputHeader)
@@ -558,6 +562,8 @@ namespace YardiDashboard
             }
             tabCtl.SelectTab("tabRetrieval");
             string keyword = lvClients.SelectedItems[0].SubItems[0].Text;
+            string propCode = lvClients.SelectedItems[0].SubItems[1].Text;
+            string propName = lvClients.SelectedItems[0].SubItems[2].Text;
             //XElement props = GetPropertyConfiguration(keyword);
             XElement props = GetPropertyConfiguration_Local(keyword);
             if (props == null)
@@ -571,7 +577,7 @@ namespace YardiDashboard
                 AddMessage(res);
                 return;
             }
-            AddMessage(String.Format("---- Property Configurations for {0} properties for {1}",props.Descendants("Property").Count(), keyword));
+            AddMessage(String.Format("---- Property Configurations for {0} properties for {1} - {2}: {3} ----",props.Descendants("Property").Count(), keyword,propCode,propName));
             foreach ( XElement prop in props.Descendants("Property"))
             {
                     AddMessage(GetPropInfo(prop));
@@ -618,6 +624,32 @@ namespace YardiDashboard
         private void restartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void retrieveAllCollectionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string keyword; string propCode; string propName; bool enabled;
+            tabCtl.SelectTab("tabRetrieval");
+            foreach (ListViewItem row in lvClients.Items)
+            {
+                keyword = row.SubItems[0].Text;
+                propCode = row.SubItems[1].Text;
+                propName = row.SubItems[2].Text;
+                if (!bool.TryParse(row.SubItems[3].Text, out enabled))
+                {
+                    AddMessage(String.Format("Invalid Enabled column {3} for ID - {0}-{1} : {2} (skipped)", keyword, propCode, propName, row.SubItems[3].Text));
+                    continue;
+                }
+                if (!enabled)
+                {
+                    AddMessage(String.Format("Skipped Disabled entry for ID - {0}-{1} : {2}", keyword, propCode, propName, row.SubItems[3].Text));
+                    continue;
+                }
+                AddMessage(String.Format("Retrieving data for ID {0}-{1} : {2}", keyword, propCode, propName));
+                GetCollections_Local(keyword);
+
+                //AddMessage("Retrieval complete " + keyword);
+            }
         }
     }
 }
