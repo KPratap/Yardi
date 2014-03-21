@@ -424,6 +424,21 @@ namespace YardiClients
             this.Close();
         }
 
+        private void copyClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (isLoading) return;
+            var selItems = lvClients.SelectedItems;
+            if (selItems.Count > 0)
+            {
+                currMode = EditMode.Edit;
+                ListViewItem lvi = lvClients.SelectedItems[0];
+                pnlDetl.Enabled = true;
+                txtShortName.ReadOnly = true;
+                LoadDetails(lvi);
+                lvClients.Enabled = false;
+            }
+        }
+
 
     }
 }

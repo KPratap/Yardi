@@ -82,6 +82,7 @@ namespace YardiDashboard
 
         private void frmDash_Load(object sender, EventArgs e)
         {
+            SetRunMode(runUnattendedToolStripMenuItem.Checked);
             try
             {
 
@@ -488,7 +489,7 @@ namespace YardiDashboard
             lvMsg.Items.Add(lvi);
         }
 
-        private void DoExtract(bool outputHeader)
+        private void DoExtract(bool outputHeader, bool dbg = false)
         {
             string fn = GetFileToExtract(txtRawXML.Text);
             if (fn == string.Empty)
@@ -499,7 +500,7 @@ namespace YardiDashboard
                 AddMessage("Extracting file " + fn);
                 YardiData.YardiData yd = new YardiData.YardiData(txtRawXML.Text, txtColl.Text, txtCollFalse.Text);
                 yd.OutputHeader = outputHeader;
-                yd.Extract(fn);
+                yd.Extract(fn, dbg);
                 AddMessage("File Extracted to " + yd.foutColl);
                 if (yd.CollStatusFalseCount > 0)
                     AddMessage("File Extracted to " + yd.foutCollFalse);
@@ -539,7 +540,6 @@ namespace YardiDashboard
 
         private void excludeHeadersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
             DoExtract(false);
         }
 
@@ -628,8 +628,15 @@ namespace YardiDashboard
 
         private void retrieveAllCollectionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string keyword; string propCode; string propName; bool enabled;
             tabCtl.SelectTab("tabRetrieval");
+            GetAllCollections();
+
+        }
+
+        private void GetAllCollections()
+        {
+            string keyword; string propCode; string propName; bool enabled;
+
             foreach (ListViewItem row in lvClients.Items)
             {
                 keyword = row.SubItems[0].Text;
@@ -650,6 +657,59 @@ namespace YardiDashboard
 
                 //AddMessage("Retrieval complete " + keyword);
             }
+        }
+
+        private void chToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LaunchTool(_YardiClientsTool);
+        }
+
+        private void setFileLocationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LaunchTool(_FileLocationsTool);
+
+        }
+
+        private void mnuExtract_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unattendedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void runUnattendedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetRunMode(runUnattendedToolStripMenuItem.Checked);
+        }
+
+        private void SetRunMode(bool unatt)
+        {
+            tabCtl.SelectTab("tabRetrieval");
+            if (unatt)
+            {
+                lblRunMode.Text = "Running Unattended";
+                lblRunMode.BackColor = Color.Red;
+                AddMessage("..started Unattended Run mode ..");
+            }
+            else
+            {
+                lblRunMode.Text = string.Empty;
+                lblRunMode.BackColor = Control.DefaultBackColor;
+                AddMessage("..stopped Unattended Run mode ..");
+            }
+        }
+
+        private void debugFormatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoExtract(true, true);
         }
     }
 }

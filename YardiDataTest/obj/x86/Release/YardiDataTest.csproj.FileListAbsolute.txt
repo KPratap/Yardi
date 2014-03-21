@@ -8,3 +8,14 @@ C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\NSConfig.dll
 C:\Docs\Pers\YardiConfig\YardiDataTest\bin\Release\NSConfig.pdb
 C:\Docs\Pers\YardiConfig\YardiDataTest\obj\x86\Release\YardiDataTest.exe
 C:\Docs\Pers\YardiConfig\YardiDataTest\obj\x86\Release\YardiDataTest.pdb
+C:\Development\Yardi\YardiDataTest\bin\Release\Collections Sample.xml
+C:\Development\Yardi\YardiDataTest\bin\Release\Copy of DataElements.xml
+C:\Development\Yardi\YardiDataTest\bin\Release\DataElements.xml
+C:\Development\Yardi\YardiDataTest\bin\Release\YardiDataTest.exe.config
+C:\Development\Yardi\YardiDataTest\bin\Release\YardiDataTest.exe
+C:\Development\Yardi\YardiDataTest\bin\Release\YardiDataTest.pdb
+C:\Development\Yardi\YardiDataTest\bin\Release\NSConfig.dll
+C:\Development\Yardi\YardiDataTest\bin\Release\NSConfig.pdb
+C:\Development\Yardi\YardiDataTest\obj\x86\Release\YardiDataTest.csprojResolveAssemblyReference.cache
+C:\Development\Yardi\YardiDataTest\obj\x86\Release\YardiDataTest.exe
+C:\Development\Yardi\YardiDataTest\obj\x86\Release\YardiDataTest.pdb

@@ -19,7 +19,7 @@ namespace YardiData
             foreach (XElement sub in src.Descendants("CustomRecords"))
             {
 
-                if (sub.Descendants("Records") != null)
+                if (sub.Descendants("Record") != null)
                 {
                     GetCustomRecord(sub, tcr);
                 }
@@ -56,6 +56,18 @@ namespace YardiData
                     if (cr.Element("Value") != null)
                         tcr.Other4Val = cr.Element("Value").Value;
                 }
+                if (cr.Element("Name") != null && cr.Element("Name").Value == "Employer")
+                {
+                    tcr.EmployerName = cr.Element("Name").Value;
+                    if (cr.Element("Value") != null)
+                        tcr.EmployerNameVal = cr.Element("Value").Value;
+                }
+                if (cr.Element("Name") != null && cr.Element("Name").Value == "Work Phone")
+                {
+                    tcr.EmployerPhone = cr.Element("Name").Value;
+                    if (cr.Element("Value") != null)
+                        tcr.EmployerPhoneVal = cr.Element("Value").Value;
+                }
             }
         }
     }
@@ -80,5 +92,9 @@ namespace YardiData
         public string Other3Val { get; set; }
         public string Other4Name { get; set; }
         public string Other4Val { get; set; }
+        public string EmployerName { get; set; }
+        public string EmployerNameVal { get; set; }
+        public string EmployerPhone { get; set; }
+        public string EmployerPhoneVal { get; set; }
     }
 }

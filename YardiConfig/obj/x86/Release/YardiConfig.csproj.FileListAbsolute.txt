@@ -10,3 +10,16 @@ C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.Properties.Reso
 C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.exe
 C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.pdb
 C:\Docs\Pers\YardiConfig\YardiConfig\obj\x86\Release\YardiConfig.csproj.GenerateResource.Cache
+C:\Development\Yardi\YardiConfig\bin\Release\Config.xml
+C:\Development\Yardi\YardiConfig\bin\Release\Clients.xml
+C:\Development\Yardi\YardiConfig\bin\Release\YardiConfig.exe.config
+C:\Development\Yardi\YardiConfig\bin\Release\YardiConfig.exe
+C:\Development\Yardi\YardiConfig\bin\Release\YardiConfig.pdb
+C:\Development\Yardi\YardiConfig\bin\Release\NSConfig.dll
+C:\Development\Yardi\YardiConfig\bin\Release\NSConfig.pdb
+C:\Development\Yardi\YardiConfig\obj\x86\Release\YardiConfig.csprojResolveAssemblyReference.cache
+C:\Development\Yardi\YardiConfig\obj\x86\Release\YardiConfig.frmConfig.resources
+C:\Development\Yardi\YardiConfig\obj\x86\Release\YardiConfig.Properties.Resources.resources
+C:\Development\Yardi\YardiConfig\obj\x86\Release\YardiConfig.csproj.GenerateResource.Cache
+C:\Development\Yardi\YardiConfig\obj\x86\Release\YardiConfig.exe
+C:\Development\Yardi\YardiConfig\obj\x86\Release\YardiConfig.pdb

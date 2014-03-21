@@ -2,3 +2,8 @@ C:\Docs\Pers\YardiConfig\YardiReports\bin\Release\YardiReports.dll
 C:\Docs\Pers\YardiConfig\YardiReports\bin\Release\YardiReports.pdb
 C:\Docs\Pers\YardiConfig\YardiReports\obj\Release\YardiReports.dll
 C:\Docs\Pers\YardiConfig\YardiReports\obj\Release\YardiReports.pdb
+C:\Development\Yardi\YardiReports\bin\Release\YardiReports.dll
+C:\Development\Yardi\YardiReports\bin\Release\YardiReports.pdb
+C:\Development\Yardi\YardiReports\obj\Release\YardiReports.csprojResolveAssemblyReference.cache
+C:\Development\Yardi\YardiReports\obj\Release\YardiReports.dll
+C:\Development\Yardi\YardiReports\obj\Release\YardiReports.pdb

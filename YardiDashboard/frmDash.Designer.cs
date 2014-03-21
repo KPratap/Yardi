@@ -33,8 +33,10 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuYardiFileLocator = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuYardiClients = new System.Windows.Forms.ToolStripMenuItem();
+            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setFileLocationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.runUnattendedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExtract = new System.Windows.Forms.ToolStripMenuItem();
             this.excludeHeadersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.includeHeadersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +71,8 @@
             this.lblColl = new System.Windows.Forms.Label();
             this.txtRawXML = new System.Windows.Forms.TextBox();
             this.lblRawXML = new System.Windows.Forms.Label();
+            this.lblRunMode = new System.Windows.Forms.Label();
+            this.debugFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.tabCtl.SuspendLayout();
             this.tabClients.SuspendLayout();
@@ -81,8 +85,7 @@
             // 
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.mnuYardiFileLocator,
-            this.mnuYardiClients,
+            this.actionToolStripMenuItem,
             this.mnuExtract,
             this.helpToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
@@ -115,30 +118,48 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // mnuYardiFileLocator
+            // actionToolStripMenuItem
             // 
-            this.mnuYardiFileLocator.Name = "mnuYardiFileLocator";
-            this.mnuYardiFileLocator.Size = new System.Drawing.Size(165, 24);
-            this.mnuYardiFileLocator.Text = "Change File Locations";
-            this.mnuYardiFileLocator.ToolTipText = "Launch Yardi File Locator tool";
-            this.mnuYardiFileLocator.Click += new System.EventHandler(this.mnuYardiFileLocator_Click);
+            this.actionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chToolStripMenuItem,
+            this.setFileLocationsToolStripMenuItem,
+            this.runUnattendedToolStripMenuItem});
+            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
+            this.actionToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.actionToolStripMenuItem.Text = "Action";
             // 
-            // mnuYardiClients
+            // chToolStripMenuItem
             // 
-            this.mnuYardiClients.Name = "mnuYardiClients";
-            this.mnuYardiClients.Size = new System.Drawing.Size(147, 24);
-            this.mnuYardiClients.Text = "Maintain Client List";
-            this.mnuYardiClients.ToolTipText = "Launch Yardi Client Setup Tool";
-            this.mnuYardiClients.Click += new System.EventHandler(this.mnuYardiClients_Click);
+            this.chToolStripMenuItem.Name = "chToolStripMenuItem";
+            this.chToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
+            this.chToolStripMenuItem.Text = "Maintain Client List";
+            this.chToolStripMenuItem.Click += new System.EventHandler(this.chToolStripMenuItem_Click);
+            // 
+            // setFileLocationsToolStripMenuItem
+            // 
+            this.setFileLocationsToolStripMenuItem.Name = "setFileLocationsToolStripMenuItem";
+            this.setFileLocationsToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
+            this.setFileLocationsToolStripMenuItem.Text = "Set File Locations";
+            this.setFileLocationsToolStripMenuItem.Click += new System.EventHandler(this.setFileLocationsToolStripMenuItem_Click);
+            // 
+            // runUnattendedToolStripMenuItem
+            // 
+            this.runUnattendedToolStripMenuItem.CheckOnClick = true;
+            this.runUnattendedToolStripMenuItem.Name = "runUnattendedToolStripMenuItem";
+            this.runUnattendedToolStripMenuItem.Size = new System.Drawing.Size(204, 24);
+            this.runUnattendedToolStripMenuItem.Text = "Run Unattended";
+            this.runUnattendedToolStripMenuItem.Click += new System.EventHandler(this.runUnattendedToolStripMenuItem_Click);
             // 
             // mnuExtract
             // 
             this.mnuExtract.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.excludeHeadersToolStripMenuItem,
-            this.includeHeadersToolStripMenuItem});
+            this.includeHeadersToolStripMenuItem,
+            this.debugFormatToolStripMenuItem});
             this.mnuExtract.Name = "mnuExtract";
             this.mnuExtract.Size = new System.Drawing.Size(179, 24);
             this.mnuExtract.Text = "Extract Collections Data";
+            this.mnuExtract.Click += new System.EventHandler(this.mnuExtract_Click);
             // 
             // excludeHeadersToolStripMenuItem
             // 
@@ -167,6 +188,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // tabCtl
             // 
@@ -176,11 +198,11 @@
             this.tabCtl.Controls.Add(this.tabClients);
             this.tabCtl.Controls.Add(this.tabRetrieval);
             this.tabCtl.Controls.Add(this.tabFileLocations);
-            this.tabCtl.Location = new System.Drawing.Point(16, 53);
+            this.tabCtl.Location = new System.Drawing.Point(16, 76);
             this.tabCtl.Margin = new System.Windows.Forms.Padding(4);
             this.tabCtl.Name = "tabCtl";
             this.tabCtl.SelectedIndex = 0;
-            this.tabCtl.Size = new System.Drawing.Size(1049, 503);
+            this.tabCtl.Size = new System.Drawing.Size(1049, 480);
             this.tabCtl.TabIndex = 1;
             // 
             // tabClients
@@ -190,7 +212,7 @@
             this.tabClients.Margin = new System.Windows.Forms.Padding(4);
             this.tabClients.Name = "tabClients";
             this.tabClients.Padding = new System.Windows.Forms.Padding(4);
-            this.tabClients.Size = new System.Drawing.Size(1041, 474);
+            this.tabClients.Size = new System.Drawing.Size(1041, 451);
             this.tabClients.TabIndex = 1;
             this.tabClients.Text = "Client List";
             this.tabClients.UseVisualStyleBackColor = true;
@@ -214,7 +236,7 @@
             this.lvClients.Location = new System.Drawing.Point(13, 25);
             this.lvClients.Margin = new System.Windows.Forms.Padding(4);
             this.lvClients.Name = "lvClients";
-            this.lvClients.Size = new System.Drawing.Size(1009, 420);
+            this.lvClients.Size = new System.Drawing.Size(1009, 397);
             this.lvClients.TabIndex = 21;
             this.lvClients.UseCompatibleStateImageBehavior = false;
             this.lvClients.View = System.Windows.Forms.View.Details;
@@ -288,7 +310,7 @@
             this.tabRetrieval.Location = new System.Drawing.Point(4, 25);
             this.tabRetrieval.Margin = new System.Windows.Forms.Padding(4);
             this.tabRetrieval.Name = "tabRetrieval";
-            this.tabRetrieval.Size = new System.Drawing.Size(1041, 474);
+            this.tabRetrieval.Size = new System.Drawing.Size(1041, 451);
             this.tabRetrieval.TabIndex = 2;
             this.tabRetrieval.Text = "Retrieval Status";
             this.tabRetrieval.UseVisualStyleBackColor = true;
@@ -346,7 +368,7 @@
             this.tabFileLocations.Margin = new System.Windows.Forms.Padding(4);
             this.tabFileLocations.Name = "tabFileLocations";
             this.tabFileLocations.Padding = new System.Windows.Forms.Padding(4);
-            this.tabFileLocations.Size = new System.Drawing.Size(1041, 474);
+            this.tabFileLocations.Size = new System.Drawing.Size(1041, 451);
             this.tabFileLocations.TabIndex = 0;
             this.tabFileLocations.Text = "File Locations";
             this.tabFileLocations.UseVisualStyleBackColor = true;
@@ -464,11 +486,30 @@
             this.lblRawXML.TabIndex = 22;
             this.lblRawXML.Text = "Raw XML File";
             // 
+            // lblRunMode
+            // 
+            this.lblRunMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRunMode.ForeColor = System.Drawing.Color.Yellow;
+            this.lblRunMode.Location = new System.Drawing.Point(131, 43);
+            this.lblRunMode.Name = "lblRunMode";
+            this.lblRunMode.Size = new System.Drawing.Size(773, 29);
+            this.lblRunMode.TabIndex = 2;
+            this.lblRunMode.Text = "Run mode";
+            this.lblRunMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // debugFormatToolStripMenuItem
+            // 
+            this.debugFormatToolStripMenuItem.Name = "debugFormatToolStripMenuItem";
+            this.debugFormatToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+            this.debugFormatToolStripMenuItem.Text = "Debug Format";
+            this.debugFormatToolStripMenuItem.Click += new System.EventHandler(this.debugFormatToolStripMenuItem_Click);
+            // 
             // frmDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 588);
+            this.Controls.Add(this.lblRunMode);
             this.Controls.Add(this.tabCtl);
             this.Controls.Add(this.menuMain);
             this.MainMenuStrip = this.menuMain;
@@ -497,8 +538,6 @@
         private System.Windows.Forms.MenuStrip menuMain;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mnuYardiFileLocator;
-        private System.Windows.Forms.ToolStripMenuItem mnuYardiClients;
         private System.Windows.Forms.TabControl tabCtl;
         private System.Windows.Forms.TabPage tabFileLocations;
         private System.Windows.Forms.TabPage tabClients;
@@ -534,6 +573,12 @@
         private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem retrieveAllCollectionsToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setFileLocationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem runUnattendedToolStripMenuItem;
+        private System.Windows.Forms.Label lblRunMode;
+        private System.Windows.Forms.ToolStripMenuItem debugFormatToolStripMenuItem;
     }
 }
 

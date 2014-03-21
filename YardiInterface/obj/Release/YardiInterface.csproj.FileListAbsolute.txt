@@ -12,7 +12,7 @@ C:\Development\Yardi\YardiInterface\bin\Release\YardiInterface.dll.config
 C:\Development\Yardi\YardiInterface\bin\Release\YardiInterface.dll
 C:\Development\Yardi\YardiInterface\bin\Release\YardiInterface.XmlSerializers.dll
 C:\Development\Yardi\YardiInterface\bin\Release\YardiInterface.pdb
-C:\Development\Yardi\YardiInterface\obj\Release\YardiInterface.csprojResolveAssemblyReference.cache
 C:\Development\Yardi\YardiInterface\obj\Release\YardiInterface.dll
 C:\Development\Yardi\YardiInterface\obj\Release\YardiInterface.pdb
 C:\Development\Yardi\YardiInterface\obj\Release\YardiInterface.XmlSerializers.dll
+C:\Development\Yardi\YardiInterface\obj\Release\YardiInterface.csprojResolveAssemblyReference.cache

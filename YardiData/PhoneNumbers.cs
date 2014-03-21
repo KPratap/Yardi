@@ -15,6 +15,7 @@ namespace YardiData
         public Dictionary<string, string> IdValues;
         public void GetIdValues(XElement src)
         {
+            if (src == null) return;
             foreach (XElement sub in src.Descendants("Phone"))
             {
                 if (sub.Attribute("PhoneType") != null)

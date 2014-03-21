@@ -5,3 +5,11 @@ C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Release\NSConfig.dll
 C:\Docs\Pers\YardiConfig\CreateDataElementFile\bin\Release\NSConfig.pdb
 C:\Docs\Pers\YardiConfig\CreateDataElementFile\obj\x86\Release\CreateDataElementFile.exe
 C:\Docs\Pers\YardiConfig\CreateDataElementFile\obj\x86\Release\CreateDataElementFile.pdb
+C:\Development\Yardi\CreateDataElementFile\bin\Release\Collections Sample.xml
+C:\Development\Yardi\CreateDataElementFile\bin\Release\CreateDataElementFile.exe
+C:\Development\Yardi\CreateDataElementFile\bin\Release\CreateDataElementFile.pdb
+C:\Development\Yardi\CreateDataElementFile\bin\Release\NSConfig.dll
+C:\Development\Yardi\CreateDataElementFile\bin\Release\NSConfig.pdb
+C:\Development\Yardi\CreateDataElementFile\obj\x86\Release\CreateDataElementFile.csprojResolveAssemblyReference.cache
+C:\Development\Yardi\CreateDataElementFile\obj\x86\Release\CreateDataElementFile.exe
+C:\Development\Yardi\CreateDataElementFile\obj\x86\Release\CreateDataElementFile.pdb

@@ -38,8 +38,11 @@ namespace YardiData
         {
             get { return cntFalseCount; }
         }
+        private int ftransMaxCount = 0;
+        private int tenantMaxCnt = 0;
+        private bool debugFormat = false;
 
-        IEnumerable<XElement> dateElements;
+        //IEnumerable<XElement> dateElements;
         public YardiData(string rawfolder, string collFolder, string collFalseFolder)
         {
             RawFolder = rawfolder;
@@ -55,8 +58,9 @@ namespace YardiData
                 throw ex;
             }
         }
-        public void Extract(string fname)
+        public void Extract(string fname, bool dbg=false)
         {
+            debugFormat = dbg;
             FileName = fname;
 
             foutColl = Path.GetFileName(fname);
@@ -112,7 +116,6 @@ namespace YardiData
             foreach (XElement prop in propfiles.Descendants("PropertyFile").Descendants("Property"))
             {
                 dictProp = ExtractPropertyInfo(prop);
-
             }
 
             WriteSummary(writer);
@@ -120,6 +123,8 @@ namespace YardiData
             tempStr = string.Empty;
             cntFalseCount = 0;
             bool collStatusFalse = false;
+            var cntLease = propfiles.Descendants("LeaseFile").Count();
+
             foreach (XElement lease in propfiles.Descendants("LeaseFile"))
             {
                 collStatusFalse = false;
@@ -132,6 +137,7 @@ namespace YardiData
                     collStatusFalse = true;
                 }
                 ftransCnt = lease.Descendants("FileTransactions").Count();
+                ftransMaxCount = GetElementsMaxCount("FileTransactions");
                 dictFiletrans = new List<Dictionary<string, string>>();
 
                 if (ftransCnt > 0)
@@ -147,7 +153,7 @@ namespace YardiData
                         foreach (var x in fTrans.IdValues)
                         {
                             cnt++;
-                            if (cnt > 10) break;
+                            if (cnt > ftransMaxCount) break;
                             dictItem = new Dictionary<string, string>();
                             if (cnt == 1)
                                 dictItem = ExtractFtrans(fTrans, x.Key, true);
@@ -158,20 +164,19 @@ namespace YardiData
                     }
                 }
 
-                if (dictFiletrans.Count < 10)
-                    AddBlankTransactions(dictFiletrans);
+                if (dictFiletrans.Count < ftransMaxCount)
+                    AddBlankTransactions(dictFiletrans, ftransMaxCount);
 
                 tenantCnt = lease.Descendants("Tenants").Count();
+                tenantMaxCnt = GetElementsMaxCount("Tenants");
                 dictTenants = new List<Dictionary<string, string>>();
                 if (tenantCnt > 0)
                 {
                     int cnt = 0;
-                    //if (tenantCnt > 3)
-                    //    WriteMessage("Tenant count > 3; only importing 3");
                     foreach (XElement tenant in lease.Descendants("Tenants"))
                     {
                         cnt++;
-                        if (cnt > 3) break;
+                        if (cnt > tenantMaxCnt) break;
                         if (cnt == 1)
                             dictTenants.Add(ExtractTenantInfo(tenant, true));  // primary tenant
                         else 
@@ -179,18 +184,15 @@ namespace YardiData
                     }
 
                     if (dictTenants.Count > 1)
-                        ReplicateAddress();
+                      ReplicateAddress();
                 }
-                if (dictTenants.Count < 3)
-                    AddBlankTenants(dictTenants);
+                if (dictTenants.Count < tenantMaxCnt)
+                    AddBlankTenants(dictTenants, tenantMaxCnt);
 
-                //if (tenantCnt > 0 && ftransCnt > 0)
-                //{
-                    if (!collStatusFalse)
-                        WriteLease(writer);
-                    else
-                        WriteLease(writerFalse);
-                //}
+                if (!collStatusFalse)
+                    WriteLease(writer);
+                else
+                    WriteLease(writerFalse);
             }
 
         }
@@ -207,11 +209,11 @@ namespace YardiData
                 }
             }
         }
-        private void AddBlankTenants(List<Dictionary<string, string>> dictTenants)
+        private void AddBlankTenants(List<Dictionary<string, string>> dictTenants, int max)
         {
             if (dictTenants.Count == 0) return;
             Dictionary<string, string> dict;
-            int toAdd = (3 - dictTenants.Count);
+            int toAdd = (max - dictTenants.Count);
 
             for (int x = 0; x < toAdd; x++)
             {
@@ -223,11 +225,11 @@ namespace YardiData
             }
         }
 
-        private void AddBlankTransactions(List<Dictionary<string, string>> dictFiletrans)
+        private void AddBlankTransactions(List<Dictionary<string, string>> dictFiletrans, int max)
         {
             if (dictFiletrans.Count == 0) return;
             Dictionary<string, string> dict;
-            int toAdd = (10 - dictFiletrans.Count);
+            int toAdd = (max - dictFiletrans.Count);
 
             for (int x = 0; x < toAdd; x++)
             {
@@ -247,41 +249,74 @@ namespace YardiData
         private void WriteLease(StreamWriter writer)
         {
             string tempStr = string.Empty;
-            Dictionary<string, string>[] v = new Dictionary<string, string>[14];
-            for (int ix = 0; ix < v.Count(); ix++)
+            string tempHdr = string.Empty;
+            Dictionary<string, string>[] v = new Dictionary<string, string>[tenantMaxCnt+ftransMaxCount+1]; // tenants+transactions+lease
+            v[0] = dictLease;
+            if (dictTenants != null)
             {
-                if (ix == 0) 
-                    v[ix] = dictLease;
-                else if (ix >= 1 && ix <= 3 && dictTenants.Count > 0)
-                    {
-                        if (dictTenants != null) v[ix] = dictTenants[ix - 1];
-                    }
-                    else if (ix > 3 && dictFiletrans.Count > 0)
-                    {
-                        if (dictFiletrans != null) v[ix] = dictFiletrans[ix - 4];
-                    }
+                for (int ix = 1; ix <= tenantMaxCnt; ix++)
+                {
+                    v[ix] = dictTenants[ix - 1];
+                }
             }
-            if (OutputHeader)
-            {
-                tempStr = GetString(true, v);
-                writer.WriteLine(tempStr);
-            }
+             if (dictFiletrans != null) 
+             {
+                 for (int ix = tenantMaxCnt + 1; ix <= tenantMaxCnt + ftransMaxCount; ix++ )
+                 {
+                     v[ix] = dictFiletrans[ix - tenantMaxCnt - 1];
+                 }
+             }
+            tempHdr = GetString(true, v);
             tempStr = GetString(false, v);
+
+            if (OutputHeader)
+                writer.WriteLine(tempHdr);
             writer.WriteLine(tempStr);
+            if (debugFormat)
+                writer.WriteLine(GetStringDebug(tempHdr, tempStr));
         }
+
         private void WriteSummary(StreamWriter writer)
         {
-            string tempStr;
+            string tempStr = string.Empty;
+            string tempHdr = string.Empty;
             // Write Summary + prop combined
-            tempStr = string.Empty;
-            if (OutputHeader)
-            {
-                tempStr = GetString(true, new Dictionary<string, string>[] { dictProp, dictSumm });
-                writer.WriteLine(tempStr);
-            }
+            tempHdr = GetString(true, new Dictionary<string, string>[] { dictProp, dictSumm });
             tempStr = GetString(false, new Dictionary<string, string>[] { dictProp, dictSumm });
+
+            if (OutputHeader)
+                writer.WriteLine(tempHdr);
             writer.WriteLine(tempStr);
+            if (debugFormat)
+                writer.WriteLine(GetStringDebug(tempHdr, tempStr));
         }
+
+        private string GetStringDebug(string tempHdr, string tempStr)
+        {
+            StringBuilder sline = new StringBuilder();
+            sline.Append("------------- Start Record Details --------------\r\n");
+            if (string.IsNullOrEmpty(tempHdr) || string.IsNullOrEmpty(tempStr))
+                return "Error: input strings missing";
+ 
+            var hdr = tempHdr.Split('|');
+            var data = tempStr.Split('|');
+            if (hdr.Length != data.Length)
+                return "Error: Unequal length arrays";
+
+            for (int i = 0; i < hdr.Length; i++)
+            {
+                if (hdr[i].StartsWith("TenantFirstName"))
+                    sline.Append("\r\n--- Tenant Info ---\r\n");
+                if (hdr[i].StartsWith("AssignedAmount"))
+                    sline.Append("\r\n--- File Transactions Info ---\r\n");
+                sline.Append(hdr[i] + " = " + (!string.IsNullOrEmpty(data[i]) ? data[i] : "<empty>") + "\r\n");
+            }
+            sline.Append("------------- End  Record Details --------------\r\n");
+
+            return sline.ToString();
+        }
+
+
 
         private string GetString(bool hdr, Dictionary<string, string>[] dict)
         {
@@ -293,7 +328,9 @@ namespace YardiData
                 foreach (var x in dict[ix].Keys)
                 {
                     if (!hdr)
-                    { if (dict[ix] != null) st.Add(dict[ix][x]); }
+                    { 
+                        if (dict[ix] != null) st.Add(dict[ix][x]); 
+                    }
                     else st.Add(x);
                 }
             }
@@ -310,6 +347,10 @@ namespace YardiData
             PhoneNumbers ph = new PhoneNumbers();
             if (tenant.Descendants("PersonDetails") != null)
                 ph.GetIdValues(tenant.Descendants("PersonDetails").FirstOrDefault());
+
+            PhoneNumbers contactph = new PhoneNumbers();
+            if (tenant.Descendants("Contact") != null)
+                contactph.GetIdValues(tenant.Descendants("Contact").FirstOrDefault());
             // gather up addresses
             Addresses addr = new Addresses();
             if (tenant.Descendants("PersonDetails") != null)
@@ -325,7 +366,7 @@ namespace YardiData
                     isDate = true;
                 else isDate = false;
 
-                if (de.Attribute("phonetype") != null)
+                if ( de.Attribute("location").Value.Equals("PersonDetails/Phone/PhoneNumber") && de.Attribute("phonetype") != null)
                 {
                     if (ph.IdValues.ContainsKey(de.Attribute("phonetype").Value))
                         st.Add(de.Attribute("outputname").Value, ph.IdValues[de.Attribute("phonetype").Value]);
@@ -333,7 +374,7 @@ namespace YardiData
                         st.Add(de.Attribute("outputname").Value, string.Empty);
                 }
                 else
-                    if (de.Attribute("addresstype") != null)
+                    if (de.Attribute("location").Value.StartsWith("PersonDetails/Address") && de.Attribute("addresstype") != null)
                     {
                         if (addr.IdValues.ContainsKey(de.Attribute("addresstype").Value))
                         {
@@ -365,23 +406,47 @@ namespace YardiData
                     else if (de.Attribute("location").Value.Contains("CustomRecords/Other"))
                     {
                         if (de.Attribute("location").Value == "CustomRecords/Other1")
-                            if (primaryTenant) st.Add(de.Attribute("outputname").Value, tc.IdValues.Other1Val);
+                            //if (primaryTenant) 
+                                st.Add(de.Attribute("outputname").Value, tc.IdValues.Other1Val);
                         if (de.Attribute("location").Value == "CustomRecords/Other2")
-                            if (primaryTenant) st.Add(de.Attribute("outputname").Value, tc.IdValues.Other2Val);
+                            //if (primaryTenant) 
+                                st.Add(de.Attribute("outputname").Value, tc.IdValues.Other2Val);
                         if (de.Attribute("location").Value == "CustomRecords/Other3")
-                            if (primaryTenant) st.Add(de.Attribute("outputname").Value, tc.IdValues.Other3Val);
+                            //if (primaryTenant) 
+                                st.Add(de.Attribute("outputname").Value, tc.IdValues.Other3Val);
                         if (de.Attribute("location").Value == "CustomRecords/Other4")
-                            if (primaryTenant) st.Add(de.Attribute("outputname").Value, tc.IdValues.Other4Val);
+                            //if (primaryTenant) 
+                                st.Add(de.Attribute("outputname").Value, tc.IdValues.Other4Val);
                     }
-                    else if (primaryTenant)
-                    { if (!isDate) st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
-                    else st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant).Replace("-",""));
-                    }
-                    else if (!primaryTenant)
+                    else if (de.Attribute("location").Value == "CustomRecords/Employer")
                     {
-                        if (!de.Attribute("location").Value.StartsWith("Contact/"))
-                            st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
+                        st.Add(de.Attribute("outputname").Value, tc.IdValues.EmployerNameVal);
                     }
+                    else if (de.Attribute("location").Value == "CustomRecords/EmployerPhone")
+                    {
+                        st.Add(de.Attribute("outputname").Value, tc.IdValues.EmployerPhoneVal);
+                    }
+                    else
+                    {
+                        if (primaryTenant)
+                        {
+                            if (de.Attribute("location").Value.Equals("Contact/Phone/PhoneNumber") && de.Attribute("phonetype") != null)
+                                st.Add(de.Attribute("outputname").Value, contactph.IdValues[de.Attribute("phonetype").Value]);
+                            else
+                            {
+                                if (!isDate)
+                                    st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
+                                else st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant).Replace("-", ""));
+                            }
+                        }
+                        else
+                        {
+                            if (!isDate)
+                                st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
+                            else st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant).Replace("-", ""));
+                        }
+                    }
+                    
             }
             return st;
         }
@@ -399,7 +464,19 @@ namespace YardiData
             }
             return string.Join("|", st);
         }
+        private int GetElementsMaxCount(string section)
+        {
+            int max = 0;
+            XDocument decfg = XDocument.Load("dataelements.xml");
 
+            XElement deSec = decfg.Descendants(section).FirstOrDefault();
+            if  (deSec == null) 
+                return -1;
+            if (deSec.HasAttributes && deSec.Attribute("maxcount") != null)
+                if (!int.TryParse(deSec.Attribute("maxcount").Value, out max))
+                    return -2;
+            return max;
+        }
         private IEnumerable<XElement> GetElements(string section)
         {
             XDocument decfg = XDocument.Load("dataelements.xml");
@@ -542,6 +619,7 @@ namespace YardiData
         {
             Dictionary<string, string> st = new Dictionary<string, string>();
             var temp = GetElements("FileTransactions");
+            var secMaxCount = GetElementsMaxCount("FileTransactions");
             if (temp == null)
                 return st;
             int cnt = 0;
