@@ -49,7 +49,7 @@
     <dataelement location="CustomRecords/Other1" outputname="Other1" enabled ="1" />
     <dataelement location="CustomRecords/Other2" outputname="Other2" enabled ="1" />
     <dataelement location="CustomRecords/Other3" outputname="Other3" enabled ="1" />
-    <dataelement location="CustomRecords/Other4" outputname="Other4" enabled ="0" />
+    <dataelement location="CustomRecords/Other4" outputname="Other4" enabled ="1" />
     <dataelement location="CustomRecords/Employer" outputname="EmployerName" enabled ="1" note="added here looking at the data" />
     <dataelement location="CustomRecords/EmployerPhone" outputname="EmployerPhone" enabled ="1" note="added here looking at the data" />
   </Tenants>

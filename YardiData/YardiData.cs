@@ -364,7 +364,8 @@ namespace YardiData
             {
                 if (de.Attribute("date") != null && de.Attribute("date").Value == "1")
                     isDate = true;
-                else isDate = false;
+                else 
+                    isDate = false;
 
                 if ( de.Attribute("location").Value.Equals("PersonDetails/Phone/PhoneNumber") && de.Attribute("phonetype") != null)
                 {
@@ -428,25 +429,35 @@ namespace YardiData
                     }
                     else
                     {
+                        if (!primaryTenant)
+                        {
+                            if (de.Attribute("location").Value.Equals("Contact/Phone/PhoneNumber") && de.Attribute("phonetype") != null)
+                                continue;
+                            if (de.Attribute("location").Value.Equals("Contact/Name/FirstName") ||
+                                     de.Attribute("location").Value.Equals("Contact/Name/LastName"))
+                                continue;
+
+                            if (!isDate)
+                                st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
+                            else
+                                st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant).Replace("-", ""));
+                        }
                         if (primaryTenant)
                         {
                             if (de.Attribute("location").Value.Equals("Contact/Phone/PhoneNumber") && de.Attribute("phonetype") != null)
                                 st.Add(de.Attribute("outputname").Value, contactph.IdValues[de.Attribute("phonetype").Value]);
+                            else if (de.Attribute("location").Value.Equals("Contact/Name/FirstName") ||
+                                     de.Attribute("location").Value.Equals("Contact/Name/LastName"))
+                                st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
                             else
                             {
                                 if (!isDate)
                                     st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
-                                else st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant).Replace("-", ""));
+                                else 
+                                    st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant).Replace("-", ""));
                             }
                         }
-                        else
-                        {
-                            if (!isDate)
-                                st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
-                            else st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant).Replace("-", ""));
-                        }
                     }
-                    
             }
             return st;
         }
