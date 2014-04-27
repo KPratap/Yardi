@@ -430,10 +430,10 @@ namespace YardiClients
             var selItems = lvClients.SelectedItems;
             if (selItems.Count > 0)
             {
-                currMode = EditMode.Edit;
+                currMode = EditMode.Add;
                 ListViewItem lvi = lvClients.SelectedItems[0];
                 pnlDetl.Enabled = true;
-                txtShortName.ReadOnly = true;
+                txtShortName.ReadOnly = false;
                 LoadDetails(lvi);
                 lvClients.Enabled = false;
             }

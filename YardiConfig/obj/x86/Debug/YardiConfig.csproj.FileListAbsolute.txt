@@ -12,3 +12,16 @@ C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\Config.xml
 C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\Clients.xml
 C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\NSConfig.dll
 C:\Docs\Pers\YardiConfig\YardiConfig\bin\Debug\NSConfig.pdb
+C:\Development\Yardi\YardiConfig\bin\Debug\YardiConfig.exe.config
+C:\Development\Yardi\YardiConfig\obj\x86\Debug\YardiConfig.exe
+C:\Development\Yardi\YardiConfig\obj\x86\Debug\YardiConfig.pdb
+C:\Development\Yardi\YardiConfig\bin\Debug\Config.xml
+C:\Development\Yardi\YardiConfig\bin\Debug\Clients.xml
+C:\Development\Yardi\YardiConfig\bin\Debug\YardiConfig.exe
+C:\Development\Yardi\YardiConfig\bin\Debug\YardiConfig.pdb
+C:\Development\Yardi\YardiConfig\bin\Debug\NSConfig.dll
+C:\Development\Yardi\YardiConfig\bin\Debug\NSConfig.pdb
+C:\Development\Yardi\YardiConfig\obj\x86\Debug\YardiConfig.csprojResolveAssemblyReference.cache
+C:\Development\Yardi\YardiConfig\obj\x86\Debug\YardiConfig.frmConfig.resources
+C:\Development\Yardi\YardiConfig\obj\x86\Debug\YardiConfig.Properties.Resources.resources
+C:\Development\Yardi\YardiConfig\obj\x86\Debug\YardiConfig.csproj.GenerateResource.Cache

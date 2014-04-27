@@ -461,8 +461,8 @@ namespace YardiDashboard
         private void retrieveCollectionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string keyword;
-            string propCode;
-            string propName;
+            //string propCode;
+            //string propName;
             if (lvClients.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Please select a client", "Error", MessageBoxButtons.OK);

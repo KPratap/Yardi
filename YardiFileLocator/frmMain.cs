@@ -109,7 +109,7 @@ namespace YardiFileLocator
         private string RetrieveElement(string ele)
         {
            string val = string.Empty;
-           XElement entry =  ccfg.GetElement(_cfg, "rawxml");
+           XElement entry =  ccfg.GetElement(_cfg, ele);
            if (entry != null)
            {
                if (entry.Attribute("location") != null)

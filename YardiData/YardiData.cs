@@ -211,32 +211,38 @@ namespace YardiData
         }
         private void AddBlankTenants(List<Dictionary<string, string>> dictTenants, int max)
         {
-            if (dictTenants.Count == 0) return;
+            //if (dictTenants.Count == 0) return;
             Dictionary<string, string> dict;
             int toAdd = (max - dictTenants.Count);
 
             for (int x = 0; x < toAdd; x++)
             {
                 dict = new Dictionary<string, string>();
-                foreach (var itm in dictTenants[0].Keys)
-                    if (!(itm.StartsWith("Contact") || (itm.StartsWith("Other"))))
-                        dict[itm] = string.Empty;
+                if (dictTenants != null && dictTenants.Count > 0)
+                {
+                    foreach (var itm in dictTenants[0].Keys)
+                        if (!(itm.StartsWith("Contact") || (itm.StartsWith("Other"))))
+                            dict[itm] = string.Empty;
+                }
                 dictTenants.Add(dict);
             }
         }
 
         private void AddBlankTransactions(List<Dictionary<string, string>> dictFiletrans, int max)
         {
-            if (dictFiletrans.Count == 0) return;
+            //if (dictFiletrans.Count == 0) return;
             Dictionary<string, string> dict;
             int toAdd = (max - dictFiletrans.Count);
 
             for (int x = 0; x < toAdd; x++)
             {
                 dict = new Dictionary<string, string>();
-                foreach (var itm in dictFiletrans[0].Keys)
-                    if (itm != "AssignedAmount")
-                        dict[itm] = string.Empty;
+                if (dictFiletrans != null && dictFiletrans.Count > 0)
+                {
+                    foreach (var itm in dictFiletrans[0].Keys)
+                        if (itm != "AssignedAmount")
+                            dict[itm] = string.Empty;
+                }
                 dictFiletrans.Add(dict);
             }
         }
@@ -252,14 +258,14 @@ namespace YardiData
             string tempHdr = string.Empty;
             Dictionary<string, string>[] v = new Dictionary<string, string>[tenantMaxCnt+ftransMaxCount+1]; // tenants+transactions+lease
             v[0] = dictLease;
-            if (dictTenants != null)
+            if (dictTenants != null && dictTenants.Count > 0)
             {
                 for (int ix = 1; ix <= tenantMaxCnt; ix++)
                 {
                     v[ix] = dictTenants[ix - 1];
                 }
             }
-             if (dictFiletrans != null) 
+             if (dictFiletrans != null && dictFiletrans.Count > 0) 
              {
                  for (int ix = tenantMaxCnt + 1; ix <= tenantMaxCnt + ftransMaxCount; ix++ )
                  {
@@ -444,11 +450,21 @@ namespace YardiData
                         }
                         if (primaryTenant)
                         {
-                            if (de.Attribute("location").Value.Equals("Contact/Phone/PhoneNumber") && de.Attribute("phonetype") != null)
-                                st.Add(de.Attribute("outputname").Value, contactph.IdValues[de.Attribute("phonetype").Value]);
+                            if (de.Attribute("location").Value.Equals("Contact/Phone/PhoneNumber") &&
+                                de.Attribute("phonetype") != null)
+                            {
+                                if (contactph.IdValues .Count > 0)
+                                    st.Add(de.Attribute("outputname").Value, contactph.IdValues[de.Attribute("phonetype").Value]);
+                                else
+                                {
+                                    st.Add(de.Attribute("outputname").Value, string.Empty);
+                                }
+                            }
                             else if (de.Attribute("location").Value.Equals("Contact/Name/FirstName") ||
                                      de.Attribute("location").Value.Equals("Contact/Name/LastName"))
+                            {
                                 st.Add(de.Attribute("outputname").Value, GetItem(de.Attribute("location").Value, tenant));
+                            }
                             else
                             {
                                 if (!isDate)

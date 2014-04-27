@@ -3,3 +3,7 @@ C:\Docs\Pers\YardiConfig\YardiReports\bin\Debug\YardiReports.pdb
 C:\Docs\Pers\YardiConfig\YardiReports\obj\Debug\ResolveAssemblyReference.cache
 C:\Docs\Pers\YardiConfig\YardiReports\obj\Debug\YardiReports.dll
 C:\Docs\Pers\YardiConfig\YardiReports\obj\Debug\YardiReports.pdb
+C:\Development\Yardi\YardiReports\bin\Debug\YardiReports.dll
+C:\Development\Yardi\YardiReports\bin\Debug\YardiReports.pdb
+C:\Development\Yardi\YardiReports\obj\Debug\YardiReports.dll
+C:\Development\Yardi\YardiReports\obj\Debug\YardiReports.pdb

@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>966668_595911987116590_491582006_o.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -89,6 +92,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="966668_595911987116590_491582006_o.ico" />
     <Content Include="V100055004.lic">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

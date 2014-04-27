@@ -12,3 +12,16 @@ C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\YardiFileLocator.exe.config
 C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\NSConfig.dll
 C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\NSConfig.pdb
 C:\Docs\Pers\YardiConfig\YardiFileLocator\bin\Debug\App.config
+C:\Development\Yardi\YardiFileLocator\bin\Debug\YardiFileLocator.exe.config
+C:\Development\Yardi\YardiFileLocator\obj\x86\Debug\YardiFileLocator.exe
+C:\Development\Yardi\YardiFileLocator\obj\x86\Debug\YardiFileLocator.pdb
+C:\Development\Yardi\YardiFileLocator\bin\Debug\App.config
+C:\Development\Yardi\YardiFileLocator\bin\Debug\Config.xml
+C:\Development\Yardi\YardiFileLocator\bin\Debug\YardiFileLocator.exe
+C:\Development\Yardi\YardiFileLocator\bin\Debug\YardiFileLocator.pdb
+C:\Development\Yardi\YardiFileLocator\bin\Debug\NSConfig.dll
+C:\Development\Yardi\YardiFileLocator\bin\Debug\NSConfig.pdb
+C:\Development\Yardi\YardiFileLocator\obj\x86\Debug\YardiFileLocator.csprojResolveAssemblyReference.cache
+C:\Development\Yardi\YardiFileLocator\obj\x86\Debug\YardiFileLocator.frmMain.resources
+C:\Development\Yardi\YardiFileLocator\obj\x86\Debug\YardiFileLocator.Properties.Resources.resources
+C:\Development\Yardi\YardiFileLocator\obj\x86\Debug\YardiFileLocator.csproj.GenerateResource.Cache
