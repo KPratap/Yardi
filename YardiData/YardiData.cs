@@ -221,7 +221,7 @@ namespace YardiData
                 if (dictTenants != null && dictTenants.Count > 0)
                 {
                     foreach (var itm in dictTenants[0].Keys)
-                        if (!(itm.StartsWith("Contact") || (itm.StartsWith("Other"))))
+                        if (!(itm.StartsWith("Contact")))
                             dict[itm] = string.Empty;
                 }
                 dictTenants.Add(dict);
@@ -383,6 +383,21 @@ namespace YardiData
                 else
                     if (de.Attribute("location").Value.StartsWith("PersonDetails/Address") && de.Attribute("addresstype") != null)
                     {
+                        var fwd = "forwarding";
+                        if (addr.IdValues.ContainsKey(fwd)) // Custom code for Adara, does not contain "current"
+                        {
+                            if (de.Attribute("location").Value.Contains("Address/Address"))
+                                st.Add(de.Attribute("outputname").Value, addr.IdValues[fwd].Street);
+                            if (de.Attribute("location").Value.Contains("Address/City"))
+                                st.Add(de.Attribute("outputname").Value, addr.IdValues[fwd].City);
+                            if (de.Attribute("location").Value.Contains("Address/State"))
+                                st.Add(de.Attribute("outputname").Value, addr.IdValues[fwd].State);
+                            if (de.Attribute("location").Value.Contains("Address/PostalCode"))
+                                st.Add(de.Attribute("outputname").Value, addr.IdValues[fwd].PostalCode);
+                            if (de.Attribute("location").Value.Contains("Address/Email"))
+                                st.Add(de.Attribute("outputname").Value, addr.IdValues[fwd].Email);
+                        }
+                        else // Yardi uses this branch
                         if (addr.IdValues.ContainsKey(de.Attribute("addresstype").Value))
                         {
                             if (de.Attribute("location").Value.Contains("Address/Address"))
@@ -625,10 +640,17 @@ namespace YardiData
                 if (de.Attribute("location").Value == "Identification")
                 {
                     idvals.GetIdValues(lease);
+                    if (de.Attribute("idtype").Value != string.Empty)
+                    {
+                        if (idvals.IdValues.ContainsKey(de.Attribute("idtype").Value))
+                            st.Add(de.Attribute("outputname").Value, idvals.IdValues[de.Attribute("idtype").Value]);
+                        continue;
+                    }
                     if (de.Attribute("orgval").Value != string.Empty)
                     {
                         if (idvals.IdValues.ContainsKey(de.Attribute("orgval").Value))
                             st.Add(de.Attribute("outputname").Value, idvals.IdValues[de.Attribute("orgval").Value]);
+                        continue;
                     }
                 }
                 else

@@ -14,8 +14,8 @@
     <dataelement location="Address/State" outputname="State" enabled="1" />
   </Property>
   <LeaseFile>
-    <dataelement location="Identification" outputname="LeaseTenantId" orgval="primary tenant code" enabled ="1" />
-    <dataelement location="Identification" outputname="UnitCode" orgval="unit code" enabled ="1" />
+    <dataelement location="Identification" outputname="LeaseTenantId" orgval="primary tenant code"  idtype="leaseId" enabled ="1" />
+    <dataelement location="Identification" outputname="UnitCode" orgval="unit code" idtype="unitId" enabled ="1" />
     <dataelement location="CollectionStatus" outputname="CollectionStatus" enabled="1" />
     <dataelement location="CollectionStatusLastChangeDate" outputname="LastChangeDate" date="1" enabled="1" />
     <dataelement location="MonthlyRentAmount" outputname="MonthlyRentAmount" enabled="1" />
