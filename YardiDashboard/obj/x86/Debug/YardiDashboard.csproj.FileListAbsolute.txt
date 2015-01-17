@@ -22,7 +22,6 @@ C:\Docs\Pers\YardiConfig\YardiDashboard\bin\Debug\Clients_save2.xml
 C:\Docs\Pers\YardiConfig\YardiDashboard\bin\Debug\Clients.xml
 C:\Development\Yardi\YardiDashboard\bin\Debug\Clients.xml
 C:\Development\Yardi\YardiDashboard\bin\Debug\App.config
-C:\Development\Yardi\YardiDashboard\bin\Debug\DataElements.xml
 C:\Development\Yardi\YardiDashboard\bin\Debug\V100055004.lic
 C:\Development\Yardi\YardiDashboard\bin\Debug\Clients_save2.xml
 C:\Development\Yardi\YardiDashboard\bin\Debug\Config.xml
@@ -41,3 +40,10 @@ C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.Properties.Reso
 C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.csproj.GenerateResource.Cache
 C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.exe
 C:\Development\Yardi\YardiDashboard\obj\x86\Debug\YardiDashboard.pdb
+C:\Development\Yardi\YardiDashboard\bin\Debug\RealpageData.dll
+C:\Development\Yardi\YardiDashboard\bin\Debug\RealpageData.pdb
+C:\Development\Yardi\YardiDashboard\bin\Debug\RPDataElements.xml
+C:\Development\Yardi\YardiDashboard\bin\Debug\Interop.CAPICOM.dll
+C:\Development\Yardi\YardiDashboard\bin\Debug\RPClients.xml
+C:\Development\Yardi\YardiDashboard\bin\Debug\V100055004CS.lic
+C:\Development\Yardi\YardiDashboard\bin\Debug\DataElements.xml

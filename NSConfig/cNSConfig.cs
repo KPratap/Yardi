@@ -45,12 +45,17 @@ namespace NSConfig
             try
             {
 
-                el = node.Descendants(ele).First();
+                el = node.Descendants(ele).FirstOrDefault();
+                if (el == null)
+                {
+                    return new XElement(ele,string.Empty);
+                }
                 return el;
             }
             catch (Exception ex)
             {
-                return el;
+                return  new XElement(ele, string.Empty);
+//                return el;
                 //throw ex;
             }
         }
@@ -116,9 +121,7 @@ namespace NSConfig
             xel.Attribute(attrName).Value = attValue;
             return true;
         }
-        public void
-           // List<string> 
-            ExtractElements(XElement root)
+        public void ExtractElements(XElement root)
         {
             List<string> elements = new List<string>();
             StringBuilder line;
@@ -131,6 +134,23 @@ namespace NSConfig
                     Console.WriteLine("> " + attrib.Name + " = " + attrib.Value);
                 }
             }
+        }
+
+        public XElement GetClientElementForSiteId(XDocument doc, string site)
+        {
+            var clients = doc.Descendants("client").ToList();
+            string s;
+            foreach (var c in clients)
+            {
+                s = c.Descendants("siteid").FirstOrDefault() == null ? string.Empty : c.Descendants("siteid").FirstOrDefault().Value;
+                if (s == string.Empty)
+                    continue;
+                if (site == s)
+                {
+                    return c;
+                }
+            }
+            return null;
         }
     }
 }

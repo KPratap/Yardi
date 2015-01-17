@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Rentrecoverysolutions" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <xsd:complexType name="AuthDTO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="consumerid" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="providerid" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="pmcid" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="siteid" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="username" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="password" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="licensekey" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="system" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="buildcollectiondocuments">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:BuildCollectionDocumentsRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="BuildCollectionDocumentsRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="reshid" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="buildcollectiondocumentsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="buildcollectiondocumentsResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bulksetcollectionstatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:BulkSetCollectionStatusRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="BulkSetCollectionStatusRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="firstdate" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="bulksetcollectionstatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="bulksetcollectionstatusResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="clearcollectionschedule">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="clearcollectionscheduleResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="clearcollectionscheduleResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="clearpaymentplanstatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:ClearPaymentPlanStatusRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ClearPaymentPlanStatusRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="reshid" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="clearpaymentplanstatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="clearpaymentplanstatusResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="downloadcollectiondocument">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:DownloadCollectionDocumentRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="DownloadCollectionDocumentRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="reshid" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="downloadcollectiondocumentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="downloadcollectiondocumentResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getpaymentplansactivity">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getpaymentplansactivityResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="getpaymentplansactivityResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="retrieveplacementsbydate">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:RetrievePlacementsByDateRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="RetrievePlacementsByDateRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="aftermoveout" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="balanceowed" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="subid" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="extractfrom" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="extractto" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="erroronnodata" type="xsd:boolean" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="paramstartdate" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="retrieveplacementsbydateResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="retrieveplacementsbydateResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setautocollection">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:SetAutoCollectionRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="SetAutoCollectionRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="aftermoveout" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="balanceowed" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="setautocollectionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="setautocollectionResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setsuredepositbond">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:SetSureDepositBondRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="SetSureDepositBondRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="bondid" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="unitnumber" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="buildingnumber" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="lastname" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="firstname" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ssn" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="setsuredepositbondResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="setsuredepositbondResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sitelist">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="auth" type="tns:AuthDTO" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="request" type="tns:SiteListRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="SiteListRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="xmlerrors" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="sitelistResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="sitelistResult">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <xsd:simpleType name="guid">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure">
+      <xsd:complexType name="RPXApplicationFault">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CustomMessage" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ExceptionMessage" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ExceptionDetails" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RPXApplicationFault" nillable="true" type="tns:RPXApplicationFault" />
+    </xsd:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Message">
+      <xsd:complexType name="MessageBody">
+        <xsd:sequence>
+          <xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##any" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRPXService_GetMainHelpPage_InputMessage" />
+  <wsdl:message name="IRPXService_GetMainHelpPage_OutputMessage">
+    <wsdl:part xmlns:q1="http://schemas.microsoft.com/Message" name="GetMainHelpPageResult" type="q1:MessageBody" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_buildcollectiondocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:buildcollectiondocuments" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_buildcollectiondocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:buildcollectiondocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_buildcollectiondocuments_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q2:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_bulksetcollectionstatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:bulksetcollectionstatus" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_bulksetcollectionstatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bulksetcollectionstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_bulksetcollectionstatus_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q3:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_clearcollectionschedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:clearcollectionschedule" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_clearcollectionschedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clearcollectionscheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_clearcollectionschedule_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q4:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_clearpaymentplanstatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:clearpaymentplanstatus" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_clearpaymentplanstatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clearpaymentplanstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_clearpaymentplanstatus_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q5:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_downloadcollectiondocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:downloadcollectiondocument" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_downloadcollectiondocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:downloadcollectiondocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_downloadcollectiondocument_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q6:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_getpaymentplansactivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:getpaymentplansactivity" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_getpaymentplansactivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpaymentplansactivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_getpaymentplansactivity_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q7:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_retrieveplacementsbydate_InputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveplacementsbydate" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_retrieveplacementsbydate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retrieveplacementsbydateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_retrieveplacementsbydate_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q8:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_setautocollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:setautocollection" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_setautocollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setautocollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_setautocollection_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q9:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_setsuredepositbond_InputMessage">
+    <wsdl:part name="parameters" element="tns:setsuredepositbond" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_setsuredepositbond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setsuredepositbondResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_setsuredepositbond_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q10:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_sitelist_InputMessage">
+    <wsdl:part name="parameters" element="tns:sitelist" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_sitelist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sitelistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRPXService_sitelist_RPXApplicationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/RPX.Gateway.Infrastructure" name="detail" element="q11:RPXApplicationFault" />
+  </wsdl:message>
+  <wsdl:portType name="IRPXService">
+    <wsdl:operation name="GetMainHelpPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/GetMainHelpPage" message="tns:IRPXService_GetMainHelpPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/GetMainHelpPageResponse" message="tns:IRPXService_GetMainHelpPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="buildcollectiondocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/buildcollectiondocuments" message="tns:IRPXService_buildcollectiondocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/buildcollectiondocumentsResponse" message="tns:IRPXService_buildcollectiondocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/buildcollectiondocumentsRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_buildcollectiondocuments_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bulksetcollectionstatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/bulksetcollectionstatus" message="tns:IRPXService_bulksetcollectionstatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/bulksetcollectionstatusResponse" message="tns:IRPXService_bulksetcollectionstatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/bulksetcollectionstatusRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_bulksetcollectionstatus_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clearcollectionschedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/clearcollectionschedule" message="tns:IRPXService_clearcollectionschedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/clearcollectionscheduleResponse" message="tns:IRPXService_clearcollectionschedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/clearcollectionscheduleRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_clearcollectionschedule_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clearpaymentplanstatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/clearpaymentplanstatus" message="tns:IRPXService_clearpaymentplanstatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/clearpaymentplanstatusResponse" message="tns:IRPXService_clearpaymentplanstatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/clearpaymentplanstatusRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_clearpaymentplanstatus_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadcollectiondocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/downloadcollectiondocument" message="tns:IRPXService_downloadcollectiondocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/downloadcollectiondocumentResponse" message="tns:IRPXService_downloadcollectiondocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/downloadcollectiondocumentRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_downloadcollectiondocument_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getpaymentplansactivity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/getpaymentplansactivity" message="tns:IRPXService_getpaymentplansactivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/getpaymentplansactivityResponse" message="tns:IRPXService_getpaymentplansactivity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/getpaymentplansactivityRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_getpaymentplansactivity_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveplacementsbydate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/retrieveplacementsbydate" message="tns:IRPXService_retrieveplacementsbydate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/retrieveplacementsbydateResponse" message="tns:IRPXService_retrieveplacementsbydate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/retrieveplacementsbydateRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_retrieveplacementsbydate_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setautocollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/setautocollection" message="tns:IRPXService_setautocollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/setautocollectionResponse" message="tns:IRPXService_setautocollection_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/setautocollectionRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_setautocollection_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setsuredepositbond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/setsuredepositbond" message="tns:IRPXService_setsuredepositbond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/setsuredepositbondResponse" message="tns:IRPXService_setsuredepositbond_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/setsuredepositbondRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_setsuredepositbond_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sitelist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRPXService/sitelist" message="tns:IRPXService_sitelist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRPXService/sitelistResponse" message="tns:IRPXService_sitelist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRPXService/sitelistRPXApplicationFaultFault" name="RPXApplicationFaultFault" message="tns:IRPXService_sitelist_RPXApplicationFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRPXService" type="tns:IRPXService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMainHelpPage">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/GetMainHelpPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buildcollectiondocuments">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/buildcollectiondocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="bulksetcollectionstatus">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/bulksetcollectionstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="clearcollectionschedule">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/clearcollectionschedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="clearpaymentplanstatus">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/clearpaymentplanstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="downloadcollectiondocument">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/downloadcollectiondocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getpaymentplansactivity">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/getpaymentplansactivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveplacementsbydate">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/retrieveplacementsbydate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setautocollection">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/setautocollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setsuredepositbond">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/setsuredepositbond" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sitelist">
+      <soap:operation soapAction="http://tempuri.org/IRPXService/sitelist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RPXApplicationFaultFault">
+        <soap:fault use="literal" name="RPXApplicationFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Rentrecoverysolutions">
+    <wsdl:port name="BasicHttpBinding_IRPXService" binding="tns:BasicHttpBinding_IRPXService">
+      <soap:address location="https://gateway.rpx.realpage.com/RPXGateway/partner/RentRecoverySolutions/RentRecoverySolutions.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

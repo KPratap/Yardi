@@ -6,7 +6,6 @@ C:\Docs\Pers\YardiConfig\YardiData\bin\Debug\NSConfig.pdb
 C:\Docs\Pers\YardiConfig\YardiData\obj\Debug\YardiData.dll
 C:\Docs\Pers\YardiConfig\YardiData\obj\Debug\YardiData.pdb
 C:\Docs\Pers\YardiConfig\YardiData\bin\Debug\DataElements.xml
-C:\Development\Yardi\YardiData\bin\Debug\DataElements.xml
 C:\Development\Yardi\YardiData\bin\Debug\YardiData.dll
 C:\Development\Yardi\YardiData\bin\Debug\YardiData.pdb
 C:\Development\Yardi\YardiData\bin\Debug\NSConfig.dll
@@ -14,3 +13,4 @@ C:\Development\Yardi\YardiData\bin\Debug\NSConfig.pdb
 C:\Development\Yardi\YardiData\obj\Debug\YardiData.csprojResolveAssemblyReference.cache
 C:\Development\Yardi\YardiData\obj\Debug\YardiData.dll
 C:\Development\Yardi\YardiData\obj\Debug\YardiData.pdb
+C:\Development\Yardi\YardiData\bin\Debug\DataElements.xml

@@ -7,4 +7,3 @@ C:\Development\Yardi\NSConfig\bin\Debug\NSConfig.dll
 C:\Development\Yardi\NSConfig\bin\Debug\NSConfig.pdb
 C:\Development\Yardi\NSConfig\obj\Debug\NSConfig.dll
 C:\Development\Yardi\NSConfig\obj\Debug\NSConfig.pdb
-C:\Development\Yardi\NSConfig\obj\Debug\NSConfig.csprojResolveAssemblyReference.cache

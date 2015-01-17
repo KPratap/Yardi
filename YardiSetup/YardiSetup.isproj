@@ -29,6 +29,10 @@
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2013Limited\InstallShield.targets"/>
 	<ItemGroup>
+		<ProjectReference Include="..\RealpageData\RealpageData.csproj">
+			<Name>RealpageData</Name>
+			<Project>{DC27A3E6-71FE-4A9A-9372-B85395FCD718}</Project>
+		</ProjectReference>
 		<ProjectReference Include="..\YardiClients\YardiClients.csproj">
 			<Name>YardiClients</Name>
 			<Project>{AA8BF0AF-7267-4FA7-9482-12622EDBFD9E}</Project>

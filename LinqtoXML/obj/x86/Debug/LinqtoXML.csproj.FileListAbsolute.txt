@@ -9,6 +9,5 @@ C:\Development\Yardi\LinqtoXML\bin\Debug\Clients.xml
 C:\Development\Yardi\LinqtoXML\bin\Debug\Config.xml
 C:\Development\Yardi\LinqtoXML\bin\Debug\LinqtoXML.exe
 C:\Development\Yardi\LinqtoXML\bin\Debug\LinqtoXML.pdb
-C:\Development\Yardi\LinqtoXML\obj\x86\Debug\LinqtoXML.csprojResolveAssemblyReference.cache
 C:\Development\Yardi\LinqtoXML\obj\x86\Debug\LinqtoXML.exe
 C:\Development\Yardi\LinqtoXML\obj\x86\Debug\LinqtoXML.pdb

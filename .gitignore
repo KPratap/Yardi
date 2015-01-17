@@ -79,9 +79,10 @@ ClientBin
 [Ss]tyle[Cc]op.*
 ~$*
 *.dbmdl
-
-
+*.txt
+*.htm
 *.[Pp]ublish.xml
+*.zip
 
 # Backup & report files from converting an old project file to a newer
 # Visual Studio version. Backup files are not needed, because we have git ;-)

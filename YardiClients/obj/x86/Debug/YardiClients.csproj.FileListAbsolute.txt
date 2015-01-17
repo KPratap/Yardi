@@ -29,3 +29,5 @@ C:\Development\Yardi\YardiClients\obj\x86\Debug\YardiClients.csprojResolveAssemb
 C:\Development\Yardi\YardiClients\obj\x86\Debug\YardiClients.frmClients.resources
 C:\Development\Yardi\YardiClients\obj\x86\Debug\YardiClients.Properties.Resources.resources
 C:\Development\Yardi\YardiClients\obj\x86\Debug\YardiClients.csproj.GenerateResource.Cache
+C:\Development\Yardi\YardiClients\bin\Debug\Clients.xml
+C:\Development\Yardi\YardiClients\bin\Debug\RPClients.xml

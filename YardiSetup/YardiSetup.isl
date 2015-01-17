@@ -340,6 +340,9 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{F9477984-63E8-4991-B4FF-CB4335891C24}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{E1F4BCAA-0B96-4199-AD3D-CC1734980703}</td><td>AppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{FC1BEA55-CFFB-444F-967E-2C78C5A1DDAC}</td><td>ProgramFilesFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>RealpageData.Primary_output</td><td>{C0E803D2-95F2-4B88-851C-73180ECC1032}</td><td>INSTALLDIR</td><td>2</td><td/><td>realpagedata.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>YardiClients.Primary_output</td><td>{EFFE4BEF-7C04-4A85-A3BD-079E23A019BC}</td><td>INSTALLDIR</td><td>2</td><td/><td>yardiclients.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>YardiDashboard.Primary_output</td><td>{D3598C4B-E1F9-4782-8D8D-5D0CD1E95EC0}</td><td>INSTALLDIR</td><td>2</td><td/><td>yardidashboard.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>YardiData.Primary_output</td><td>{914B9C11-233D-47F6-AC42-19D5DAA9B561}</td><td>INSTALLDIR</td><td>2</td><td/><td>yardidata.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1053,6 +1056,8 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AppDataFolder</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>ProgramFilesFolder</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1866,6 +1871,9 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
+		<row><td>AlwaysInstall</td><td>RealpageData.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>YardiClients.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>YardiDashboard.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>YardiData.Primary_output</td></row>
@@ -1885,10 +1893,14 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>clients.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>Clients.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\Clients.xml</td><td>1</td><td/></row>
-		<row><td>config.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>Config.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\Config.xml</td><td>1</td><td/></row>
-		<row><td>dataelements.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>DATAEL~1.XML|DataElements.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\DataElements.xml</td><td>1</td><td/></row>
-		<row><td>v100055004.lic</td><td>ISX_DEFAULTCOMPONENT</td><td>V10005~1.LIC|V100055004.lic</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\V100055004.lic</td><td>1</td><td/></row>
+		<row><td>clients.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>Clients.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\Clients.xml</td><td>1</td><td/></row>
+		<row><td>config.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>Config.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\Config.xml</td><td>1</td><td/></row>
+		<row><td>dataelements.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>DATAEL~1.XML|DataElements.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\DataElements.xml</td><td>1</td><td/></row>
+		<row><td>realpagedata.primary_output</td><td>RealpageData.Primary_output</td><td>RealpageData.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RealpageData&gt;|Built</td><td>3</td><td/></row>
+		<row><td>rpclients.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>RPCLIE~1.XML|RPClients.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiClients\RPClients.xml</td><td>1</td><td/></row>
+		<row><td>rpdataelements.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>RPDATA~1.XML|RPDataElements.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\RealpageData\RPDataElements.xml</td><td>1</td><td/></row>
+		<row><td>v100055004.lic2</td><td>ISX_DEFAULTCOMPONENT</td><td>V10005~1.LIC|V100055004.lic</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\V100055004.lic</td><td>1</td><td/></row>
+		<row><td>v100055004cs.lic2</td><td>ISX_DEFAULTCOMPONENT</td><td>V10005~1.LIC|V100055004CS.lic</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\V100055004CS.lic</td><td>1</td><td/></row>
 		<row><td>yardiclients.primary_output</td><td>YardiClients.Primary_output</td><td>YardiClients.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;YardiClients&gt;|Built</td><td>3</td><td/></row>
 		<row><td>yardidashboard.primary_outpu</td><td>YardiDashboard.Primary_output</td><td>YardiDashboard.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;YardiDashboard&gt;|Built</td><td>3</td><td/></row>
 		<row><td>yardidata.primary_output</td><td>YardiData.Primary_output</td><td>YardiData.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;YardiData&gt;|Built</td><td>3</td><td/></row>
@@ -2038,6 +2050,9 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_F58E1DED_AA4F_4A1B_B59A_A45583F78B89_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_9D7F87B4_59C7_4757_958F_9EA394D44BDD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_1D1FBE01_8511_48A2_8B70_0832517AE802_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>RealpageData.Primary_output</td><td/><td/><td>_CCC12FEF_A91B_4EAE_9415_242040C2642B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>YardiClients.Primary_output</td><td/><td/><td>_02785BE8_717E_40EB_B4E8_E0FC97FCB2E9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>YardiDashboard.Primary_output</td><td/><td/><td>_CECD5F5C_8630_4752_A891_90D9F85C9B45_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>YardiData.Primary_output</td><td/><td/><td>_452CD802_53E9_42E2_B023_C0A3018B384B_FILTER</td><td/><td/><td/><td/></row>
@@ -2349,6 +2364,7 @@
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
+		<row><td>RealpageData</td><td>RealpageData\RealpageData.csproj</td><td/><td>2</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
 		<row><td>YardiClients</td><td>YardiClients\YardiClients.csproj</td><td/><td>2</td></row>
@@ -2664,7 +2680,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>RRS</td><td>0</td><td/><td>-501064810</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>RentRecoverySolutions</td><td>0</td><td/><td>2116211831</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-375204173</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-375204173</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40FULL</td><td>1033</td><td>Microsoft .NET Framework 4.0 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-2111641003</td></row>
@@ -4012,7 +4028,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{268CE0BB-FD22-4E5A-B3B8-0CBCC9E8E26E}</td></row>
 		<row><td>ISUSSignature</td><td>{7E486D04-31BF-4C60-BE94-C2511E9EF2F5}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewRealSetupDesign,viewAppV,viewProject,viewSetupDesign,viewRelease,viewTextMessages,viewDesignPatches,viewObjects,viewShortcuts,viewSetupTypes,viewAppFiles</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewRealSetupDesign,viewAppV,viewProject,viewSetupDesign,viewRelease,viewTextMessages,viewDesignPatches,viewObjects,viewShortcuts,viewSetupTypes,viewAppFiles,viewFeatureFiles</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>

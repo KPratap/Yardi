@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clients>
+  <client keyword="003217">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatfriendlymanor.com</email>
+    <siteid>1046007</siteid>
+    <sitename>Legacy at Friendly Manor</sitename>
+    <siteaddress>5402 Friendly Manor Dr, Greensboro, NC 27410-4258</siteaddress>
+    <firstdate>2014-12-15</firstdate>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+  </client>
+  <client keyword="003218">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@hodginsretreatapts.com</email>
+    <siteid>3273618</siteid>
+    <sitename>Hodgins Retreat</sitename>
+    <siteaddress>811 Dolley Madison Rd, Greensboro, NC 27410-3311</siteaddress>
+    <firstdate>2014-12-15</firstdate>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+  </client>
+  <client keyword="003466">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@ashbrookpointe.com</email>
+    <siteid>1070480</siteid>
+    <sitename>Ashbrook Pointe</sitename>
+    <siteaddress>2826 Vanstory St, Greensboro, NC 27407-4608</siteaddress>
+    <firstdate>2015-01-06</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+  </client>
+</clients>
