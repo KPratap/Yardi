@@ -142,12 +142,18 @@ namespace RealpageData
             }
 
             var siteList = DeserializeNode<SiteList>(sites);
-            
+
+            XElement units = cli.Descendants("UnitList").FirstOrDefault();
+            //if (units == null)
+            //{
+            //    throw new Exception("FileContents/Collections/UnitList element not found");
+            //}
+
+            var unitList = DeserializeNode<UnitList>(units).Units;
+
+
             var thisSite = siteList.Sites[0].SiteID;
             
-
-
-
             dictProp = ExtractPropertyInfo(siteList.Sites[0]);
 
             // Residents
@@ -204,7 +210,8 @@ namespace RealpageData
                 foreach (var lt in leasetenants)
                 {
                     AssignedAmount = 0;
-                    dictLease = ExtractLeaseInfo(lea);
+                    var unitNo = GetUnitNo(lea.UnitID, lea.SiteID, unitList);
+                    dictLease = ExtractLeaseInfo(lea, unitNo);
                     var leaseresident = leasetenants.Where(i => i.LeaID == lea.LeaID).FirstOrDefault();
                     if (leaseresident != null)
                     {
@@ -266,6 +273,17 @@ namespace RealpageData
                 else
                     WriteLease(writerFalse);
             }
+        }
+
+        private string GetUnitNo(int unitId, int siteId, List<Unit> units  )
+        {
+            string val = string.Empty;
+            var  unit = units.FirstOrDefault(i => i.UnitID == unitId && i.SiteID == siteId);
+            if (unit != null)
+            {
+                val = unit.UnitNo;
+            }
+            return val;
         }
 
         private List<Dictionary<string, string>> ExtractFileTransInfo(IEnumerable<OpenCharges> leasecharges)
@@ -438,7 +456,7 @@ namespace RealpageData
             }
             catch (Exception ex)
             {
-                output = "Error Decrypting.." + ex + val;
+                output =  val + "\nError Decrypting.." + ex;
             }
             return output;
         }
@@ -940,7 +958,7 @@ namespace RealpageData
             return string.Join("|", st);
         }
 
-        private Dictionary<string, string> ExtractLeaseInfo(Lease lease)
+        private Dictionary<string, string> ExtractLeaseInfo(Lease lease, string unitNo)
         {
             Dictionary<string, string> st = new Dictionary<string, string>();
             _NTVOnDate = string.Empty;
@@ -959,6 +977,12 @@ namespace RealpageData
                 if (key == "InColl")
                 {
                     st.Add(de.Attribute("outputname").Value, string.Empty);
+                    continue;
+                }
+                if (key == "UnitNo")
+                {
+                    val = unitNo;
+                    st.Add(de.Attribute("outputname").Value, val);
                     continue;
                 }
                 if (typeof (Lease).GetProperties().Any(x => x.Name == key))

@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clients>
+  <client keyword="rp2">
+    <name>pmc1</name>
+    <enabled>false</enabled>
+    <email>abv@ddle.com</email>
+    <siteid>pmc1 site2</siteid>
+    <sitename>site name 2</sitename>
+    <siteaddress>110 theeente st</siteaddress>
+    <firstdate>2014-01-01</firstdate>
+    <ekey>12345678</ekey>
+    <pmcid>test</pmcid>
+    <aftermoveout>10</aftermoveout>
+    <balanceowed>10</balanceowed>
+  </client>
+  <client keyword="rp1">
+    <name>pmc1</name>
+    <enabled>false</enabled>
+    <email>abv@ddle.com</email>
+    <siteid>pmc1 site1</siteid>
+    <sitename>site name 2</sitename>
+    <siteaddress>110 theeente road</siteaddress>
+    <firstdate>2014-09-01</firstdate>
+    <ekey>11223344</ekey>
+    <pmcid>test</pmcid>
+    <aftermoveout>10</aftermoveout>
+    <balanceowed>10</balanceowed>
+  </client>
+  <client keyword="rp3">
+    <name>pmc1</name>
+    <enabled>false</enabled>
+    <email>abv@ddle.com</email>
+    <siteid>3513777</siteid>
+    <sitename>site name 2</sitename>
+    <siteaddress>110 theeente road</siteaddress>
+    <firstdate>2014-06-01</firstdate>
+    <ekey>55667788</ekey>
+    <pmcid>test</pmcid>
+    <aftermoveout>10</aftermoveout>
+    <balanceowed>10</balanceowed>
+  </client>
+  <client keyword="003488">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@theorchardsapts.com</email>
+    <siteid>1045973</siteid>
+    <sitename>The Orchards</sitename>
+    <siteaddress>5360 Orchard Hill Dr, Roanoke, VA 24019-6080</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003467">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@ashfordplaceapartments.com</email>
+    <siteid>1045974</siteid>
+    <sitename>Ashford Place</sitename>
+    <siteaddress>905 Pineville Point Ave, Charlotte, NC 28217-2080</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003480">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatforesthills.com</email>
+    <siteid>1045987</siteid>
+    <sitename>Reserve at Forest Hills</sitename>
+    <siteaddress>361 Darlington Ave, Wilmington, NC 28403-1306</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003462">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@abbottscreek.com</email>
+    <siteid>1045988</siteid>
+    <sitename>Abbotts Creek</sitename>
+    <siteaddress>1000 Abbotts Creek Cir, Kernersville, NC 27284-3751</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003484">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatjacksonville.com</email>
+    <siteid>1045990</siteid>
+    <sitename>Reserve at Jacksonville Commons</sitename>
+    <siteaddress>500 Talon Dr, Jacksonville, NC 28546-6967</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003479">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatcrosscreek.com</email>
+    <siteid>1068741</siteid>
+    <sitename>Legacy at Cross Creek</sitename>
+    <siteaddress>570 Castle Rising Rd, Fayetteville, NC 28314-1551</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003466">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@ashbrookpointe.com</email>
+    <siteid>1070480</siteid>
+    <sitename>Ashbrook Pointe</sitename>
+    <siteaddress>2826 Vanstory St, Greensboro, NC 27407-4608</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003461">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatabbingtonplace.com</email>
+    <siteid>1070945</siteid>
+    <sitename>Legacy at Abbington Place</sitename>
+    <siteaddress>1025 Kensington Dr, Jacksonville, NC 28546</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003471">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatberkeleyplace.com</email>
+    <siteid>1071102</siteid>
+    <sitename>Legacy at Berkeley Place</sitename>
+    <siteaddress>105 Fallin Blvd, Goldsboro, NC 27534</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003468">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@ashtonparkapts.com</email>
+    <siteid>1225043</siteid>
+    <sitename>Ashton Park</sitename>
+    <siteaddress>50 Braeburn Dr, Anderson, SC 29621</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003489">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@palladiumparkapts.com</email>
+    <siteid>1225044</siteid>
+    <sitename>Palladium Park</sitename>
+    <siteaddress>3902 Pallas Wy, High Point, NC 27265</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003493">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@salisburyvillageapts.com</email>
+    <siteid>1225103</siteid>
+    <sitename>Salisbury Village at Castlewood</sitename>
+    <siteaddress>200 Castlewood Dr, Salisbury, NC 28147-1319</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003494">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@thornberrypark.com</email>
+    <siteid>1225104</siteid>
+    <sitename>Thornberry Park</sitename>
+    <siteaddress>3701 Ashbrook Drive NW, Wilson, NC 27896</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003482">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@haltonpark.com</email>
+    <siteid>1225105</siteid>
+    <sitename>Halton Park</sitename>
+    <siteaddress>17701 Halton Park Dr, Charlotte, NC 28262</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003476">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatcarringtonplace.com</email>
+    <siteid>1225106</siteid>
+    <sitename>Reserve at Carrington Place</sitename>
+    <siteaddress>6511 Lexi Ln, Fayetteville, NC 28314</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003470">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@bellinghampark.com</email>
+    <siteid>1225107</siteid>
+    <sitename>Bellingham Park</sitename>
+    <siteaddress>1522 Cadfel Ct, Wilmington, NC 28412</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003487">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@millcrestpark.com</email>
+    <siteid>1225229</siteid>
+    <sitename>Millcrest Park</sitename>
+    <siteaddress>208 Sedgewick Drive, Fort Mill, SC 29708</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003486">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyatmanchestervillage.com</email>
+    <siteid>1225230</siteid>
+    <sitename>Legacy at Manchester Village</sitename>
+    <siteaddress>159 Longsight Lane, Rock Hill, SC 29730</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003463">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@abernathypark.com</email>
+    <siteid>1225298</siteid>
+    <sitename>Abernathy Park</sitename>
+    <siteaddress>3624 Belmont St, Greensboro, NC 27406</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003465">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@andoverparkapts.com</email>
+    <siteid>1225299</siteid>
+    <sitename>Andover Park</sitename>
+    <siteaddress>1350 Norwalk St Apt A, Greensboro, NC 27407</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003490">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@reserveatparkwest.com</email>
+    <siteid>1225348</siteid>
+    <sitename>Reserve at Park West</sitename>
+    <siteaddress>100 Keats Drive, Spartanburg, SC 29301</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003485">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyatlindenpark.com</email>
+    <siteid>1225350</siteid>
+    <sitename>Legacy at Linden Park</sitename>
+    <siteaddress>1000 Misty Mountain Rd, Lynchburg, VA 24502</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003464">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@alexandriapark.com</email>
+    <siteid>1225351</siteid>
+    <sitename>Alexandria Park</sitename>
+    <siteaddress>3519 Ramsay Street, High Point, NC 27265</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003495">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyattwinoaks.com</email>
+    <siteid>1225374</siteid>
+    <sitename>Legacy at Twin Oaks</sitename>
+    <siteaddress>5269 Hilltop Rd, Greensboro, NC 27407</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003475">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@burkeridgecrossingapts.com</email>
+    <siteid>1473827</siteid>
+    <sitename>Burke Ridge Crossing</sitename>
+    <siteaddress>2112 Burke Ridge Meadows Rd, Winston Salem, NC 27103</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003472">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@berkshireparkapts.com</email>
+    <siteid>1492773</siteid>
+    <sitename>Berkshire Park Apartments</sitename>
+    <siteaddress>1201 Aragon Dr, Knightdale, NC 27545</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003481">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatglenburnie.com</email>
+    <siteid>1493270</siteid>
+    <sitename>Reserve at Glenburnie</sitename>
+    <siteaddress>100 Gurten St, New Bern, NC 28562-2629</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003474">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@breckenridgeparkapts.com</email>
+    <siteid>2029108</siteid>
+    <sitename>Breckenridge Park</sitename>
+    <siteaddress>100 Breckenridge Drive, Hattiesburg, MS 39402-3698</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003469">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@avalonapthome.com</email>
+    <siteid>2405716</siteid>
+    <sitename>Avalon Apartments</sitename>
+    <siteaddress>327 Guinevere Ln, Wilmington, NC 28403-1479</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003477">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@charlestonplaceapts.com</email>
+    <siteid>2649733</siteid>
+    <sitename>Charleston Place</sitename>
+    <siteaddress>400 Charleston Ln, Jacksonville, NC 28546-7088</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003497">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@thewaverlyapts.com</email>
+    <siteid>2656926</siteid>
+    <sitename>Waverly</sitename>
+    <siteaddress>3211 Pridwen Cir, Raleigh, NC 27610-1269</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003492">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyatthepoint.com</email>
+    <siteid>2940390</siteid>
+    <sitename>Legacy at The Point</sitename>
+    <siteaddress>1411-G Bergamot Loop, High Point, NC 27260-3450</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003478">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@crescentpointeapartments.com</email>
+    <siteid>2986717</siteid>
+    <sitename>Crescent Pointe</sitename>
+    <siteaddress>1500 S Oak St, Seneca, SC 29678-1730</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003491">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@thepinesonwendover.com</email>
+    <siteid>3055236</siteid>
+    <sitename>Pines on Wendover</sitename>
+    <siteaddress>628 N Wendover Rd, Charlotte, NC 28211-4841</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003496">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@uptowncourtapartments.com</email>
+    <siteid>3055237</siteid>
+    <sitename>Uptown Court</sitename>
+    <siteaddress>415 W 10th St, Charlotte, NC 28202-1775</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003483">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@heronlakeapt.com</email>
+    <siteid>3519404</siteid>
+    <sitename>Heron Lake Apartments</sitename>
+    <siteaddress>1340 N Brickyard Rd, Columbia, SC 29223-8015</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1225062</siteid>
+    <sitename>Blue Ridge Business Model</sitename>
+    <siteaddress>2401 Penny Rd, High Point, NC 27265-8186</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1></phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>manager@independenceparkapartments.com</email>
+    <siteid>1225344</siteid>
+    <sitename>Historical-Independence Park</sitename>
+    <siteaddress>215 William Penn Plaza, Durham, NC 27704</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(919) 246-0800</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>manager@reserveatbradburyplace.com</email>
+    <siteid>1225349</siteid>
+    <sitename>Historical-Reserve at Bradbury Place</sitename>
+    <siteaddress>560 W New Hope Rd, Goldsboro, NC 27534</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(919) 587-9370</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@palmsatpremierparkapts.com</email>
+    <siteid>1961199</siteid>
+    <sitename>Historical-Palms at Premier Park</sitename>
+    <siteaddress>1155 Clemson Frontage Rd, Columbia, SC 29229</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(803) 227-3760</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@overlookatallensville.com</email>
+    <siteid>2748633</siteid>
+    <sitename>Historical-Overlook at Allensville Square</sitename>
+    <siteaddress>293 Mount Dr, Sevierville, TN 37876-1807</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(865) 365-1558</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>manager@crossingatchesterridge.com</email>
+    <siteid>2883464</siteid>
+    <sitename>Historical-Crossing at Chester Ridge</sitename>
+    <siteaddress>2122 Crossing Way Ct # C, High Point, NC 27262-8501</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 841-4919</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@masonmanorapts.com</email>
+    <siteid>2897214</siteid>
+    <sitename>Historical-Mason Manor And Emery Lane</sitename>
+    <siteaddress>122 Northgate Ct, High Point, NC 27265-1861</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 887-6600</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@gregorieferryapts.com</email>
+    <siteid>2925313</siteid>
+    <sitename>Historical-Gregorie Ferry Landing</sitename>
+    <siteaddress>1240 Winnowing Way Ste 101, Mount Pleasant, SC 29466-7523</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(843) 225-7515</phone1>
+  </client>
+  <client keyword="003218">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@hodginsretreatapts.com</email>
+    <siteid>3273618</siteid>
+    <sitename>Hodgins Retreat</sitename>
+    <siteaddress>811 Dolley Madison Rd, Greensboro, NC 27410-3311</siteaddress>
+    <firstdate>2014-12-01</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 553-2077</phone1>
+  </client>
+  <client keyword="003217">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatfriendlymanor.com</email>
+    <siteid>1046007</siteid>
+    <sitename>Legacy at Friendly Manor</sitename>
+    <siteaddress>5402 Friendly Manor Dr, Greensboro, NC 27410-4258</siteaddress>
+    <firstdate>2014-12-01</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 292-2991</phone1>
+  </client>
+</clients>

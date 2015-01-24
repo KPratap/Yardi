@@ -283,7 +283,7 @@ namespace YardiDashboard
             lvRealPageSites.Columns.Add("Minimum Bal", 100);
 
             Dictionary<string, string> cboDict = new Dictionary<string, string>();
-            cboDict.Add("-Select Site-",string.Empty);
+            cboDict.Add("_Select Site_",string.Empty);
             cboSiteList.Items.Clear();
             var kwd = string.Empty;
             foreach (XElement el in clients)
@@ -312,9 +312,13 @@ namespace YardiDashboard
                     cboDict.Add(kwd + "_" + ccfg.GetElement(el, "siteid").Value, kwd);
                 }
             }
+            var cboSorted  = from pair in cboDict
+                        orderby pair.Key ascending
+                        select pair;
+
             cboSiteList.DisplayMember = "Key";
             cboSiteList.ValueMember = "Value";
-            cboSiteList.DataSource = new BindingSource(cboDict, null); 
+            cboSiteList.DataSource = new BindingSource(cboSorted, null); 
         }
         private bool CheckClients()
         {
@@ -821,7 +825,7 @@ namespace YardiDashboard
 
                 var reqDL = new DownloadCollectionDocumentRequest() { reshid = res.ReshID };
 
-                var returnDoc = client.downloadcollectiondocumentAsync(auth, reqDL).Result.Body.downloadcollectiondocumentResult;
+                var returnDoc =  client.downloadcollectiondocumentAsync(auth, reqDL).Result.Body.downloadcollectiondocumentResult;
                 var returnResult = returnDoc.Descendants("Result").FirstOrDefault();
                 if (returnResult == null)
                 {

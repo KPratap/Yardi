@@ -15,7 +15,8 @@
   </Property>
   <LeaseFile>
     <dataelement location="ReshID" outputname="LeaseTenantId" enabled ="1" />
-    <dataelement location="UnitID" outputname="UnitCode" enabled ="1" />
+    <!--dataelement location="UnitID" outputname="UnitCode" enabled ="1" /-->
+    <dataelement location="UnitNo" outputname="UnitCode" enabled ="1" />
     <dataelement location="InColl" outputname="CollectionStatus" enabled="1" />
     <dataelement location="MODate" outputname="LastChangeDate" date="1" enabled="1" />
     <dataelement location="Rent" outputname="MonthlyRentAmount" enabled="1" />

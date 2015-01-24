@@ -41,4 +41,17 @@
     <aftermoveout>30</aftermoveout>
     <balanceowed>100</balanceowed>
   </client>
+  <client keyword="003470">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@bellinghampark.com</email>
+    <siteid>1225107</siteid>
+    <sitename>Bellingham Park</sitename>
+    <siteaddress>1522 Cadfel Ct, Wilmington, NC 28412</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
 </clients>
