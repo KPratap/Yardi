@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<clients>
-  <client Keyword="FirstClient" Name="Collingwood" IntId="1" YardiId="111" Enabled="1" />
-  <client Keyword="2ndClient" Name="amli" IntId="1" YardiId="222" Enabled="0" />
-  <client Keyword="3rdclient" Name="Post Alpharetta" IntId="45" YardiId="111" Enabled="1" />
-</clients>

@@ -1,9 +1,0 @@
-C:\Docs\Pers\YardiConfig\TestJson\bin\Release\TestJson.exe
-C:\Docs\Pers\YardiConfig\TestJson\bin\Release\TestJson.pdb
-C:\Docs\Pers\YardiConfig\TestJson\obj\x86\Release\TestJson.exe
-C:\Docs\Pers\YardiConfig\TestJson\obj\x86\Release\TestJson.pdb
-C:\Development\Yardi\TestJson\bin\Release\TestJson.exe
-C:\Development\Yardi\TestJson\bin\Release\TestJson.pdb
-C:\Development\Yardi\TestJson\obj\x86\Release\TestJson.csprojResolveAssemblyReference.cache
-C:\Development\Yardi\TestJson\obj\x86\Release\TestJson.exe
-C:\Development\Yardi\TestJson\obj\x86\Release\TestJson.pdb

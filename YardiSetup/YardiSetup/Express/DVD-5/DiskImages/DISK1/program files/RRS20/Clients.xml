@@ -66,4 +66,15 @@
     <platform>Sql Server</platform>
     <yardipropid>rentrec1</yardipropid>
   </client>
+  <client keyword="002967">
+    <name>St George Villas</name>
+    <enabled>true</enabled>
+    <url>https://yardiasp14.com/34557aamci/webservices/itfcollections.asmx</url>
+    <user>rrsolutions</user>
+    <password>rrsolutions4#</password>
+    <server>nsql22_2k8</server>
+    <database>iljkwzt_live</database>
+    <platform>Sql Server</platform>
+    <yardipropid>SGG</yardipropid>
+  </client>
 </clients>

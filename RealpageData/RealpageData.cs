@@ -91,6 +91,7 @@ namespace RealpageData
                 writer = new StreamWriter(foutColl);
                 writerFalse = new StreamWriter(foutCollFalse);
                 ExtractData(doc);
+                ArchiveRawFile(fname);
 
             }
             catch (Exception ex)
@@ -107,6 +108,39 @@ namespace RealpageData
                     File.Delete(foutCollFalse);
             }
 
+        }
+
+        private void ArchiveRawFile(string fname)
+        {
+            var fullpath = Path.GetDirectoryName(fname);
+            var fname_only = Path.GetFileName(fname);
+            string new_name = GetArchiveFilename(fname_only);
+            new_name = Path.Combine(fullpath, new_name);
+            try
+            {
+                File.Move(fname, new_name);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Unable to rename raw file {0} to {1}\n {2}",fname, new_name, ex));
+            }
+    }
+
+        private string GetArchiveFilename(string fname)
+        {
+            string fout = string.Empty;
+            var fname_noext = Path.GetFileNameWithoutExtension(fname);
+            var fname_ext = Path.GetExtension(fname);
+            Match match = Regex.Match(fname, @"([_A-Za-z0-9\-]+)(_Archive_)([0-9]+)(\.xml)$", RegexOptions.IgnoreCase);
+            if (!match.Success)
+            {
+                fout = fname_noext + "_archive_1" + fname_ext;
+                return fout;
+            }
+            var aval = Convert.ToInt32(match.Groups[3].Value);
+            aval++;
+            fout = string.Concat(match.Groups[1], match.Groups[2], aval.ToString(), match.Groups[4]);
+            return fout;
         }
         private void DisposeFile(StreamWriter writer)
         {

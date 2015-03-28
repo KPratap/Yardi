@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<filelocations>
-  <rawxml location="C:\Docs\Pers\Peta\Raw" />
-  <collections location="C:\Docs\Pers\Peta\Extract" />
-  <collectionsfalse location="C:\Docs\Pers\Peta\ExtractFalse" />
-  <automation enabled="1" dailydownloadtime="hh:mm" autoextract="1"/>
-</filelocations>

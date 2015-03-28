@@ -117,16 +117,22 @@ namespace YardiClients
             if (vn == VendorName.Yardi)
             {
                 AddListViewColumns(vn);
+                ListViewItem lvi = null;
                 foreach (XElement el in clients)
                 {
-                    lvClients.Items.Add(new ListViewItem(new string[] 
+                    bool enabled = Convert.ToBoolean(ccfg.GetElement(el, "enabled").Value);
+                    lvi =  new ListViewItem(new string[] 
                                       {ccfg.GetElementAttrib(el,"keyword").Value
                                       ,ccfg.GetElement(el,"yardipropid").Value
                                       ,ccfg.GetElement(el,"name").Value
                                       ,ccfg.GetElement(el,"enabled").Value
                                       ,ccfg.GetElement(el,"url").Value
-                                        }));
-
+                                        });
+                    lvi.ForeColor = enabled ? Color.Green : Color.Gray;
+                    lvClients.Items.Add(lvi);
+                    cntTot++;
+                    cntActive = enabled ? cntActive + 1 : cntActive;
+                    cntInactive = !enabled ? cntInactive + 1 : cntInactive;
                 }
             }
 
@@ -150,6 +156,7 @@ namespace YardiClients
                                       ,ccfg.GetElement(el,"aftermoveout").Value
                                       ,ccfg.GetElement(el,"balanceowed").Value
                                       ,ccfg.GetElement(el,"ekey").Value
+                                      ,ccfg.GetElement(el,"phone1").Value
                                         });
                     lvi.ForeColor = enabled ? Color.Green : Color.Gray;
                     lvClients.Items.Add(lvi);
@@ -279,6 +286,7 @@ namespace YardiClients
                 lvClients.Columns.Add("Days after Moveout", 50);
                 lvClients.Columns.Add("Minimum Balance", 100);
                 lvClients.Columns.Add("Ekey", 150);
+                lvClients.Columns.Add("Phone", 80);
                 return;
             }
         }
@@ -360,6 +368,7 @@ namespace YardiClients
                 txtAfterMoveout.Text = ccfg.GetElement(el, "aftermoveout").Value;
                 txtBalanceOwed.Text = ccfg.GetElement(el, "balanceowed").Value;
                 txtEncryptionKey.Text = ccfg.GetElement(el, "ekey").Value;
+                txtPhone1.Text = ccfg.GetElement(el, "phone1").Value;
             }
         }
 
@@ -468,6 +477,7 @@ namespace YardiClients
                         AddUpdateChild(xml, "aftermoveout", txtAfterMoveout.Text);
                         AddUpdateChild(xml, "balanceowed", txtBalanceOwed.Text);
                         AddUpdateChild(xml, "ekey", txtEncryptionKey.Text);
+                        AddUpdateChild(xml, "phone1", txtPhone1.Text);
                         element.Save(_cfgFile);
                     }
                     else // try finding entry by siteid
@@ -489,6 +499,7 @@ namespace YardiClients
                                 AddUpdateChild(member, "aftermoveout", txtAfterMoveout.Text);
                                 AddUpdateChild(member, "balanceowed", txtBalanceOwed.Text);
                                 AddUpdateChild(member, "ekey", txtEncryptionKey.Text);
+                                AddUpdateChild(member, "phone1", txtPhone1.Text);
                                 element.Save(_cfgFile);
                             }
                         }
@@ -590,6 +601,7 @@ namespace YardiClients
                     , new XElement("aftermoveout", txtAfterMoveout.Text)
                     , new XElement("balanceowed", txtBalanceOwed.Text)
                     , new XElement("ekey", txtEncryptionKey.Text)
+                    , new XElement("phone1", txtPhone1.Text)
                     );
                 doc.Add(newClient);
                 doc.Save(_cfgFile);
@@ -720,6 +732,7 @@ namespace YardiClients
                 txtBalanceOwed.Clear();
                 txtPMCId_RP.Clear();
                 txtEncryptionKey.Clear();
+                txtPhone1.Clear();
             }
 
             currMode = EditMode.None;

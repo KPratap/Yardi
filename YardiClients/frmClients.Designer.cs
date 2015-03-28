@@ -36,6 +36,7 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unconfiguredClientReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtShortName = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -96,8 +97,9 @@
             this.lblTotCli = new System.Windows.Forms.Label();
             this.lblActiveCli = new System.Windows.Forms.Label();
             this.lblInactiveCli = new System.Windows.Forms.Label();
-            this.unconfiguredClientReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveReport = new System.Windows.Forms.SaveFileDialog();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtPhone1 = new System.Windows.Forms.TextBox();
             this.cmenuClient.SuspendLayout();
             this.pnlDetl.SuspendLayout();
             this.pnlDetlRP.SuspendLayout();
@@ -167,6 +169,13 @@
             this.copyClientToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.copyClientToolStripMenuItem.Text = "Copy Client";
             this.copyClientToolStripMenuItem.Click += new System.EventHandler(this.copyClientToolStripMenuItem_Click);
+            // 
+            // unconfiguredClientReportToolStripMenuItem
+            // 
+            this.unconfiguredClientReportToolStripMenuItem.Name = "unconfiguredClientReportToolStripMenuItem";
+            this.unconfiguredClientReportToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.unconfiguredClientReportToolStripMenuItem.Text = "Unconfigured Client Report";
+            this.unconfiguredClientReportToolStripMenuItem.Click += new System.EventHandler(this.unconfiguredClientReportToolStripMenuItem_Click);
             // 
             // txtShortName
             // 
@@ -429,6 +438,8 @@
             // 
             // pnlDetlRP
             // 
+            this.pnlDetlRP.Controls.Add(this.label26);
+            this.pnlDetlRP.Controls.Add(this.txtPhone1);
             this.pnlDetlRP.Controls.Add(this.label22);
             this.pnlDetlRP.Controls.Add(this.txtBalanceOwed);
             this.pnlDetlRP.Controls.Add(this.label21);
@@ -732,12 +743,22 @@
             this.lblInactiveCli.Size = new System.Drawing.Size(30, 13);
             this.lblInactiveCli.TabIndex = 53;
             // 
-            // unconfiguredClientReportToolStripMenuItem
+            // label26
             // 
-            this.unconfiguredClientReportToolStripMenuItem.Name = "unconfiguredClientReportToolStripMenuItem";
-            this.unconfiguredClientReportToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.unconfiguredClientReportToolStripMenuItem.Text = "Unconfigured Client Report";
-            this.unconfiguredClientReportToolStripMenuItem.Click += new System.EventHandler(this.unconfiguredClientReportToolStripMenuItem_Click);
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(339, 190);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(78, 13);
+            this.label26.TabIndex = 49;
+            this.label26.Text = "Contact Phone";
+            // 
+            // txtPhone1
+            // 
+            this.txtPhone1.Location = new System.Drawing.Point(424, 186);
+            this.txtPhone1.MaxLength = 50;
+            this.txtPhone1.Name = "txtPhone1";
+            this.txtPhone1.Size = new System.Drawing.Size(99, 20);
+            this.txtPhone1.TabIndex = 48;
             // 
             // frmClients
             // 
@@ -845,6 +866,8 @@
         private System.Windows.Forms.Label lblInactiveCli;
         private System.Windows.Forms.ToolStripMenuItem unconfiguredClientReportToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveReport;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtPhone1;
     }
 }
 

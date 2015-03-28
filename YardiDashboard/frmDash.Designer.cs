@@ -89,6 +89,8 @@
             this.lblRawXML = new System.Windows.Forms.Label();
             this.lblRunMode = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filesNeverExtractedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.tabCtl.SuspendLayout();
             this.tabClients.SuspendLayout();
@@ -105,6 +107,7 @@
             this.fileToolStripMenuItem,
             this.actionToolStripMenuItem,
             this.mnuExtract,
+            this.reportToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
@@ -463,6 +466,7 @@
             this.retrieveAllCollectionsRpx.Name = "retrieveAllCollectionsRpx";
             this.retrieveAllCollectionsRpx.Size = new System.Drawing.Size(195, 22);
             this.retrieveAllCollectionsRpx.Text = "Retrieve All Collections";
+            this.retrieveAllCollectionsRpx.Click += new System.EventHandler(this.retrieveAllCollectionsRpx_Click);
             // 
             // updateSitesToolStripMenuItem
             // 
@@ -665,6 +669,21 @@
             this.lblRunMode.Text = "Run mode";
             this.lblRunMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filesNeverExtractedToolStripMenuItem});
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // filesNeverExtractedToolStripMenuItem
+            // 
+            this.filesNeverExtractedToolStripMenuItem.Name = "filesNeverExtractedToolStripMenuItem";
+            this.filesNeverExtractedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filesNeverExtractedToolStripMenuItem.Text = "Files never Extracted";
+            this.filesNeverExtractedToolStripMenuItem.Click += new System.EventHandler(this.filesNeverExtractedToolStripMenuItem_Click);
+            // 
             // frmDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -758,6 +777,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem updateSitesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyResponseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filesNeverExtractedToolStripMenuItem;
     }
 }
 

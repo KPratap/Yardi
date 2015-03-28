@@ -47,6 +47,9 @@ Config/local/*
 
 *.log
 *.scc
+*.exe
+*.dll
+*.pdb
 # Visual C++ cache files
 ipch/
 *.aps
@@ -69,7 +72,7 @@ publish
 
 
 # Others
-# [Bb]in
+Bb]in
 [Oo]bj
 sql
 TestResults

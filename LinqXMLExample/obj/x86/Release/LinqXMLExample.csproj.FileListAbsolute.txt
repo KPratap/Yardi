@@ -1,9 +1,0 @@
-C:\Docs\Pers\YardiConfig\LinqXMLExample\bin\Release\LinqXMLExample.exe
-C:\Docs\Pers\YardiConfig\LinqXMLExample\bin\Release\LinqXMLExample.pdb
-C:\Docs\Pers\YardiConfig\LinqXMLExample\obj\x86\Release\LinqXMLExample.exe
-C:\Docs\Pers\YardiConfig\LinqXMLExample\obj\x86\Release\LinqXMLExample.pdb
-C:\Development\Yardi\LinqXMLExample\bin\Release\LinqXMLExample.exe
-C:\Development\Yardi\LinqXMLExample\bin\Release\LinqXMLExample.pdb
-C:\Development\Yardi\LinqXMLExample\obj\x86\Release\LinqXMLExample.csprojResolveAssemblyReference.cache
-C:\Development\Yardi\LinqXMLExample\obj\x86\Release\LinqXMLExample.exe
-C:\Development\Yardi\LinqXMLExample\obj\x86\Release\LinqXMLExample.pdb

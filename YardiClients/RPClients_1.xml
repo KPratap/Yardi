@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clients>
+  <client keyword="003217">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatfriendlymanor.com</email>
+    <siteid>1046007</siteid>
+    <sitename>Legacy at Friendly Manor</sitename>
+    <siteaddress>5402 Friendly Manor Dr, Greensboro, NC 27410-4258</siteaddress>
+    <firstdate>2014-12-15</firstdate>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+  </client>
+  <client keyword="003218">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@hodginsretreatapts.com</email>
+    <siteid>3273618</siteid>
+    <sitename>Hodgins Retreat</sitename>
+    <siteaddress>811 Dolley Madison Rd, Greensboro, NC 27410-3311</siteaddress>
+    <firstdate>2014-12-15</firstdate>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@theorchardsapts.com</email>
+    <siteid>1045973</siteid>
+    <sitename>The Orchards</sitename>
+    <siteaddress>5360 Orchard Hill Dr, Roanoke, VA 24019-6080</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@ashfordplaceapartments.com</email>
+    <siteid>1045974</siteid>
+    <sitename>Ashford Place</sitename>
+    <siteaddress>905 Pineville Point Ave, Charlotte, NC 28217-2080</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@reserveatforesthills.com</email>
+    <siteid>1045987</siteid>
+    <sitename>Reserve at Forest Hills</sitename>
+    <siteaddress>361 Darlington Ave, Wilmington, NC 28403-1306</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@abbottscreek.com</email>
+    <siteid>1045988</siteid>
+    <sitename>Abbotts Creek</sitename>
+    <siteaddress>1000 Abbotts Creek Cir, Kernersville, NC 27284-3751</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@reserveatjacksonville.com</email>
+    <siteid>1045990</siteid>
+    <sitename>Reserve at Jacksonville Commons</sitename>
+    <siteaddress>500 Talon Dr, Jacksonville, NC 28546-6967</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@legacyatcrosscreek.com</email>
+    <siteid>1068741</siteid>
+    <sitename>Legacy at Cross Creek</sitename>
+    <siteaddress>570 Castle Rising Rd, Fayetteville, NC 28314-1551</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@ashbrookpointe.com</email>
+    <siteid>1070480</siteid>
+    <sitename>Ashbrook Pointe</sitename>
+    <siteaddress>2826 Vanstory St, Greensboro, NC 27407-4608</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@legacyatabbingtonplace.com</email>
+    <siteid>1070945</siteid>
+    <sitename>Legacy at Abbington Place</sitename>
+    <siteaddress>1025 Kensington Dr, Jacksonville, NC 28546</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@legacyatberkeleyplace.com</email>
+    <siteid>1071102</siteid>
+    <sitename>Legacy at Berkeley Place</sitename>
+    <siteaddress>105 Fallin Blvd, Goldsboro, NC 27534</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@ashtonparkapts.com</email>
+    <siteid>1225043</siteid>
+    <sitename>Ashton Park</sitename>
+    <siteaddress>50 Braeburn Dr, Anderson, SC 29621</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@palladiumparkapts.com</email>
+    <siteid>1225044</siteid>
+    <sitename>Palladium Park</sitename>
+    <siteaddress>3902 Pallas Wy, High Point, NC 27265</siteaddress>
+    <firstdate>2015-01-05</firstdate>
+    <aftermoveout></aftermoveout>
+    <balanceowed></balanceowed>
+    <ekey></ekey>
+    <siteid></siteid>
+  </client>
+</clients>

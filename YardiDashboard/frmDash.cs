@@ -1172,12 +1172,11 @@ namespace YardiDashboard
         private string GetSiteAddress(XElement site)
         {
             var retStr =
-                site.Descendants("Adr1").FirstOrDefault().Value + ", "
-                + site.Descendants("City").FirstOrDefault().Value + ", "
-                + site.Descendants("State").FirstOrDefault().Value + " "
-                + site.Descendants("Zip").FirstOrDefault().Value;
+                  (site.Descendants("Adr1").FirstOrDefault() != null ? site.Descendants("Adr1").FirstOrDefault().Value : "No Address") + ", "
+                + (site.Descendants("City").FirstOrDefault() != null ? site.Descendants("City").FirstOrDefault().Value : "No City") + ", "
+                + (site.Descendants("State").FirstOrDefault() != null ? site.Descendants("State").FirstOrDefault().Value : "No State") + " "
+                + (site.Descendants("Zip").FirstOrDefault() != null ? site.Descendants("Zip").FirstOrDefault().Value : "No Zip");
             return retStr;
-
         }
 
         private void retrieveCollectionsRpx_Click(object sender, EventArgs e)
@@ -1189,6 +1188,7 @@ namespace YardiDashboard
                 MessageBox.Show("Please select a site", "Error", MessageBoxButtons.OK);
                 return;
             }
+            AddMessage("Reteieving selected item(s)");
             foreach (ListViewItem row in lvRealPageSites.SelectedItems)
             {
                 clEntry = GetClientEntry(row);
@@ -1211,11 +1211,11 @@ namespace YardiDashboard
                     return;
                 }
                 tabCtl.SelectTab("tabRetrieval");
-                AddMessage("Retrieving data for rrsid/siteid " + clEntry.RrsId + "/" + clEntry.SiteId);
+                AddMessage(string.Format("Retrieving data for RRSId {0} - {1} ", clEntry.RrsId, clEntry.SiteName));
                 RetrievePlacementsByDate(clEntry);
-
-                AddMessage("Retrieval complete " + clEntry.SiteId);
             }
+            AddMessage("Reteieving selected item(s) complete");
+
         }
 
         private ClientEntry GetClientEntry(ListViewItem row)
@@ -1485,6 +1485,44 @@ namespace YardiDashboard
             Clipboard.Clear();
             Clipboard.SetText(txtResponse.Text);
             AddMessage("Response copied to clipboard");
+        }
+
+        private void retrieveAllCollectionsRpx_Click(object sender, EventArgs e)
+        {
+            ClientEntry clEntry;
+            bool enabled;
+            AddMessage("Retrieve all collections");
+            foreach (ListViewItem row in lvRealPageSites.Items)
+            {
+                clEntry = GetClientEntry(row);
+                if (string.IsNullOrEmpty(clEntry.RrsId))
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been configured for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (!clEntry.Enabled)
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been enabled for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (string.IsNullOrEmpty(clEntry.AfterMoveout)
+                    || string.IsNullOrEmpty(clEntry.BalanceOwed)
+                    || string.IsNullOrEmpty(clEntry.Ekey))
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " is missing EncryptionKey, Aftermoveout or BalanceOwed values\n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                tabCtl.SelectTab("tabRetrieval");
+                AddMessage(string.Format("Retrieving data for RRSId {0} - {1}", clEntry.RrsId, clEntry.SiteName));
+                RetrievePlacementsByDate(clEntry);
+            }
+            AddMessage("Retrievals complete");
+
+        }
+
+        private void filesNeverExtractedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
 

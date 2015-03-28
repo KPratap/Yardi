@@ -155,6 +155,9 @@
     <Content Include="bin\Debug\RPClients.xml" />
     <Content Include="RPClients.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPClients_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Service References\RPXCollections\configuration91.svcinfo" />
@@ -196,7 +199,7 @@
   <ItemGroup>
     <Content Include="bin\Debug\Clients.xml" />
     <Content Include="Clients.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Clients_save2.xml">
