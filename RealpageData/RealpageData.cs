@@ -91,7 +91,7 @@ namespace RealpageData
                 writer = new StreamWriter(foutColl);
                 writerFalse = new StreamWriter(foutCollFalse);
                 ExtractData(doc);
-                ArchiveRawFile(fname);
+            //    ArchiveRawFile(fname);
 
             }
             catch (Exception ex)
