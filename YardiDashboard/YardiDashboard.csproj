@@ -55,6 +55,10 @@
     <ApplicationIcon>966668_595911987116590_491582006_o.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -74,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientEntry.cs" />
+    <Compile Include="FileReport.cs" />
     <Compile Include="frmDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Service References\RPXCollections\Rentrecoverysolutions.wsdl" />
     <None Include="Service References\RPXCollections\YardiDashboard.RPXCollections.buildcollectiondocumentsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -153,6 +161,9 @@
     </Compile>
     <Content Include="966668_595911987116590_491582006_o.ico" />
     <Content Include="bin\Debug\RPClients.xml" />
+    <None Include="ReadMe.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="RPClients.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

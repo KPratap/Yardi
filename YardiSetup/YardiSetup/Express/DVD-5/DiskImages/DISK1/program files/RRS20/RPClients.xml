@@ -1,17 +1,623 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <clients>
-  <client keyword="003217">
+  <client keyword="rp2">
+    <name>pmc1</name>
+    <enabled>false</enabled>
+    <email>abv@ddle.com</email>
+    <siteid>pmc1 site2</siteid>
+    <sitename>site name 2</sitename>
+    <siteaddress>110 theeente st</siteaddress>
+    <firstdate>2014-01-01</firstdate>
+    <ekey>12345678</ekey>
+    <pmcid>test</pmcid>
+    <aftermoveout>10</aftermoveout>
+    <balanceowed>10</balanceowed>
+  </client>
+  <client keyword="rp1">
+    <name>pmc1</name>
+    <enabled>false</enabled>
+    <email>abv@ddle.com</email>
+    <siteid>pmc1 site1</siteid>
+    <sitename>site name 2</sitename>
+    <siteaddress>110 theeente road</siteaddress>
+    <firstdate>2014-09-01</firstdate>
+    <ekey>11223344</ekey>
+    <pmcid>test</pmcid>
+    <aftermoveout>10</aftermoveout>
+    <balanceowed>10</balanceowed>
+  </client>
+  <client keyword="rp3">
+    <name>pmc1</name>
+    <enabled>false</enabled>
+    <email>abv@ddle.com</email>
+    <siteid>3513777</siteid>
+    <sitename>site name 2</sitename>
+    <siteaddress>110 theeente road</siteaddress>
+    <firstdate>2014-06-01</firstdate>
+    <ekey>55667788</ekey>
+    <pmcid>test</pmcid>
+    <aftermoveout>10</aftermoveout>
+    <balanceowed>10</balanceowed>
+  </client>
+  <client keyword="003488">
     <name>Blue Ridge Property Management, LLC</name>
     <enabled>true</enabled>
-    <email>leasing@legacyatfriendlymanor.com</email>
-    <siteid>1046007</siteid>
-    <sitename>Legacy at Friendly Manor</sitename>
-    <siteaddress>5402 Friendly Manor Dr, Greensboro, NC 27410-4258</siteaddress>
-    <firstdate>2014-12-15</firstdate>
-    <ekey>B1ueR!dgeC0mpany</ekey>
-    <pmcid>1054426</pmcid>
+    <email>manager@theorchardsapts.com</email>
+    <siteid>1045973</siteid>
+    <sitename>The Orchards</sitename>
+    <siteaddress>5360 Orchard Hill Dr, Roanoke, VA 24019-6080</siteaddress>
+    <firstdate>2015-01-07</firstdate>
     <aftermoveout>30</aftermoveout>
     <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003467">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@ashfordplaceapartments.com</email>
+    <siteid>1045974</siteid>
+    <sitename>Ashford Place</sitename>
+    <siteaddress>905 Pineville Point Ave, Charlotte, NC 28217-2080</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003480">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatforesthills.com</email>
+    <siteid>1045987</siteid>
+    <sitename>Reserve at Forest Hills</sitename>
+    <siteaddress>361 Darlington Ave, Wilmington, NC 28403-1306</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003462">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@abbottscreek.com</email>
+    <siteid>1045988</siteid>
+    <sitename>Abbotts Creek</sitename>
+    <siteaddress>1000 Abbotts Creek Cir, Kernersville, NC 27284-3751</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003484">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatjacksonville.com</email>
+    <siteid>1045990</siteid>
+    <sitename>Reserve at Jacksonville Commons</sitename>
+    <siteaddress>500 Talon Dr, Jacksonville, NC 28546-6967</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003479">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatcrosscreek.com</email>
+    <siteid>1068741</siteid>
+    <sitename>Legacy at Cross Creek</sitename>
+    <siteaddress>570 Castle Rising Rd, Fayetteville, NC 28314-1551</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003466">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@ashbrookpointe.com</email>
+    <siteid>1070480</siteid>
+    <sitename>Ashbrook Pointe</sitename>
+    <siteaddress>2826 Vanstory St, Greensboro, NC 27407-4608</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003461">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatabbingtonplace.com</email>
+    <siteid>1070945</siteid>
+    <sitename>Legacy at Abbington Place</sitename>
+    <siteaddress>1025 Kensington Dr, Jacksonville, NC 28546</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003471">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatberkeleyplace.com</email>
+    <siteid>1071102</siteid>
+    <sitename>Legacy at Berkeley Place</sitename>
+    <siteaddress>105 Fallin Blvd, Goldsboro, NC 27534</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003468">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@ashtonparkapts.com</email>
+    <siteid>1225043</siteid>
+    <sitename>Ashton Park</sitename>
+    <siteaddress>50 Braeburn Dr, Anderson, SC 29621</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003489">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@palladiumparkapts.com</email>
+    <siteid>1225044</siteid>
+    <sitename>Palladium Park</sitename>
+    <siteaddress>3902 Pallas Wy, High Point, NC 27265</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003493">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@salisburyvillageapts.com</email>
+    <siteid>1225103</siteid>
+    <sitename>Salisbury Village at Castlewood</sitename>
+    <siteaddress>200 Castlewood Dr, Salisbury, NC 28147-1319</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003494">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@thornberrypark.com</email>
+    <siteid>1225104</siteid>
+    <sitename>Thornberry Park</sitename>
+    <siteaddress>3701 Ashbrook Drive NW, Wilson, NC 27896</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003482">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@haltonpark.com</email>
+    <siteid>1225105</siteid>
+    <sitename>Halton Park</sitename>
+    <siteaddress>17701 Halton Park Dr, Charlotte, NC 28262</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003476">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatcarringtonplace.com</email>
+    <siteid>1225106</siteid>
+    <sitename>Reserve at Carrington Place</sitename>
+    <siteaddress>6511 Lexi Ln, Fayetteville, NC 28314</siteaddress>
+    <firstdate>2014-11-01</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003470">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@bellinghampark.com</email>
+    <siteid>1225107</siteid>
+    <sitename>Bellingham Park</sitename>
+    <siteaddress>1522 Cadfel Ct, Wilmington, NC 28412</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003487">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@millcrestpark.com</email>
+    <siteid>1225229</siteid>
+    <sitename>Millcrest Park</sitename>
+    <siteaddress>208 Sedgewick Drive, Fort Mill, SC 29708</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003486">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyatmanchestervillage.com</email>
+    <siteid>1225230</siteid>
+    <sitename>Legacy at Manchester Village</sitename>
+    <siteaddress>159 Longsight Lane, Rock Hill, SC 29730</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003463">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@abernathypark.com</email>
+    <siteid>1225298</siteid>
+    <sitename>Abernathy Park</sitename>
+    <siteaddress>3624 Belmont St, Greensboro, NC 27406</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003465">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@andoverparkapts.com</email>
+    <siteid>1225299</siteid>
+    <sitename>Andover Park</sitename>
+    <siteaddress>1350 Norwalk St Apt A, Greensboro, NC 27407</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003490">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@reserveatparkwest.com</email>
+    <siteid>1225348</siteid>
+    <sitename>Reserve at Park West</sitename>
+    <siteaddress>100 Keats Drive, Spartanburg, SC 29301</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003485">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyatlindenpark.com</email>
+    <siteid>1225350</siteid>
+    <sitename>Legacy at Linden Park</sitename>
+    <siteaddress>1000 Misty Mountain Rd, Lynchburg, VA 24502</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003464">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@alexandriapark.com</email>
+    <siteid>1225351</siteid>
+    <sitename>Alexandria Park</sitename>
+    <siteaddress>3519 Ramsay Street, High Point, NC 27265</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003495">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyattwinoaks.com</email>
+    <siteid>1225374</siteid>
+    <sitename>Legacy at Twin Oaks</sitename>
+    <siteaddress>5269 Hilltop Rd, Greensboro, NC 27407</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003475">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@burkeridgecrossingapts.com</email>
+    <siteid>1473827</siteid>
+    <sitename>Burke Ridge Crossing</sitename>
+    <siteaddress>2112 Burke Ridge Meadows Rd, Winston Salem, NC 27103</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003472">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@berkshireparkapts.com</email>
+    <siteid>1492773</siteid>
+    <sitename>Berkshire Park Apartments</sitename>
+    <siteaddress>1201 Aragon Dr, Knightdale, NC 27545</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003481">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@reserveatglenburnie.com</email>
+    <siteid>1493270</siteid>
+    <sitename>Reserve at Glenburnie</sitename>
+    <siteaddress>100 Gurten St, New Bern, NC 28562-2629</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003474">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@breckenridgeparkapts.com</email>
+    <siteid>2029108</siteid>
+    <sitename>Breckenridge Park</sitename>
+    <siteaddress>100 Breckenridge Drive, Hattiesburg, MS 39402-3698</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003469">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@avalonapthome.com</email>
+    <siteid>2405716</siteid>
+    <sitename>Avalon Apartments</sitename>
+    <siteaddress>327 Guinevere Ln, Wilmington, NC 28403-1479</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003477">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@charlestonplaceapts.com</email>
+    <siteid>2649733</siteid>
+    <sitename>Charleston Place</sitename>
+    <siteaddress>400 Charleston Ln, Jacksonville, NC 28546-7088</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003497">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@thewaverlyapts.com</email>
+    <siteid>2656926</siteid>
+    <sitename>Waverly</sitename>
+    <siteaddress>3211 Pridwen Cir, Raleigh, NC 27610-1269</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003492">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@legacyatthepoint.com</email>
+    <siteid>2940390</siteid>
+    <sitename>Legacy at The Point</sitename>
+    <siteaddress>1411-G Bergamot Loop, High Point, NC 27260-3450</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003478">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@crescentpointeapartments.com</email>
+    <siteid>2986717</siteid>
+    <sitename>Crescent Pointe</sitename>
+    <siteaddress>1500 S Oak St, Seneca, SC 29678-1730</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003491">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@thepinesonwendover.com</email>
+    <siteid>3055236</siteid>
+    <sitename>Pines on Wendover</sitename>
+    <siteaddress>628 N Wendover Rd, Charlotte, NC 28211-4841</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003496">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@uptowncourtapartments.com</email>
+    <siteid>3055237</siteid>
+    <sitename>Uptown Court</sitename>
+    <siteaddress>415 W 10th St, Charlotte, NC 28202-1775</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="003483">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>manager@heronlakeapt.com</email>
+    <siteid>3519404</siteid>
+    <sitename>Heron Lake Apartments</sitename>
+    <siteaddress>1340 N Brickyard Rd, Columbia, SC 29223-8015</siteaddress>
+    <firstdate>2015-01-07</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1225062</siteid>
+    <sitename>Blue Ridge Business Model</sitename>
+    <siteaddress>2401 Penny Rd, High Point, NC 27265-8186</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1></phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>manager@independenceparkapartments.com</email>
+    <siteid>1225344</siteid>
+    <sitename>Historical-Independence Park</sitename>
+    <siteaddress>215 William Penn Plaza, Durham, NC 27704</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(919) 246-0800</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>manager@reserveatbradburyplace.com</email>
+    <siteid>1225349</siteid>
+    <sitename>Historical-Reserve at Bradbury Place</sitename>
+    <siteaddress>560 W New Hope Rd, Goldsboro, NC 27534</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(919) 587-9370</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@palmsatpremierparkapts.com</email>
+    <siteid>1961199</siteid>
+    <sitename>Historical-Palms at Premier Park</sitename>
+    <siteaddress>1155 Clemson Frontage Rd, Columbia, SC 29229</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(803) 227-3760</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@overlookatallensville.com</email>
+    <siteid>2748633</siteid>
+    <sitename>Historical-Overlook at Allensville Square</sitename>
+    <siteaddress>293 Mount Dr, Sevierville, TN 37876-1807</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(865) 365-1558</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>manager@crossingatchesterridge.com</email>
+    <siteid>2883464</siteid>
+    <sitename>Historical-Crossing at Chester Ridge</sitename>
+    <siteaddress>2122 Crossing Way Ct # C, High Point, NC 27262-8501</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 841-4919</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@masonmanorapts.com</email>
+    <siteid>2897214</siteid>
+    <sitename>Historical-Mason Manor And Emery Lane</sitename>
+    <siteaddress>122 Northgate Ct, High Point, NC 27265-1861</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 887-6600</phone1>
+  </client>
+  <client keyword="">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>false</enabled>
+    <email>leasing@gregorieferryapts.com</email>
+    <siteid>2925313</siteid>
+    <sitename>Historical-Gregorie Ferry Landing</sitename>
+    <siteaddress>1240 Winnowing Way Ste 101, Mount Pleasant, SC 29466-7523</siteaddress>
+    <firstdate>2015-01-20</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(843) 225-7515</phone1>
   </client>
   <client keyword="003218">
     <name>Blue Ridge Property Management, LLC</name>
@@ -20,153 +626,2798 @@
     <siteid>3273618</siteid>
     <sitename>Hodgins Retreat</sitename>
     <siteaddress>811 Dolley Madison Rd, Greensboro, NC 27410-3311</siteaddress>
-    <firstdate>2014-12-15</firstdate>
-    <ekey>B1ueR!dgeC0mpany</ekey>
-    <pmcid>1054426</pmcid>
+    <firstdate>2014-12-01</firstdate>
     <aftermoveout>30</aftermoveout>
     <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 553-2077</phone1>
+  </client>
+  <client keyword="003217">
+    <name>Blue Ridge Property Management, LLC</name>
+    <enabled>true</enabled>
+    <email>leasing@legacyatfriendlymanor.com</email>
+    <siteid>1046007</siteid>
+    <sitename>Legacy at Friendly Manor</sitename>
+    <siteaddress>5402 Friendly Manor Dr, Greensboro, NC 27410-4258</siteaddress>
+    <firstdate>2014-12-01</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>100</balanceowed>
+    <ekey>B1ueR!dgeC0mpany</ekey>
+    <pmcid>1054426</pmcid>
+    <phone1>(336) 292-2991</phone1>
+  </client>
+  <client keyword="003575">
+    <name>CAF MANAGEMENT</name>
+    <pmcid>3509289</pmcid>
+    <enabled>true</enabled>
+    <email>northpointe.pm@cafmanagement.com</email>
+    <siteid>3509306</siteid>
+    <sitename>oaks at northpointe</sitename>
+    <siteaddress>12101 northpointe blvd</siteaddress>
+    <email>northpointe.pm@cafmanagement.com</email>
+    <firstdate>02/16/2015</firstdate>
+    <aftermoveout>0</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@theorchardsapts.com</email>
-    <siteid>1045973</siteid>
-    <sitename>The Orchards</sitename>
-    <siteaddress>5360 Orchard Hill Dr, Roanoke, VA 24019-6080</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email>arboretum.pm@cafmanagement.com</email>
+    <siteid>3509290</siteid>
+    <sitename>Arboretum Estates</sitename>
+    <siteaddress>411 Buckingham Rd, Richardson, TX 75081-5779</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(972) 699-4700</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@ashfordplaceapartments.com</email>
-    <siteid>1045974</siteid>
-    <sitename>Ashford Place</sitename>
-    <siteaddress>905 Pineville Point Ave, Charlotte, NC 28217-2080</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email></email>
+    <siteid>3509297</siteid>
+    <sitename>Historical - Arboretum Estates</sitename>
+    <siteaddress>411 Buckingham Rd, Richardson, TX 75081-5779</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(999) 999-9999</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@reserveatforesthills.com</email>
-    <siteid>1045987</siteid>
-    <sitename>Reserve at Forest Hills</sitename>
-    <siteaddress>361 Darlington Ave, Wilmington, NC 28403-1306</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email>crosscreek.pm@cafmanagement.com</email>
+    <siteid>3509302</siteid>
+    <sitename>Cross Creek At Grapevine</sitename>
+    <siteaddress>2701 N Grapevine Mills Blvd, Grapevine, TX 76051-2057</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(972) 906-9900</phone1>
+  </client>
+  <client keyword="003579">
+    <name>CAF Management LLC</name>
+    <enabled>true</enabled>
+    <email>crosscreek.pm@cafmanagement.com</email>
+    <siteid>3509302</siteid>
+    <sitename>Cross Creek At Grapevine</sitename>
+    <siteaddress>2701 N Grapevine Mills Blvd, Grapevine, TX 76051-2057</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>0</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(999) 999-9999</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@abbottscreek.com</email>
-    <siteid>1045988</siteid>
-    <sitename>Abbotts Creek</sitename>
-    <siteaddress>1000 Abbotts Creek Cir, Kernersville, NC 27284-3751</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email>franciscan.pm@cafmanagement.com</email>
+    <siteid>3509304</siteid>
+    <sitename>Franciscan At Bear Creek</sitename>
+    <siteaddress>1600 Village Dr, Euless, TX 76039-4690</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(817) 267-5585</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@reserveatjacksonville.com</email>
-    <siteid>1045990</siteid>
-    <sitename>Reserve at Jacksonville Commons</sitename>
-    <siteaddress>500 Talon Dr, Jacksonville, NC 28546-6967</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email></email>
+    <siteid>3509305</siteid>
+    <sitename>Historical - Franciscan At Bear Creek</sitename>
+    <siteaddress>1600 Village Dr, Euless, TX 76039-4690</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(817) 267-5595</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@legacyatcrosscreek.com</email>
-    <siteid>1068741</siteid>
-    <sitename>Legacy at Cross Creek</sitename>
-    <siteaddress>570 Castle Rising Rd, Fayetteville, NC 28314-1551</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email>northpointe.pm@cafmanagement.com</email>
+    <siteid>3509311</siteid>
+    <sitename>Historical - Oaks At Northpointe</sitename>
+    <siteaddress>12101 Northpointe Blvd, Tomball, TX 77377-5795</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(281) 255-8045</phone1>
+  </client>
+  <client keyword="003576">
+    <name>CAF Management LLC</name>
+    <enabled>true</enabled>
+    <email>platinum.pm@cafmanagement.com</email>
+    <siteid>3509318</siteid>
+    <sitename>PLATINUM CASTLE HILLS</sitename>
+    <siteaddress>5200 Windhaven Pkwy, Lewisville, TX 75056-5974</siteaddress>
+    <firstdate>2015-01-02</firstdate>
+    <aftermoveout>0</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(972) 899-6333</phone1>
+  </client>
+  <client keyword="003617">
+    <name>CAF Management LLC</name>
+    <enabled>true</enabled>
+    <email>platinum.pm@cafmanagement.com</email>
+    <siteid>3509319</siteid>
+    <sitename>Historical - Platinum Castle Hills</sitename>
+    <siteaddress>5200 Windhaven Pkwy, Lewisville, TX 75056-5974</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>0</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(999) 999-9999</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@ashbrookpointe.com</email>
-    <siteid>1070480</siteid>
-    <sitename>Ashbrook Pointe</sitename>
-    <siteaddress>2826 Vanstory St, Greensboro, NC 27407-4608</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email>ridgeview.pm@cafmanagement.com</email>
+    <siteid>3509322</siteid>
+    <sitename>Ranch At Ridgeview</sitename>
+    <siteaddress>2901 Ridgeview Dr, Plano, TX 75025-6454</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(972) 727-1289</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@legacyatabbingtonplace.com</email>
-    <siteid>1070945</siteid>
-    <sitename>Legacy at Abbington Place</sitename>
-    <siteaddress>1025 Kensington Dr, Jacksonville, NC 28546</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email></email>
+    <siteid>3509323</siteid>
+    <sitename>Historical - Ranch At Ridgeview</sitename>
+    <siteaddress>2901 Ridgeview Dr, Plano, TX 75025-6454</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(999) 999-9999</phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@legacyatberkeleyplace.com</email>
-    <siteid>1071102</siteid>
-    <sitename>Legacy at Berkeley Place</sitename>
-    <siteaddress>105 Fallin Blvd, Goldsboro, NC 27534</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email></email>
+    <siteid>3517423</siteid>
+    <sitename>CAF Management CONV Business Model</sitename>
+    <siteaddress>2600 Network Blvd Ste 590, Frisco, TX 75034-6037</siteaddress>
+    <firstdate>2015-02-16</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1></phone1>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>CAF Management LLC</name>
     <enabled>false</enabled>
-    <email>leasing@ashtonparkapts.com</email>
-    <siteid>1225043</siteid>
-    <sitename>Ashton Park</sitename>
-    <siteaddress>50 Braeburn Dr, Anderson, SC 29621</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email></email>
+    <siteid>3509303</siteid>
+    <sitename>Historical - Cross Creek At Grapevine</sitename>
+    <siteaddress>2701 N Grapevine Mills Blvd, Grapevine, TX 76051-2057</siteaddress>
+    <firstdate>2015-02-18</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(999) 999-9999</phone1>
+  </client>
+  <client keyword="003582">
+    <name>Cortland Partners</name>
+    <pmcid>2690747</pmcid>
+    <enabled>true</enabled>
+    <email>marla.runnels@cortlandpartners.com</email>
+    <siteid>2691033</siteid>
+    <sitename>the village at lake park</sitename>
+    <siteaddress>2085 lake park dr se, smyrna, ga 30080</siteaddress>
+    <email>Marla.Runnels@cortlandpartners.com</email>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
   </client>
   <client keyword="">
-    <name>Blue Ridge Property Management, LLC</name>
+    <name>Cortland Partners</name>
     <enabled>false</enabled>
-    <email>leasing@palladiumparkapts.com</email>
-    <siteid>1225044</siteid>
-    <sitename>Palladium Park</sitename>
-    <siteaddress>3902 Pallas Wy, High Point, NC 27265</siteaddress>
-    <firstdate>2015-01-05</firstdate>
-    <aftermoveout></aftermoveout>
-    <balanceowed></balanceowed>
-    <ekey></ekey>
-    <siteid></siteid>
+    <email>tuscana@cortlandpartners.com</email>
+    <siteid>2690748</siteid>
+    <sitename>Tuscana</sitename>
+    <siteaddress>6860 Bebout Dr, Norcross, GA 30093-1001</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 448-0276</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>1500oak@cortlandpartners.com</email>
+    <siteid>2690749</siteid>
+    <sitename>1500 Oak</sitename>
+    <siteaddress>1500 Post Oak Dr, Clarkston, GA 30021-3106</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 938-1241</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>auburnglenn@cortlandpartners.com</email>
+    <siteid>2690752</siteid>
+    <sitename>Auburn Glenn</sitename>
+    <siteaddress>49 Boulevard SE, Atlanta, GA 30312-1858</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 418-6028</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>avalononmontreal@cortlandpartners.com</email>
+    <siteid>2690754</siteid>
+    <sitename>Avalon On Montreal</sitename>
+    <siteaddress>1086 Montreal Rd, Clarkston, GA 30021-1321</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 296-8516</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>avalonpark@cortlandpartners.com</email>
+    <siteid>2690919</siteid>
+    <sitename>Avalon Park Family</sitename>
+    <siteaddress>2798 Peek Rd NW, Atlanta, GA 30318-6071</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 799-3131</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>avalonpark@cortlandpartners.com</email>
+    <siteid>2690932</siteid>
+    <sitename>Avalon Park Senior</sitename>
+    <siteaddress>2798 Peek Rd NW, Atlanta, GA 30318-6071</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 799-8181</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>avalonridge@cortlandpartners.com</email>
+    <siteid>2690946</siteid>
+    <sitename>Avalon Ridge</sitename>
+    <siteaddress>183 Mount Zion Rd SE, Atlanta, GA 30354-2138</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 343-7200</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2690991</siteid>
+    <sitename>Cortland Partners Conventional Business Model</sitename>
+    <siteaddress>260 Peachtree St NW # STE1001, Atlanta, GA 30303-1202</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1></phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>cameron@cortlandpartners.com</email>
+    <siteid>2691000</siteid>
+    <sitename>Cameron At Hickory Grove</sitename>
+    <siteaddress>5625 Keyway Blvd, Charlotte, NC 28215-5721</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 531-1300</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>cliftonglen@cortlandpartners.com</email>
+    <siteid>2691021</siteid>
+    <sitename>Clifton Glen</sitename>
+    <siteaddress>600 Hambrick Rd, Stone Mountain, GA 30083-3314</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 492-5672</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2691022</siteid>
+    <sitename>Historical - Clifton Ridge Townhomes</sitename>
+    <siteaddress>676 Horizon Pl, Marietta, GA 30062-3348</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 693-1877</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>deltacrossing@cortlandpartners.com</email>
+    <siteid>2691023</siteid>
+    <sitename>Delta Crossing</sitename>
+    <siteaddress>6000 Delta Crossing Ln, Charlotte, NC 28212-2300</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 531-1800</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>DunwoodyGlen@CortlandPartners.com</email>
+    <siteid>2691024</siteid>
+    <sitename>Dunwoody Glen</sitename>
+    <siteaddress>6750 Peachtree Industrial Blvd, Dunwoody, GA 30360-2230</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 840-9999</phone1>
+  </client>
+  <client keyword="003581">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>greens@cortlandpartners.com</email>
+    <siteid>2691025</siteid>
+    <sitename>Greens At Windy Hill</sitename>
+    <siteaddress>970 Windy Hill Rd SE, Smyrna, GA 30080-2023</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 436-5121</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>heritagestation@cortlandpartners.com</email>
+    <siteid>2691026</siteid>
+    <sitename>Heritage Station Family</sitename>
+    <siteaddress>765 Mcdaniel St SW, Atlanta, GA 30310-5318</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 490-4271</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>heritagestation@cortlandpartners.com</email>
+    <siteid>2691027</siteid>
+    <sitename>Heritage Station Senior</sitename>
+    <siteaddress>765 Mcdaniel St SW, Atlanta, GA 30310-5318</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 588-5522</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>huntersridge@cortlandpartners.com</email>
+    <siteid>2691028</siteid>
+    <sitename>Hunters Ridge</sitename>
+    <siteaddress>1700 Hunter Ridge Ln, Norcross, GA 30092-3731</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 449-1334</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>indigopark@cortlandpartners.com</email>
+    <siteid>2691029</siteid>
+    <sitename>Indigo Park</sitename>
+    <siteaddress>11959 Nicholson Dr, Baton Rouge, LA 70810-7600</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(225) 766-0128</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>ivypark@cortlandpartners.com</email>
+    <siteid>2691030</siteid>
+    <sitename>Historical-Ivy Park</sitename>
+    <siteaddress>2035 Memorial Dr SE, Atlanta, GA 30317-2504</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 371-0003</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>jamestownvillage@cortlandpartners.com</email>
+    <siteid>2691031</siteid>
+    <sitename>Jamestown Village</sitename>
+    <siteaddress>1565 Crider Rd SE, Marietta, GA 30060-7400</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 428-0212</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>lacota@cortlandpartners.com</email>
+    <siteid>2691032</siteid>
+    <sitename>Lacota</sitename>
+    <siteaddress>6664 Peachtree Industrial Blvd, Dunwoody, GA 30360-2111</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 448-7310</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Park83@cortlandpartners.com</email>
+    <siteid>2691034</siteid>
+    <sitename>Park 83</sitename>
+    <siteaddress>100 Calibre Creek Pkwy, Roswell, GA 30076-4500</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 642-1661</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>siennaheights@cortlandpartners.com</email>
+    <siteid>2691035</siteid>
+    <sitename>Historical - Sienna Heights</sitename>
+    <siteaddress>1355 Graves Rd, Norcross, GA 30093-1373</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 493-1501</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>sinclair@cortlandpartners.com</email>
+    <siteid>2691036</siteid>
+    <sitename>Sinclair</sitename>
+    <siteaddress>3600 Park Colony Dr, Norcross, GA 30093-1677</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 938-1300</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>somersetatthecrossing@cortlandpartners.com</email>
+    <siteid>2691037</siteid>
+    <sitename>Somerset</sitename>
+    <siteaddress>100 Summerwalk Pkwy, Tucker, GA 30084-8401</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 938-4211</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>springdaleglen@cortlandpartners.com</email>
+    <siteid>2691038</siteid>
+    <sitename>Springdale Glen</sitename>
+    <siteaddress>3800 Brockett Trl, Clarkston, GA 30021-1503</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 939-4480</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>springvalley@cortlandpartners.com</email>
+    <siteid>2691039</siteid>
+    <sitename>Historical-Spring Valley</sitename>
+    <siteaddress>2823 Misty Waters Dr, Decatur, GA 30032-6614</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 288-6620</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Steeplechase@cortlandpartnets.com</email>
+    <siteid>2691040</siteid>
+    <sitename>Historical-Steeplechase</sitename>
+    <siteaddress>5940 Singleton Rd, Norcross, GA 30093-1907</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 662-0890</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2691041</siteid>
+    <sitename>Historical - The Woodridge</sitename>
+    <siteaddress>2567 Whites Mill Rd, Decatur, GA 30034-1135</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 212-9721</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>westm@cortlandpartners.com</email>
+    <siteid>2691042</siteid>
+    <sitename>West M.</sitename>
+    <siteaddress>1330 W Mcneese St, Lake Charles, LA 70605-4291</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(337) 478-8449</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>karyn.solomon@cortlandpartners.com</email>
+    <siteid>2738008</siteid>
+    <sitename>Towne West Manor</sitename>
+    <siteaddress>330 Brownlee Rd SW, Atlanta, GA 30311-1800</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 699-7178</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>aqua@cortlandpartners.com</email>
+    <siteid>2801919</siteid>
+    <sitename>Aqua</sitename>
+    <siteaddress>9803 Creekfront Rd, Jacksonville, FL 32256-0765</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(904) 642-0111</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>GETower@cortlandpartners.com</email>
+    <siteid>2801922</siteid>
+    <sitename>GE Towers</sitename>
+    <siteaddress>490 Glenn St SW, Atlanta, GA 30312-2459</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 653-0988</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>harborview@cortlandpartners.com</email>
+    <siteid>2801923</siteid>
+    <sitename>Harbor View</sitename>
+    <siteaddress>4855 Magnolia Cove Dr, Kingwood, TX 77345-2283</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(281) 360-0896</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>mirador@cortlandpartners.com</email>
+    <siteid>2801924</siteid>
+    <sitename>Historical - Mirador At River City</sitename>
+    <siteaddress>13100 Broxton Bay Dr, Jacksonville, FL 32218-8358</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(904) 714-9101</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>newport@cortlandpartners.com</email>
+    <siteid>2801925</siteid>
+    <sitename>Newport On The Lake</sitename>
+    <siteaddress>1895 Barker Cypress Rd, Houston, TX 77084-6828</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(281) 579-2787</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>stovall@cortlandpartners.com</email>
+    <siteid>2801927</siteid>
+    <sitename>Historical - Stovall At River City</sitename>
+    <siteaddress>13000 Broxton Bay Dr, Jacksonville, FL 32218-8390</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(904) 714-9101</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>watervue@cortlandpartners.com</email>
+    <siteid>2801938</siteid>
+    <sitename>Watervue</sitename>
+    <siteaddress>8660 N BEACH ST, Keller, TX 76244</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(817) 750-6000</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Watermark@cortlandpartners.com</email>
+    <siteid>2911004</siteid>
+    <sitename>Watermark at East Cobb</sitename>
+    <siteaddress>2000 E Lake Pkwy, Marietta, GA 30062-3868</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 977-5995</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>ProvenceNorth@cortlandpartners.com</email>
+    <siteid>2924552</siteid>
+    <sitename>Provence North</sitename>
+    <siteaddress>6558 Roswell Rd NE, Sandy Springs, GA 30328-3153</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 252-1393</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>3131@cortlandpartners.com</email>
+    <siteid>2946883</siteid>
+    <sitename>3131</sitename>
+    <siteaddress>3131 N Druid Hills Rd, Decatur, GA 30033-2654</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 320-9140</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>exchange@cortlandpartners.com</email>
+    <siteid>2946884</siteid>
+    <sitename>Exchange At North Haven</sitename>
+    <siteaddress>2432 Johnson Ferry Rd NE, Chamblee, GA 30341-2637</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 455-1877</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>astorplace@cortlandpartners.com</email>
+    <siteid>2946885</siteid>
+    <sitename>Astor Place</sitename>
+    <siteaddress>1435 Boggs Rd, Duluth, GA 30096-1201</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 923-2987</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>chelsea88@cortlandpartners.com</email>
+    <siteid>2946888</siteid>
+    <sitename>Chelsea 88</sitename>
+    <siteaddress>1435 Boggs Rd, Duluth, GA 30096-1201</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 935-5151</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>TheLex@cortlandpartners.com</email>
+    <siteid>2946889</siteid>
+    <sitename>The Lex</sitename>
+    <siteaddress>1000 Lexington Farms Dr, Alpharetta, GA 30004-5324</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 475-0222</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>coventry@cortlandpartners.com</email>
+    <siteid>2951484</siteid>
+    <sitename>Coventry At City View</sitename>
+    <siteaddress>5200 Bryant Irvin Rd, Fort Worth, TX 76132-3800</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(817) 263-5900</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>twoaddisonplace@cortlandpartners.com</email>
+    <siteid>2962983</siteid>
+    <sitename>Historical - Two Addison Place</sitename>
+    <siteaddress>2 Addison Place, Pooler, GA 31322</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(912) 330-0030</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Halstead@cortlandpartners.com</email>
+    <siteid>3011528</siteid>
+    <sitename>Halstead</sitename>
+    <siteaddress>4620 N Braeswood Blvd, Houston, TX 77096-2845</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(713) 667-5900</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>SaxonWoods@cortlandpartners.com</email>
+    <siteid>3041984</siteid>
+    <sitename>Saxon Woods</sitename>
+    <siteaddress>4490 Eldorado Pkwy, Mckinney, TX 75070-3770</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(214) 726-9299</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>avingtonpark@cortlandpartners.com</email>
+    <siteid>3068387</siteid>
+    <sitename>Avington Park At Fossil Creek</sitename>
+    <siteaddress>6101 N Riverside Dr, Fort Worth, TX 76137-7079</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(817) 306-4454</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>1250west@cortlandpartners.com</email>
+    <siteid>3069727</siteid>
+    <sitename>1250 West</sitename>
+    <siteaddress>1250 Powder Springs Rd SW, Marietta, GA 30064</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 425-9117</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>legacyftclarke@cortlandpartners.com</email>
+    <siteid>3073882</siteid>
+    <sitename>Legacy At Fort Clark</sitename>
+    <siteaddress>1505 Fort Clarke Blvd, Gainesville, FL 32606-7182</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(352) 331-9322</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>preserveatdeerpark@cortlandpartners.com</email>
+    <siteid>3092888</siteid>
+    <sitename>Preserve At Deer Park</sitename>
+    <siteaddress>15420 Livingston Ave, Lutz, FL 33559-3430</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(813) 910-0077</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>thebristol@cortlandpartners.com</email>
+    <siteid>3096179</siteid>
+    <sitename>The Bristol</sitename>
+    <siteaddress>4777 Memorial Dr, The Colony, TX 75056-2811</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(972) 731-1000</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>AudubonVillage@cortlandpartners.com</email>
+    <siteid>3115896</siteid>
+    <sitename>Audubon Village</sitename>
+    <siteaddress>5830 Memorial Hwy, Tampa, FL 33615-5009</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(813) 886-5568</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Vizcaya@cortlandpartners.com</email>
+    <siteid>3115899</siteid>
+    <sitename>Vizcaya</sitename>
+    <siteaddress>18108 S Parkview Dr, Houston, TX 77084-5884</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(281) 578-5050</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Quorum@cortlandpartners.com</email>
+    <siteid>3172765</siteid>
+    <sitename>15777 Quorum Apartments</sitename>
+    <siteaddress>15777 Quorum Dr, Addison, TX 75001-3474</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(972) 239-7881</phone1>
+  </client>
+  <client keyword="003580">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>ambermill@cortlandpartners.com</email>
+    <siteid>3172767</siteid>
+    <sitename>Amber Mill</sitename>
+    <siteaddress>2906 Old Norcross Rd, Duluth, GA 30096-5108</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 564-3354</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>ridgleavillage@cortlandpartners.com</email>
+    <siteid>3200895</siteid>
+    <sitename>Ridglea Village</sitename>
+    <siteaddress>3601 Westridge Ave, Fort Worth, TX 76116-5826</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(817) 735-9595</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Themason@cortlandpartners.com</email>
+    <siteid>3200896</siteid>
+    <sitename>The Mason at Lakemont</sitename>
+    <siteaddress>7115 S Mason Rd, Richmond, TX 77407-4474</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(281) 342-9905</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>3253697</siteid>
+    <sitename>Harbor At Lake Howell</sitename>
+    <siteaddress>1280 Vinings Ln, Casselberry, FL 32707-6452</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(407) 657-8961</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>ThePointe@cortlandpartners.com</email>
+    <siteid>3306165</siteid>
+    <sitename>Pointe At Lenox Park</sitename>
+    <siteaddress>1900 N Druid Hills Rd NE, Atlanta, GA 30319-4120</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(404) 636-4413</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>VillageRS@cortlandpartners.com</email>
+    <siteid>3362715</siteid>
+    <sitename>The Village</sitename>
+    <siteaddress>2085 Lake Park Dr SE, Smyrna, GA 30080-7698</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 436-1223</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Tenoaks@cortlandpartners.com</email>
+    <siteid>3362719</siteid>
+    <sitename>Ten Oaks</sitename>
+    <siteaddress>405 Philip Blvd, Lawrenceville, GA 30046-8738</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 822-3464</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>IslandWalk@cortlandpartners.com</email>
+    <siteid>3362723</siteid>
+    <sitename>Island Walk</sitename>
+    <siteaddress>5365 Harborside Dr, Tampa, FL 33615-3675</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(813) 855-4834</phone1>
+  </client>
+  <client keyword="003602">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>abbielakes@cortlandpartners.com</email>
+    <siteid>3388190</siteid>
+    <sitename>Abbie Lakes</sitename>
+    <siteaddress>3833 Abbie Lakes Dr, Canal Winchester, OH 43110-8055</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 920-4700</phone1>
+  </client>
+  <client keyword="003603">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>brooksedge@cortlandpartners.com</email>
+    <siteid>3388191</siteid>
+    <sitename>Brooksedge</sitename>
+    <siteaddress>2870 Kengary Way, Reynoldsburg, OH 43068-9432</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 575-0005</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>cleburneterrace@cortlandpartners.com</email>
+    <siteid>3388195</siteid>
+    <sitename>Historical - Cleburne Terrace</sitename>
+    <siteaddress>1661 Woodard Ave, Cleburne, TX 76033-7052</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(817) 645-4124</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>dezavalaoaks@cortlandpartners.com</email>
+    <siteid>3388212</siteid>
+    <sitename>Dezavala Oaks</sitename>
+    <siteaddress>6033 De Zavala Rd, San Antonio, TX 78249-2243</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(210) 691-2993</phone1>
+  </client>
+  <client keyword="003604">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>jeffersonchase@cortlandpartners.com</email>
+    <siteid>3388222</siteid>
+    <sitename>Jefferson Chase</sitename>
+    <siteaddress>860 Jefferson Chase Way, Blacklick, OH 43004-9173</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 501-4790</phone1>
+  </client>
+  <client keyword="003606">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email></email>
+    <siteid>3388223</siteid>
+    <sitename>Lakes Edge</sitename>
+    <siteaddress>150 Lakepoint Ct, Pickerington, OH 43147-9847</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 837-5253</phone1>
+  </client>
+  <client keyword="003609">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>reserveabbielakes@cortlandpartners.com</email>
+    <siteid>3388224</siteid>
+    <sitename>Reserve At Abbie Lakes</sitename>
+    <siteaddress>3793 Lakeview Trl, Canal Winchester, OH 43110-7892</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 834-7780</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>RetamaRanch@cortlandpartners.com</email>
+    <siteid>3388226</siteid>
+    <sitename>Retama Ranch</sitename>
+    <siteaddress>12900 E Loop 1604 N, Universal City, TX 78148-3169</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(210) 566-1177</phone1>
+  </client>
+  <client keyword="003607">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>stonebridge@cortlandpartners.com</email>
+    <siteid>3388227</siteid>
+    <sitename>Stonebridge</sitename>
+    <siteaddress>170 Heatherbridge Ln, Blacklick, OH 43004-9296</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 759-1971</phone1>
+  </client>
+  <client keyword="003608">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>sunburyridge@cortlandpartners.com</email>
+    <siteid>3388230</siteid>
+    <sitename>Sunbury Ridge</sitename>
+    <siteaddress>3030 Sunbury Ridge Dr, Columbus, OH 43219-3595</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 475-9970</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>thecharlestonian@cortlandpartners.com</email>
+    <siteid>3388231</siteid>
+    <sitename>The Charlestonian At Lake Charles</sitename>
+    <siteaddress>1531 Country Club Rd, Lake Charles, LA 70605-5338</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(337) 562-1101</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>15190@newhome1.com</email>
+    <siteid>3388232</siteid>
+    <sitename>Wyndsor Court</sitename>
+    <siteaddress>301 S Jupiter Rd, Allen, TX 75002-3099</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(972) 396-6000</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>3389243</siteid>
+    <sitename>Historical - The Village Of Lake Park</sitename>
+    <siteaddress>2085 Lake Park Dr SE, Smyrna, GA 30080-7698</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 436-1223</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>3389248</siteid>
+    <sitename>Historical - Gallery At Baypoint</sitename>
+    <siteaddress>5365 Harborside Dr, Tampa, FL 33615-3675</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(813) 885-4834</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>3389249</siteid>
+    <sitename>Historical - Island Walk</sitename>
+    <siteaddress>5365 Harborside Dr, Tampa, FL 33615-3675</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(813) 855-4834</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>3389250</siteid>
+    <sitename>Historical - Ten Oaks</sitename>
+    <siteaddress>405 Philip Blvd, Lawrenceville, GA 30046-8738</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(770) 822-3464</phone1>
+  </client>
+  <client keyword="003605">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>LakeRidge@cortlandpartners.com</email>
+    <siteid>3426796</siteid>
+    <sitename>Lake Ridge</sitename>
+    <siteaddress>2591 Goldenstrand Dr, Hilliard, OH 43026-8081</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(614) 527-0651</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>providenceestates@cortlandpartners.com</email>
+    <siteid>3426797</siteid>
+    <sitename>Providence Estates</sitename>
+    <siteaddress>6298 Lockhill Rd, San Antonio, TX 78240-2036</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(210) 699-4700</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>toscana@cortlandpartners.com</email>
+    <siteid>3426798</siteid>
+    <sitename>Toscana At Valley Ridge</sitename>
+    <siteaddress>1400 Valley Ridge Blvd, Lewisville, TX 75077-3742</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(972) 219-0270</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>retreat@cortlandpartners.com</email>
+    <siteid>3426799</siteid>
+    <sitename>Retreat At Stonebridge Ranch</sitename>
+    <siteaddress>1920 Grassmere Ln, Mckinney, TX 75071-8519</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(972) 562-0600</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>Stonebrook@cortlandpartners.com</email>
+    <siteid>3426800</siteid>
+    <sitename>Stone Brook</sitename>
+    <siteaddress>619 Rollingbrook St, Baytown, TX 77521-4061</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(281) 837-6000</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>cityview@cortlandpartners.com</email>
+    <siteid>3426820</siteid>
+    <sitename>City View</sitename>
+    <siteaddress>2400 N 8th St, Red Oak, IA 51566-1105</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(712) 623-9113</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>madisonchase@cortlandpartners.com</email>
+    <siteid>3426821</siteid>
+    <sitename>Madison Chase</sitename>
+    <siteaddress>300 Madison Ave, Childress, TX 79201-2223</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(940) 937-6893</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>senecaplace@cortlandpartners.com</email>
+    <siteid>3426822</siteid>
+    <sitename>Seneca Place</sitename>
+    <siteaddress>1405 Seneca St, Storm Lake, IA 50588-1916</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(712) 732-1969</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>smokeytrail@cortlandpartners.com</email>
+    <siteid>3426823</siteid>
+    <sitename>Smokey Trails Of Limon</sitename>
+    <siteaddress>510 Smokey Trail Dr, Limon, CO 80828-2111</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(719) 775-2296</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>townplaza@cortlandpartners.com</email>
+    <siteid>3426824</siteid>
+    <sitename>Historical -Town Plaza</sitename>
+    <siteaddress>1700 Mayfair Dr, Beeville, TX 78102-6921</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(361) 358-2061</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>valleyview@cortlandpartners.com</email>
+    <siteid>3426825</siteid>
+    <sitename>Valley View</sitename>
+    <siteaddress>303 S Iowa St, Shenandoah, IA 51601-1585</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(712) 246-2044</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>oakhill@cortlandpartners.com</email>
+    <siteid>3426861</siteid>
+    <sitename>Historical - Oak Hill</sitename>
+    <siteaddress>500 S Hillside Dr, Beeville, TX 78102-5310</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(361) 358-8222</phone1>
+  </client>
+  <client keyword="003588">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>ansleytowncenter@cortlandpartners.com</email>
+    <siteid>3519455</siteid>
+    <sitename>Ansley At Town Center</sitename>
+    <siteaddress>1000 Alder Way, Evans, GA 30809-9100</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(706) 868-4949</phone1>
+  </client>
+  <client keyword="003591">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>carlylecrosstown@cortlandpartners.com</email>
+    <siteid>3519458</siteid>
+    <sitename>Carlyle At Crosstown</sitename>
+    <siteaddress>1820 Crosstown Club Pl, Tampa, FL 33619-7024</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(813) 630-5600</phone1>
+  </client>
+  <client keyword="003587">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>coppersprings@cortlandpartners.com</email>
+    <siteid>3519459</siteid>
+    <sitename>Copper Springs</sitename>
+    <siteaddress>13333 West Rd, Houston, TX 77041-6082</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(281) 970-1330</phone1>
+  </client>
+  <client keyword="003599">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email></email>
+    <siteid>3519461</siteid>
+    <sitename>Vista At Lost Lake Phase I</sitename>
+    <siteaddress>2550 Citrus Tower Blvd, Clermont, FL 34711-6824</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(999) 999-9999</phone1>
+  </client>
+  <client keyword="003600">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email></email>
+    <siteid>3519462</siteid>
+    <sitename>Vista At Lost Lake Phase II</sitename>
+    <siteaddress>2550 Citrus Tower Blvd, Clermont, FL 34711-6824</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(999) 999-9999</phone1>
+  </client>
+  <client keyword="003601">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>waterfordlakes@cortlandpartners.com</email>
+    <siteid>3519463</siteid>
+    <sitename>Waterford Lakes</sitename>
+    <siteaddress>8000 Waterford Lakes Dr, Charlotte, NC 28210-7457</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 552-5446</phone1>
+  </client>
+  <client keyword="003592">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>huntclub@cortlandpartners.com</email>
+    <siteid>3519469</siteid>
+    <sitename>Hunt Club</sitename>
+    <siteaddress>100 Heritage Pointe Rd, Charlotte, NC 28262-2444</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 549-4597</phone1>
+  </client>
+  <client keyword="003594">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>steeplechase@cortlandpartners.com</email>
+    <siteid>3519470</siteid>
+    <sitename>Steeplechase</sitename>
+    <siteaddress>7200 Wallace Rd, Charlotte, NC 28212-6937</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 535-1028</phone1>
+  </client>
+  <client keyword="003595">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>theoaks@cortlandpartners.com</email>
+    <siteid>3519483</siteid>
+    <sitename>The Oaks</sitename>
+    <siteaddress>4915 Misty Oaks Dr, Charlotte, NC 28269-1875</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 596-2303</phone1>
+  </client>
+  <client keyword="003596">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>thepointecharlotte@cortlandpartners.com</email>
+    <siteid>3519484</siteid>
+    <sitename>The Pointe</sitename>
+    <siteaddress>6530 Free Throw Ln, Charlotte, NC 28217-6420</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 523-4142</phone1>
+  </client>
+  <client keyword="003597">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>theregency@cortlandpartners.com</email>
+    <siteid>3519488</siteid>
+    <sitename>The Regency</sitename>
+    <siteaddress>4817 Water Oak Rd, Charlotte, NC 28211-2445</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 364-6021</phone1>
+  </client>
+  <client keyword="003589">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>aspenpeak@cortlandpartners.com</email>
+    <siteid>3519489</siteid>
+    <sitename>Aspen Peak</sitename>
+    <siteaddress>8625 Winter Oaks Ln, Charlotte, NC 28210-5574</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 554-7078</phone1>
+  </client>
+  <client keyword="003593">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>sardisplace@cortlandpartners.com</email>
+    <siteid>3519490</siteid>
+    <sitename>Sardis Place at Matthews</sitename>
+    <siteaddress>2808 Cross Point Cir, Matthews, NC 28105-8493</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 536-1609</phone1>
+  </client>
+  <client keyword="003598">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>villagelakes@cortlandpartners.com</email>
+    <siteid>3519494</siteid>
+    <sitename>Village Lakes</sitename>
+    <siteaddress>2300 Village Lake Dr, Charlotte, NC 28212-0079</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(704) 568-5910</phone1>
+  </client>
+  <client keyword="003590">
+    <name>Cortland Partners</name>
+    <enabled>true</enabled>
+    <email>bowerybayside@cortlandpartners.com</email>
+    <siteid>3519497</siteid>
+    <sitename>Bowery Bayside</sitename>
+    <siteaddress>6301 S West Shore Blvd, Tampa, FL 33616-1334</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(813) 831-4089</phone1>
+  </client>
+  <client keyword="">
+    <name>Cortland Partners</name>
+    <enabled>false</enabled>
+    <email>VistaLostLake@cortlandpartners.com</email>
+    <siteid>3547169</siteid>
+    <sitename>Vista At Lost Lake</sitename>
+    <siteaddress>2550 Citrus Tower Blvd, Clermont, FL 34711-6824</siteaddress>
+    <firstdate>2015-02-19</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>0156713500</ekey>
+    <pmcid>2690747</pmcid>
+    <phone1>(352) 242-4471</phone1>
+  </client>
+  <client keyword="">
+    <name>CAF Management LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>3566343</siteid>
+    <sitename>Ashmore At Horizon North</sitename>
+    <siteaddress>4300 Horizon North Pkwy, Dallas, TX 75287-2838</siteaddress>
+    <firstdate>2015-02-26</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(999) 999-9999</phone1>
+  </client>
+  <client keyword="">
+    <name>CAF Management LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>3566344</siteid>
+    <sitename>Emory At Horizon North</sitename>
+    <siteaddress>4200 Horizon North Pkwy, Dallas, TX 75287-2809</siteaddress>
+    <firstdate>2015-02-26</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75.00</balanceowed>
+    <ekey>CAFmanagement1</ekey>
+    <pmcid>3509289</pmcid>
+    <phone1>(999) 999-9999</phone1>
+  </client>
+  <client keyword="003621">
+    <name>Multifamily Management Services LLC</name>
+    <pmcid>1049827</pmcid>
+    <enabled>true</enabled>
+    <email>gorutherfordglen@goldoller.com</email>
+    <siteid>3202408</siteid>
+    <sitename>rutherford glen</sitename>
+    <siteaddress>7100 dawson blvd, atlanta, ga 30340</siteaddress>
+    <email>manager@reserveatjacksonville.com</email>
+    <firstdate>2012-12-01</firstdate>
+    <aftermoveout>0</aftermoveout>
+    <balanceowed>50</balanceowed>
+    <ekey>197119912011</ekey>
+    <phone1></phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1069733</siteid>
+    <sitename>Capitol</sitename>
+    <siteaddress>840 8th Ave, New York, NY 10019-6647</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 581-9677</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120578</siteid>
+    <sitename>Bedford Stuyvesants NSA</sitename>
+    <siteaddress>11 12 37 39 Kingston Ave, Brooklyn, NY 11213</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 368-2400</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120708</siteid>
+    <sitename>Chauncey</sitename>
+    <siteaddress>10 W 138th St, New York, NY 10037-1765</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 368-2400</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>elapointe@multifamilymgt.com</email>
+    <siteid>1120709</siteid>
+    <sitename>Williams and Georgia Towers</sitename>
+    <siteaddress>405 Williams Ave, Brooklyn, NY 11207-4632</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 498-7558</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>tsmith@multifamilymgt.com</email>
+    <siteid>1120710</siteid>
+    <sitename>Associated Blind</sitename>
+    <siteaddress>135 W 23rd St, New York, NY 10011-2431</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 620-9109</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>bsmith@multifamilymgt.com</email>
+    <siteid>1120712</siteid>
+    <sitename>Eckerson Village</sitename>
+    <siteaddress>164 E Eckerson Rd, Spring Valley, NY 10977-3148</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 352-9065</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>bsmith@multifamilymgt.com</email>
+    <siteid>1120713</siteid>
+    <sitename>Middlewood</sitename>
+    <siteaddress>80 N Middletown Rd, Nanuet, NY 10954-2306</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 623-6434</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>barbaras@multifamilymgt.com</email>
+    <siteid>1120715</siteid>
+    <sitename>Stony Point Elderly</sitename>
+    <siteaddress>401 Tomkins Ave, Stony Point, NY 10980</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 429-2503</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>nolivo@multifamilymgt.com</email>
+    <siteid>1120716</siteid>
+    <sitename>Taino Towers</sitename>
+    <siteaddress>2253 3rd Ave, New York, NY 10035-2206</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 369-3755</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120718</siteid>
+    <sitename>Varick Peterson</sitename>
+    <siteaddress>121 Varick Homes # A, Newburgh, NY 12550-4661</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 562-2980</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>campbellapts@multifamilymgt.com</email>
+    <siteid>1120719</siteid>
+    <sitename>Wallkill Senior Citizens Housi</sitename>
+    <siteaddress>88 Seniors Way, Middletown, NY 10940-2953</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 344-5599</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120720</siteid>
+    <sitename>Whitman Village</sitename>
+    <siteaddress>160 Lowndes Ave # A, Huntington Station, NY 11746-1277</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(631) 549-0330</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120910</siteid>
+    <sitename>Spook Rock Senior Citizen II</sitename>
+    <siteaddress>200 Dashew Dr, Suffern, NY 10901-4201</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 357-9433</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120911</siteid>
+    <sitename>Spook Rock Senior Citizen I</sitename>
+    <siteaddress>200 Dashew Dr, Suffern, NY 10901-4201</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 357-9433</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>aharrison@multifamilymgt.com</email>
+    <siteid>1120912</siteid>
+    <sitename>Chestnut Ridge</sitename>
+    <siteaddress>13 Hubert Humphrey Dr, Spring Valley, NY 10977-6720</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 352-7080</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>lhazard@multifamilymgt.com</email>
+    <siteid>1120913</siteid>
+    <sitename>Providence New City</sitename>
+    <siteaddress>17 Gordon Ave St 1, Providence, RI 02905</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(401) 276-2726</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>janniedixon38@gmail.com</email>
+    <siteid>1120914</siteid>
+    <sitename>Marjorie Richardson Court</sitename>
+    <siteaddress>359 Hendrix St, Brooklyn, NY 11207</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 647-3270</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>scastro@multifamilymgt.com</email>
+    <siteid>1120918</siteid>
+    <sitename>Fair Haven Elderly</sitename>
+    <siteaddress>25 Saltonstall Ave, New Haven, CT 06513</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(203) 777-9736</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>aharrison@multifamilymgt.com</email>
+    <siteid>1120919</siteid>
+    <sitename>FLG Company LLC</sitename>
+    <siteaddress>20 Secora Dr, Spring Valley, NY 10952</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 352-3333</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120920</siteid>
+    <sitename>College Arms</sitename>
+    <siteaddress>100 College Ave, Sleepy Hollow, NY 10591-2845</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(914) 332-5554</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>1120922</siteid>
+    <sitename>Audubon Avenue</sitename>
+    <siteaddress>301 Audubon Ave, New York, NY 10033-4229</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 328-6100</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>lreeves@multifamilymgt.com</email>
+    <siteid>1120923</siteid>
+    <sitename>Barbour Garden</sitename>
+    <siteaddress>387 Barbour St, Heartland, CT 06112</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(860) 527-4647</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>jcarton@multifamilymgt.com</email>
+    <siteid>2041609</siteid>
+    <sitename>Marlene Estates</sitename>
+    <siteaddress>940 Simpson St, Bronx, NY 10459</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 368-2400</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>jtillman@multifamilymgt.com</email>
+    <siteid>2305018</siteid>
+    <sitename>Spring Valley Redevelopment LLC</sitename>
+    <siteaddress>94 Memorial Park Dr, Spring Valley, NY 10977-5129</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 425-7879</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>lcalderon@multifamilymgt.com</email>
+    <siteid>2320101</siteid>
+    <sitename>Rockland Garden</sitename>
+    <siteaddress>N Franklin St AT Sickles Ave, Nyack, NY 10960</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(846) 368-2400</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2388761</siteid>
+    <sitename>Kingsbridge Court</sitename>
+    <siteaddress>2710 Sedgwick Ave, Bronx, NY 10468-3148</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 548-2988</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2447668</siteid>
+    <sitename>MMS Conventional Business Model</sitename>
+    <siteaddress>4 Executive Blvd Ste 100, Suffern, NY 10901-4176</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(555) 555-5555</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2448338</siteid>
+    <sitename>Prince Hall Plaza</sitename>
+    <siteaddress>460 W 155th St, New York, NY 10032-6365</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 926-3283</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>theclubattowncenter@goldoller.com</email>
+    <siteid>2448352</siteid>
+    <sitename>The Club at Town Center</sitename>
+    <siteaddress>3737 Saint Johns Bluff Rd S, Jacksonville, FL 32224-2652</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(904) 642-6045</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2452996</siteid>
+    <sitename>MMS Affordable Business Mod</sitename>
+    <siteaddress>4 Executive Blvd Ste 100, Suffern, NY 10901-4176</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(999) 999-9999</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>twalker@goldoller.com</email>
+    <siteid>2454379</siteid>
+    <sitename>Plantation</sitename>
+    <siteaddress>669 Covered Bridge Pkwy, Prattville, AL 36066-7293</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(334) 361-9887</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>tarriveraptsinfo@goldoller.com</email>
+    <siteid>2454380</siteid>
+    <sitename>Tar River Estates</sitename>
+    <siteaddress>1725 E 1st St, Greenville, NC 27858-2204</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(252) 752-4225</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>wilsonacresinfo@goldoller.com</email>
+    <siteid>2454381</siteid>
+    <sitename>Wilson Acres</sitename>
+    <siteaddress>1806 E 1st St, Greenville, NC 27858-2205</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(252) 752-0277</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>eaglepointe@goldoller.com</email>
+    <siteid>2454382</siteid>
+    <sitename>Eagle Pointe Apartment Homes</sitename>
+    <siteaddress>6612 Eagle Pointe Dr, Indianapolis, IN 46254</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(317) 293-8559</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>cfayson@multifamilymgt.com</email>
+    <siteid>2454386</siteid>
+    <sitename>Alliance Apts HDFC</sitename>
+    <siteaddress>174 Avenue A, New York, NY 10009-4079</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(646) 602-9026</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454387</siteid>
+    <sitename>Bensonhurst Housing for the Elderly</sitename>
+    <siteaddress>2164 78th St, Brooklyn, NY 11214-1536</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 234-5470</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>jcarrero@multifamilymgt.com</email>
+    <siteid>2454388</siteid>
+    <sitename>Bonifacio Cora Texidor HDFC</sitename>
+    <siteaddress>317 E 116th St, New York, NY 10029-1502</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 534-4961</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>cfayson@multifamilymgt.com</email>
+    <siteid>2454393</siteid>
+    <sitename>David L Podell House</sitename>
+    <siteaddress>179 Henry St, New York, NY 10002-6463</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(646) 395-4276</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454396</siteid>
+    <sitename>Harry and Jeanette Weinberg Gardens HDFC, Inc.</sitename>
+    <siteaddress>2552 Webb Ave, Bronx, NY 10468-3965</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 676-1448</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454397</siteid>
+    <sitename>Icarus</sitename>
+    <siteaddress>611 W 204th St, New York, NY 10034-3917</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 368-2400</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454399</siteid>
+    <sitename>Kenneth Gladstone Building, HDFC, Inc.</sitename>
+    <siteaddress>2514 University Ave, Bronx, NY 10468-4001</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 933-1501</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454405</siteid>
+    <sitename>NYSD Rombouts HDFC</sitename>
+    <siteaddress>3285 Rombouts Ave, Bronx, NY 10475-1341</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 862-2045</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454406</siteid>
+    <sitename>Project Linkage HDFC</sitename>
+    <siteaddress>309 E 118th St, New York, NY 10035-4223</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 289-5496</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454409</siteid>
+    <sitename>Renaissance Court</sitename>
+    <siteaddress>619 W 204th St, New York, NY 10034-3902</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(201) 658-7816</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454411</siteid>
+    <sitename>Riverdale Housing HDFC</sitename>
+    <siteaddress>6477 Broadway, Bronx, NY 10471-2744</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 432-1234</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454412</siteid>
+    <sitename>Soundview</sitename>
+    <siteaddress>669 White Plains Rd # 685, Bronx, NY 10473-2644</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 991-0999</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454414</siteid>
+    <sitename>Stuyvesant Charter</sitename>
+    <siteaddress>202 Flatbush Ave, Kingston, NY 12401-2220</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 331-1955</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>dgriffin@multifamilymgt.com</email>
+    <siteid>2454415</siteid>
+    <sitename>Tallman Towers</sitename>
+    <siteaddress>36 S Broadway, Nyack, NY 10960-3123</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(845) 353-7303</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454480</siteid>
+    <sitename>Brookdale Residence HDFC</sitename>
+    <siteaddress>560 Rockaway Pkwy, Brooklyn, NY 11212-3103</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 240-6290</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>jteel@multifamilymgt.com</email>
+    <siteid>2454483</siteid>
+    <sitename>Grand Street</sitename>
+    <siteaddress>711 E 6th St, New York, NY 10009-7057</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 375-1201</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>padrien@multifamilymgt.com</email>
+    <siteid>2454485</siteid>
+    <sitename>Allied Manor Road LLC</sitename>
+    <siteaddress>800 Manor Rd, Staten Island, NY 10314-7036</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 494-1237</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>bcintron@multifamilymgt.com</email>
+    <siteid>2454486</siteid>
+    <sitename>Chinese Planning Council HDFC</sitename>
+    <siteaddress>50 Norfolk St, New York, NY 10002-3916</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 475-7730</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454487</siteid>
+    <sitename>Council Towers III HDFC</sitename>
+    <siteaddress>1170 Pennsylvania Ave, Brooklyn, NY 11239-1200</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 922-5860</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454488</siteid>
+    <sitename>Council Towers IV HDFC</sitename>
+    <siteaddress>1180 Pennsylvania Ave, Brooklyn, NY 11239-1221</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 922-5860</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>jteel@multifamilymgt.com</email>
+    <siteid>2454501</siteid>
+    <sitename>Green Avenue Senior</sitename>
+    <siteaddress>80 Clifton Pl, Brooklyn, NY 11238-1342</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 636-7664</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>mpasquariello@metcouncil.org</email>
+    <siteid>2454506</siteid>
+    <sitename>Council Towers HDFC</sitename>
+    <siteaddress>777 Co Op City Blvd, Bronx, NY 10475-1600</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 320-7535</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454507</siteid>
+    <sitename>Council Towers II</sitename>
+    <siteaddress>99 Vandalia Ave, Brooklyn, NY 11239-1034</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 922-5860</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454508</siteid>
+    <sitename>Fairview Manhattan Park</sitename>
+    <siteaddress>90-100 Manhattan Ave, Greenburgh, NY 10603-2704</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(914) 428-2274</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454510</siteid>
+    <sitename>Jackson Terrace</sitename>
+    <siteaddress>100 Herriot St, Yonkers, NY 10701-4722</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(914) 968-9671</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454511</siteid>
+    <sitename>Manhattan West</sitename>
+    <siteaddress>135 W 106th St, New York, NY 10025-3723</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 865-9692</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>adove@multifamilymgt.com</email>
+    <siteid>2454512</siteid>
+    <sitename>MTV LLC</sitename>
+    <siteaddress>630 E Lincoln Ave, Mount Vernon, NY 10552-3825</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(914) 667-1475</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>dgaston@multifamilymgt.com</email>
+    <siteid>2454513</siteid>
+    <sitename>Shorefront Towers HDFC</sitename>
+    <siteaddress>3045 W 29th St, Brooklyn, NY 11224-1922</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 714-4594</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>mrankin@multifamilymgt.com</email>
+    <siteid>2454514</siteid>
+    <sitename>Valley Apartments</sitename>
+    <siteaddress>1218 W 109th, New York, NY 10025</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(212) 865-6985</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454525</siteid>
+    <sitename>Hillrise Mutual Housing</sitename>
+    <siteaddress>241 Locust St, Lancaster, PA 17602-4245</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(717) 394-3714</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2454526</siteid>
+    <sitename>Historical-Mt. Vernon LP</sitename>
+    <siteaddress>3311 Wallace St, Philadelphia, PA 19104-2047</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(215) 232-9900</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>kpawlikowsky@multifamilymgt.com</email>
+    <siteid>2454528</siteid>
+    <sitename>Autumn Brook Apartments</sitename>
+    <siteaddress>100 Luzerne St, Greensburg, PA 15601-1194</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(724) 836-5260</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2455914</siteid>
+    <sitename>Glenn Arms</sitename>
+    <siteaddress>2524 17th St NW, Washington, DC 20009-2829</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(202) 232-3012</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2455915</siteid>
+    <sitename>Hedin House</sitename>
+    <siteaddress>2900 Newton St NE, Washington, DC 20018-2961</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(202) 635-0985</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2455916</siteid>
+    <sitename>Council Towers V Senior Housing</sitename>
+    <siteaddress>789 Co Op City Blvd, Bronx, NY 10475-1601</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(718) 320-7535</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email>lighthouseapts@goldoller.com</email>
+    <siteid>2466486</siteid>
+    <sitename>Lighthouse Landings</sitename>
+    <siteaddress>6640 Heron Neck Dr, Indianapolis, IN 46217-8707</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(855) 976-2680</phone1>
+  </client>
+  <client keyword="">
+    <name>Multifamily Management Services, LLC</name>
+    <enabled>false</enabled>
+    <email></email>
+    <siteid>2472667</siteid>
+    <sitename>Interfaith Heights</sitename>
+    <siteaddress>290 Coal St, Wilkes Barre, PA 18702-6503</siteaddress>
+    <firstdate>2015-03-04</firstdate>
+    <aftermoveout>30</aftermoveout>
+    <balanceowed>75</balanceowed>
+    <ekey>197119912011</ekey>
+    <pmcid>1049827</pmcid>
+    <phone1>(570) 822-3276</phone1>
   </client>
 </clients>

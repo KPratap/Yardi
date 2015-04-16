@@ -1,20 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Serialization;
-using System.ServiceModel;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Configuration;
 using System.Xml.Linq;
-using System.Xml.Schema;
+using log4net;
 using NSConfig;
 using System.IO;
 using YardiDashboard.RPXCollections;
@@ -24,6 +18,7 @@ namespace YardiDashboard
 {
     public partial class frmDash : Form
     {
+       // private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private const string _FileLocationsTool = "YardiFileLocator.exe";
         private const string _YardiClientsTool = "YardiClients.exe";
         private string _entname = "Rent Recovery Solutions";
@@ -42,8 +37,8 @@ namespace YardiDashboard
         private string rpxsystemname = string.Empty;
         //private string rpxpmcid = string.Empty;
         string rpcliConfig = string.Empty;
+        DateTime filenotextractedcutoffdate;
         XDocument rpcliFile = null;
-
         private enum VendorName
         {
             Yardi,
@@ -74,6 +69,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Unable to run " + _FileLocationsTool + "\n" + ex);
                 MessageBox.Show("Unable to run " + _FileLocationsTool + "\n" +  ex.ToString(), "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
         
             }
@@ -89,6 +85,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error(ex);
                 MessageBox.Show(ex.ToString());
 
             }
@@ -157,7 +154,9 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error(ex);
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
                 this.Close();
             }
         }
@@ -166,6 +165,16 @@ namespace YardiDashboard
         {
             bool ret = false;
             rpcliConfig = ConfigurationManager.AppSettings["rpclientconfiguration"];
+            if (ConfigurationManager.AppSettings["filenotextractedcutoffdate"] != null)
+            {
+                filenotextractedcutoffdate =
+                    Convert.ToDateTime(ConfigurationManager.AppSettings["filenotextractedcutoffdate"]);
+            }
+            else
+            {
+                filenotextractedcutoffdate = new DateTime(2015,3,1);
+            }
+            dpCutoffDate.Value = filenotextractedcutoffdate;
             if (rpcliConfig == null)
             {
                 MessageBox.Show("Unable to find 'clientconfiguration' element in the configuration file; please fix and retry!", "Error", MessageBoxButtons.OK);
@@ -261,6 +270,7 @@ namespace YardiDashboard
                                         }));
 
             }
+        //    lvClients.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
         private void LoadClients_RP(XDocument cliFile)
         {
@@ -426,6 +436,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error retrieving data\n" + ex);
                 MessageBox.Show("Error retrieving data\n" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -477,6 +488,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error retrieving data\n" + ex);
                 MessageBox.Show("Error retrieving data\n" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -516,6 +528,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error retrieving data\n" + ex);
                 MessageBox.Show("Error retrieving data\n" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -554,6 +567,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error retrieving data\n" + ex);
                 MessageBox.Show("Error retrieving data\n" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -574,6 +588,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error retrieving data\n" + ex);
                 MessageBox.Show("Error retrieving data\n" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -622,6 +637,7 @@ namespace YardiDashboard
         {
             ListViewItem lvi = new ListViewItem(DateTime.Now.ToString("MM/dd/yyyy hh:mm ") + msg);
             lvMsg.Items.Add(lvi);
+            Log.Debug(msg);
         }
 
         private void DoExtract(bool outputHeader, bool dbg = false)
@@ -665,6 +681,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error in Extract: \n" + ex);
                 MessageBox.Show("Error in Extract: \n" + ex, "Error", MessageBoxButtons.OK);
             }
         }
@@ -703,6 +720,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.ErrorFmt(ex);
                 MessageBox.Show("Error in Extract: \n" + ex, "Error", MessageBoxButtons.OK);
             }
         }
@@ -786,6 +804,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error Creating File\n" + ex);
                 MessageBox.Show("Error Creating File\n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -843,6 +862,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error Creating File\n" + ex);
                 MessageBox.Show("Error Creating File\n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -1041,7 +1061,7 @@ namespace YardiDashboard
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+     
         }
 
         private void runUnattendedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1083,10 +1103,11 @@ namespace YardiDashboard
                 var resp = client.sitelist(auth, new SiteListRequest());
                 txtResponse.Text = resp.ToString();
                 UpdateClients_RP(resp, cle);
-
+                Log.Info("Sitelist Response \n" + resp);
             }
             catch (Exception ex)
             {
+                Log.Info("Error on Sitelist Call \n" + ex);
                 MessageBox.Show("Error on Sitelist Call \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -1298,6 +1319,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error on retrieveplacementsbydate Call \n" + ex);
                 MessageBox.Show("Error on retrieveplacementsbydate Call \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -1399,6 +1421,7 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
+                Log.Error("Error Creating File\n" + ex);
                 MessageBox.Show("Error Creating File\n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -1522,9 +1545,91 @@ namespace YardiDashboard
 
         private void filesNeverExtractedToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            PrepareReport();
+        }
+
+        private void PrepareReport()
+        {
+            FileReport fr = new FileReport();
+            lblRaw.Text = txtRawXML.Text;
+            lblDesc.Text = "Raw Unprocessed Files Report";
+            var allFiles = fr.GetFiles(txtRawXML.Text, "*.xml");
+            LoadFile(allFiles, dpCutoffDate.Value);
+        }
+        private void LoadFile(IEnumerable<FileInfo> allFiles, DateTime cutoff)
+        {
+            //foreach (var itm in allFiles)
+            //{
+            //    Log.DebugFmt("{0} Created {1}", Path.Combine(itm.DirectoryName, itm.Name), itm.CreationTime);
+            //}
+            
+            lvReport.Items.Clear();
+            if (lvReport.Columns.Count == 0)
+            {
+                LoadReportColumns();
+            }
+            var items = allFiles.Where(x => !x.Name.Contains("_archive_") && x.CreationTime > cutoff);
+            ShowReportLines(items);
+            tabCtl.SelectTab("tabReports");
+        }
+
+        private void ShowReportLines(IEnumerable<FileInfo> allFiles)
+        {
+            foreach (var itm in allFiles.OrderBy(i=>i.DirectoryName).ThenByDescending(i=>i.CreationTime))
+            {
+                var ix = itm.DirectoryName.LastIndexOf("\\");
+                var subFolder = itm.DirectoryName.Substring(ix);
+                var lvi = new ListViewItem(new string[]
+                {
+                     subFolder
+                    , itm.Name
+                    , itm.CreationTime.ToString("MM-dd-yyyy hh:mm.ss")
+                    , itm.Length.ToString()
+                });
+                if (itm.Name.Contains("_archive_"))
+                    lvi.ForeColor = Color.Green;
+                else lvi.ForeColor = Color.DarkRed;
+                lvReport.Items.Add(lvi);
+            }
+            lvReport.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            lblItemCount.Text = "Item Count: " + lvReport.Items.Count;
+        }
+
+        private void LoadReportColumns()
+        {
+            lvReport.Columns.Clear();
+            lvReport.Items.Clear();
+            lvReport.Columns.Add("SubFolder", 300);
+            lvReport.Columns.Add("FileName", 400);
+            lvReport.Columns.Add("CreateDate", 120);
+            lvReport.Columns.Add("FileSize", 50);
 
         }
 
+        private void btnRunReport_Click(object sender, EventArgs e)
+        {
+            PrepareReport();
+        }
+
+        private void releaseNotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("readme.txt");
+        }
+
+        private void excludeHeadersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           // DoExtract();
+        }
+
+        private void includeHeadersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void debugFormatToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

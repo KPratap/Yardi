@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Odbc;
 using System.IO;
 using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using log4net.Config;
 using NSConfig;
 
 namespace RealpageData
 {
     public class RealpageData
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private string FileName { get; set; }
         private string RawFolder { get; set; }
         private string CollFolder { get; set; }
@@ -77,21 +76,20 @@ namespace RealpageData
         {
             debugFormat = dbg;
             FileName = fname;
-
             foutColl = Path.GetFileName(fname);
             foutColl = Path.ChangeExtension(foutColl, "csv");
             foutColl = Path.Combine(CollFolder, foutColl);
             foutCollFalse = Path.GetFileName(fname);
             foutCollFalse = Path.ChangeExtension(foutCollFalse, "csv");
             foutCollFalse = Path.Combine(CollFalseFolder, foutCollFalse);
-
+            Log.Info("begin Extract");
             try
             {
                 doc = XDocument.Load(fname);
                 writer = new StreamWriter(foutColl);
                 writerFalse = new StreamWriter(foutCollFalse);
                 ExtractData(doc);
-            //    ArchiveRawFile(fname);
+                ArchiveRawFile(fname);
 
             }
             catch (Exception ex)

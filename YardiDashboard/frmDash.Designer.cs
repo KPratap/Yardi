@@ -42,8 +42,11 @@
             this.excludeHeadersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.includeHeadersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filesNeverExtractedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.releaseNotesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabCtl = new System.Windows.Forms.TabControl();
             this.tabClients = new System.Windows.Forms.TabPage();
             this.lvClients = new System.Windows.Forms.ListView();
@@ -75,6 +78,13 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.lvMsg = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabReports = new System.Windows.Forms.TabPage();
+            this.btnRunReport = new System.Windows.Forms.Button();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblRaw = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lvReport = new System.Windows.Forms.ListView();
             this.tabFileLocations = new System.Windows.Forms.TabPage();
             this.txtLicFile = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -89,8 +99,14 @@
             this.lblRawXML = new System.Windows.Forms.Label();
             this.lblRunMode = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filesNeverExtractedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dpCutoffDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cMenuReport = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.extractFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excludeHeadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.includeHeadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugFormatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblItemCount = new System.Windows.Forms.Label();
             this.menuMain.SuspendLayout();
             this.tabCtl.SuspendLayout();
             this.tabClients.SuspendLayout();
@@ -98,7 +114,9 @@
             this.tabRealPage.SuspendLayout();
             this.cMenuRpx.SuspendLayout();
             this.tabRetrieval.SuspendLayout();
+            this.tabReports.SuspendLayout();
             this.tabFileLocations.SuspendLayout();
+            this.cMenuReport.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuMain
@@ -210,10 +228,26 @@
             this.debugFormatToolStripMenuItem.Text = "Debug Format";
             this.debugFormatToolStripMenuItem.Click += new System.EventHandler(this.debugFormatToolStripMenuItem_Click);
             // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filesNeverExtractedToolStripMenuItem});
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // filesNeverExtractedToolStripMenuItem
+            // 
+            this.filesNeverExtractedToolStripMenuItem.Name = "filesNeverExtractedToolStripMenuItem";
+            this.filesNeverExtractedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filesNeverExtractedToolStripMenuItem.Text = "Files never Extracted";
+            this.filesNeverExtractedToolStripMenuItem.Click += new System.EventHandler(this.filesNeverExtractedToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.releaseNotesToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
@@ -221,9 +255,16 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // releaseNotesToolStripMenuItem
+            // 
+            this.releaseNotesToolStripMenuItem.Name = "releaseNotesToolStripMenuItem";
+            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.releaseNotesToolStripMenuItem.Text = "Release Notes";
+            this.releaseNotesToolStripMenuItem.Click += new System.EventHandler(this.releaseNotesToolStripMenuItem_Click);
             // 
             // tabCtl
             // 
@@ -233,6 +274,7 @@
             this.tabCtl.Controls.Add(this.tabClients);
             this.tabCtl.Controls.Add(this.tabRealPage);
             this.tabCtl.Controls.Add(this.tabRetrieval);
+            this.tabCtl.Controls.Add(this.tabReports);
             this.tabCtl.Controls.Add(this.tabFileLocations);
             this.tabCtl.Location = new System.Drawing.Point(12, 62);
             this.tabCtl.Name = "tabCtl";
@@ -534,6 +576,90 @@
             this.columnHeader6.Text = "Message";
             this.columnHeader6.Width = 700;
             // 
+            // tabReports
+            // 
+            this.tabReports.Controls.Add(this.lblItemCount);
+            this.tabReports.Controls.Add(this.label5);
+            this.tabReports.Controls.Add(this.dpCutoffDate);
+            this.tabReports.Controls.Add(this.btnRunReport);
+            this.tabReports.Controls.Add(this.lblDesc);
+            this.tabReports.Controls.Add(this.label6);
+            this.tabReports.Controls.Add(this.lblRaw);
+            this.tabReports.Controls.Add(this.label4);
+            this.tabReports.Controls.Add(this.lvReport);
+            this.tabReports.Location = new System.Drawing.Point(4, 22);
+            this.tabReports.Name = "tabReports";
+            this.tabReports.Size = new System.Drawing.Size(779, 412);
+            this.tabReports.TabIndex = 4;
+            this.tabReports.Text = "Reports";
+            this.tabReports.UseVisualStyleBackColor = true;
+            // 
+            // btnRunReport
+            // 
+            this.btnRunReport.Location = new System.Drawing.Point(675, 21);
+            this.btnRunReport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRunReport.Name = "btnRunReport";
+            this.btnRunReport.Size = new System.Drawing.Size(88, 26);
+            this.btnRunReport.TabIndex = 31;
+            this.btnRunReport.Text = "Run Report";
+            this.toolTip1.SetToolTip(this.btnRunReport, "Click to re-run report");
+            this.btnRunReport.UseVisualStyleBackColor = true;
+            this.btnRunReport.Click += new System.EventHandler(this.btnRunReport_Click);
+            // 
+            // lblDesc
+            // 
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Location = new System.Drawing.Point(52, 20);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(18, 16);
+            this.lblDesc.TabIndex = 30;
+            this.lblDesc.Text = "~";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Title:";
+            // 
+            // lblRaw
+            // 
+            this.lblRaw.AutoSize = true;
+            this.lblRaw.Location = new System.Drawing.Point(85, 47);
+            this.lblRaw.Name = "lblRaw";
+            this.lblRaw.Size = new System.Drawing.Size(14, 13);
+            this.lblRaw.TabIndex = 28;
+            this.lblRaw.Text = "~";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Raw Folder:";
+            // 
+            // lvReport
+            // 
+            this.lvReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvReport.BackColor = System.Drawing.SystemColors.Info;
+            this.lvReport.FullRowSelect = true;
+            this.lvReport.GridLines = true;
+            this.lvReport.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvReport.HideSelection = false;
+            this.lvReport.Location = new System.Drawing.Point(15, 70);
+            this.lvReport.Name = "lvReport";
+            this.lvReport.Size = new System.Drawing.Size(748, 308);
+            this.lvReport.TabIndex = 23;
+            this.lvReport.UseCompatibleStateImageBehavior = false;
+            this.lvReport.View = System.Windows.Forms.View.Details;
+            // 
             // tabFileLocations
             // 
             this.tabFileLocations.Controls.Add(this.txtLicFile);
@@ -669,20 +795,69 @@
             this.lblRunMode.Text = "Run mode";
             this.lblRunMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // reportToolStripMenuItem
+            // dpCutoffDate
             // 
-            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filesNeverExtractedToolStripMenuItem});
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.reportToolStripMenuItem.Text = "Report";
+            this.dpCutoffDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpCutoffDate.Location = new System.Drawing.Point(567, 24);
+            this.dpCutoffDate.Name = "dpCutoffDate";
+            this.dpCutoffDate.Size = new System.Drawing.Size(100, 20);
+            this.dpCutoffDate.TabIndex = 32;
             // 
-            // filesNeverExtractedToolStripMenuItem
+            // label5
             // 
-            this.filesNeverExtractedToolStripMenuItem.Name = "filesNeverExtractedToolStripMenuItem";
-            this.filesNeverExtractedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.filesNeverExtractedToolStripMenuItem.Text = "Files never Extracted";
-            this.filesNeverExtractedToolStripMenuItem.Click += new System.EventHandler(this.filesNeverExtractedToolStripMenuItem_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(495, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Cut-off Date:";
+            // 
+            // cMenuReport
+            // 
+            this.cMenuReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.extractFileToolStripMenuItem});
+            this.cMenuReport.Name = "cMenuReport";
+            this.cMenuReport.Size = new System.Drawing.Size(131, 26);
+            // 
+            // extractFileToolStripMenuItem
+            // 
+            this.extractFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excludeHeadersToolStripMenuItem1,
+            this.includeHeadersToolStripMenuItem1,
+            this.debugFormatToolStripMenuItem1});
+            this.extractFileToolStripMenuItem.Name = "extractFileToolStripMenuItem";
+            this.extractFileToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.extractFileToolStripMenuItem.Text = "Extract File";
+            // 
+            // excludeHeadersToolStripMenuItem1
+            // 
+            this.excludeHeadersToolStripMenuItem1.Name = "excludeHeadersToolStripMenuItem1";
+            this.excludeHeadersToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
+            this.excludeHeadersToolStripMenuItem1.Text = "Exclude Headers";
+            this.excludeHeadersToolStripMenuItem1.Click += new System.EventHandler(this.excludeHeadersToolStripMenuItem1_Click);
+            // 
+            // includeHeadersToolStripMenuItem1
+            // 
+            this.includeHeadersToolStripMenuItem1.Name = "includeHeadersToolStripMenuItem1";
+            this.includeHeadersToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
+            this.includeHeadersToolStripMenuItem1.Text = "Include Headers";
+            this.includeHeadersToolStripMenuItem1.Click += new System.EventHandler(this.includeHeadersToolStripMenuItem1_Click);
+            // 
+            // debugFormatToolStripMenuItem1
+            // 
+            this.debugFormatToolStripMenuItem1.Name = "debugFormatToolStripMenuItem1";
+            this.debugFormatToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
+            this.debugFormatToolStripMenuItem1.Text = "Debug Format";
+            this.debugFormatToolStripMenuItem1.Click += new System.EventHandler(this.debugFormatToolStripMenuItem1_Click);
+            // 
+            // lblItemCount
+            // 
+            this.lblItemCount.AutoSize = true;
+            this.lblItemCount.Location = new System.Drawing.Point(346, 28);
+            this.lblItemCount.Name = "lblItemCount";
+            this.lblItemCount.Size = new System.Drawing.Size(64, 13);
+            this.lblItemCount.TabIndex = 34;
+            this.lblItemCount.Text = "Item Count: ";
             // 
             // frmDash
             // 
@@ -708,8 +883,11 @@
             this.tabRealPage.PerformLayout();
             this.cMenuRpx.ResumeLayout(false);
             this.tabRetrieval.ResumeLayout(false);
+            this.tabReports.ResumeLayout(false);
+            this.tabReports.PerformLayout();
             this.tabFileLocations.ResumeLayout(false);
             this.tabFileLocations.PerformLayout();
+            this.cMenuReport.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -779,6 +957,22 @@
         private System.Windows.Forms.ToolStripMenuItem copyResponseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filesNeverExtractedToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabReports;
+        private System.Windows.Forms.ListView lvReport;
+        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblRaw;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnRunReport;
+        private System.Windows.Forms.ToolStripMenuItem releaseNotesToolStripMenuItem;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dpCutoffDate;
+        private System.Windows.Forms.ContextMenuStrip cMenuReport;
+        private System.Windows.Forms.ToolStripMenuItem extractFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excludeHeadersToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem includeHeadersToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem debugFormatToolStripMenuItem1;
+        private System.Windows.Forms.Label lblItemCount;
     }
 }
 

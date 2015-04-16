@@ -1896,6 +1896,8 @@
 		<row><td>clients.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>Clients.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\Clients.xml</td><td>1</td><td/></row>
 		<row><td>config.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>Config.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\Config.xml</td><td>1</td><td/></row>
 		<row><td>dataelements.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>DATAEL~1.XML|DataElements.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\DataElements.xml</td><td>1</td><td/></row>
+		<row><td>log4net.config</td><td>ISX_DEFAULTCOMPONENT</td><td>LOG4NE~1.CON|log4net.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\log4net.config</td><td>1</td><td/></row>
+		<row><td>readme.txt</td><td>ISX_DEFAULTCOMPONENT</td><td>ReadMe.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\ReadMe.txt</td><td>1</td><td/></row>
 		<row><td>realpagedata.primary_output</td><td>RealpageData.Primary_output</td><td>RealpageData.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RealpageData&gt;|Built</td><td>3</td><td/></row>
 		<row><td>rpclients.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>RPCLIE~1.XML|RPClients.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiClients\RPClients.xml</td><td>1</td><td/></row>
 		<row><td>rpdataelements.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>RPDATA~1.XML|RPDataElements.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\RealpageData\RPDataElements.xml</td><td>1</td><td/></row>
