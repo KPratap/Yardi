@@ -96,7 +96,8 @@ namespace YardiFileLocator
                 this.Text += " (" + _cfgFile + ")";
                 txtRawXML.Text = RetrieveElement("rawxml" );
                 txtColl.Text = RetrieveElement("collections");
-                txtCollFalse.Text=  RetrieveElement("collectionsfalse");
+                txtCollFalse.Text = RetrieveElement("collectionsfalse");
+                txtEntrataLoginFolder.Text = RetrieveElement("entratalogins");
                 _isDirty = false;
             }
             catch (Exception ex)
@@ -141,6 +142,7 @@ namespace YardiFileLocator
                 SaveElement("rawxml", txtRawXML.Text);
                 SaveElement("collections", txtColl.Text);
                 SaveElement("collectionsfalse", txtCollFalse.Text);
+                SaveElement("entratalogins", txtEntrataLoginFolder.Text);
                 _cfg.Save(_cfgFile);
                 MessageBox.Show("Data saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _isDirty = false;
@@ -149,6 +151,14 @@ namespace YardiFileLocator
             {
                 MessageBox.Show("Error on save: \n" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnSetEntrataLoginFolder_Click(object sender, EventArgs e)
+        {
+            string t = SetFolder(lblEntrataLogin.Text, txtEntrataLoginFolder.Text);
+            if (t == string.Empty)
+                return;
+            txtEntrataLoginFolder.Text = t;
         }
 
 

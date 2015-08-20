@@ -342,6 +342,7 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{F9477984-63E8-4991-B4FF-CB4335891C24}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{E1F4BCAA-0B96-4199-AD3D-CC1734980703}</td><td>AppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{FC1BEA55-CFFB-444F-967E-2C78C5A1DDAC}</td><td>ProgramFilesFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>PSData.Primary_output</td><td>{9E571D7D-12FA-4943-B38D-355399709457}</td><td>INSTALLDIR</td><td>2</td><td/><td>psdata.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>RealpageData.Primary_output</td><td>{C0E803D2-95F2-4B88-851C-73180ECC1032}</td><td>INSTALLDIR</td><td>2</td><td/><td>realpagedata.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>YardiClients.Primary_output</td><td>{EFFE4BEF-7C04-4A85-A3BD-079E23A019BC}</td><td>INSTALLDIR</td><td>2</td><td/><td>yardiclients.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>YardiDashboard.Primary_output</td><td>{D3598C4B-E1F9-4782-8D8D-5D0CD1E95EC0}</td><td>INSTALLDIR</td><td>2</td><td/><td>yardidashboard.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1148,7 +1149,7 @@
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>MY_PRODUCT_NAME1</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>RRS30</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
@@ -1164,6 +1165,7 @@
 		<row><td>ProgramFiles64Folder</td><td>TARGETDIR</td><td>.:Prog64~1|Program Files 64</td><td/><td>0</td><td/></row>
 		<row><td>ProgramFilesFolder</td><td>TARGETDIR</td><td>.:PROGRA~1|program files</td><td/><td>0</td><td/></row>
 		<row><td>ProgramMenuFolder</td><td>TARGETDIR</td><td>.:Programs</td><td/><td>3</td><td/></row>
+		<row><td>RRS30</td><td>ProgramFilesFolder</td><td>RRS30</td><td/><td>0</td><td/></row>
 		<row><td>RecentFolder</td><td>TARGETDIR</td><td>.:Recent</td><td/><td>0</td><td/></row>
 		<row><td>SendToFolder</td><td>TARGETDIR</td><td>.:SendTo</td><td/><td>3</td><td/></row>
 		<row><td>StartMenuFolder</td><td>TARGETDIR</td><td>.:STARTM~1|Start Menu</td><td/><td>3</td><td/></row>
@@ -1873,6 +1875,7 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
+		<row><td>AlwaysInstall</td><td>PSData.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>RealpageData.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>YardiClients.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>YardiDashboard.Primary_output</td></row>
@@ -1897,6 +1900,9 @@
 		<row><td>config.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>Config.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\Config.xml</td><td>1</td><td/></row>
 		<row><td>dataelements.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>DATAEL~1.XML|DataElements.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\DataElements.xml</td><td>1</td><td/></row>
 		<row><td>log4net.config</td><td>ISX_DEFAULTCOMPONENT</td><td>LOG4NE~1.CON|log4net.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\bin\Debug\log4net.config</td><td>1</td><td/></row>
+		<row><td>psclients.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>PSCLIE~1.XML|PSClients.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\PSClients.xml</td><td>1</td><td/></row>
+		<row><td>psdata.primary_output</td><td>PSData.Primary_output</td><td>PSData.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;PSData&gt;|Built</td><td>3</td><td/></row>
+		<row><td>psdataelements.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>PSDATA~1.XML|PSDataElements.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\PSData\PSDataElements.xml</td><td>1</td><td/></row>
 		<row><td>readme.txt</td><td>ISX_DEFAULTCOMPONENT</td><td>ReadMe.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiDashboard\ReadMe.txt</td><td>1</td><td/></row>
 		<row><td>realpagedata.primary_output</td><td>RealpageData.Primary_output</td><td>RealpageData.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;RealpageData&gt;|Built</td><td>3</td><td/></row>
 		<row><td>rpclients.xml2</td><td>ISX_DEFAULTCOMPONENT</td><td>RPCLIE~1.XML|RPClients.xml</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Development\Yardi\YardiClients\RPClients.xml</td><td>1</td><td/></row>
@@ -2054,6 +2060,7 @@
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_F58E1DED_AA4F_4A1B_B59A_A45583F78B89_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_9D7F87B4_59C7_4757_958F_9EA394D44BDD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_1D1FBE01_8511_48A2_8B70_0832517AE802_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>PSData.Primary_output</td><td/><td/><td>_4D86C1A7_471D_4253_8C34_F1C92AA98972_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>RealpageData.Primary_output</td><td/><td/><td>_CCC12FEF_A91B_4EAE_9415_242040C2642B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>YardiClients.Primary_output</td><td/><td/><td>_02785BE8_717E_40EB_B4E8_E0FC97FCB2E9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>YardiDashboard.Primary_output</td><td/><td/><td>_CECD5F5C_8630_4752_A891_90D9F85C9B45_FILTER</td><td/><td/><td/><td/></row>
@@ -2365,6 +2372,7 @@
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
+		<row><td>PSData</td><td>PSData\PSData.csproj</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>RealpageData</td><td>RealpageData\RealpageData.csproj</td><td/><td>2</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>

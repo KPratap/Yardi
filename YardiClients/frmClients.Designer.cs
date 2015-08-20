@@ -65,6 +65,8 @@
             this.cboVendors = new System.Windows.Forms.ComboBox();
             this.btnOpenClient = new System.Windows.Forms.Button();
             this.pnlDetlRP = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtPhone1 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtBalanceOwed = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -98,11 +100,31 @@
             this.lblActiveCli = new System.Windows.Forms.Label();
             this.lblInactiveCli = new System.Windows.Forms.Label();
             this.saveReport = new System.Windows.Forms.SaveFileDialog();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtPhone1 = new System.Windows.Forms.TextBox();
+            this.pnlDetlEntrata = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtToken_PS = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtSubDomain_PS = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtAddress_PS = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtPropName_PS = new System.Windows.Forms.TextBox();
+            this.chkEnable_PS = new System.Windows.Forms.CheckBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.btnCancel_PS = new System.Windows.Forms.Button();
+            this.btnSave_PS = new System.Windows.Forms.Button();
+            this.txtPMCName_PS = new System.Windows.Forms.TextBox();
+            this.txtInternalId_PS = new System.Windows.Forms.TextBox();
+            this.txtPropId_PS = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtFirstDate_PS = new System.Windows.Forms.TextBox();
             this.cmenuClient.SuspendLayout();
             this.pnlDetl.SuspendLayout();
             this.pnlDetlRP.SuspendLayout();
+            this.pnlDetlEntrata.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
@@ -244,7 +266,7 @@
             this.pnlDetl.Size = new System.Drawing.Size(818, 207);
             this.pnlDetl.TabIndex = 27;
             this.pnlDetl.TabStop = false;
-            this.pnlDetl.Text = "Client Details";
+            this.pnlDetl.Text = "Client Details - Yardi";
             // 
             // cboPlatform
             // 
@@ -466,12 +488,29 @@
             this.pnlDetlRP.Controls.Add(this.txtPMCName_RP);
             this.pnlDetlRP.Controls.Add(this.txtInternalId_RP);
             this.pnlDetlRP.Controls.Add(this.txtSiteId_RP);
-            this.pnlDetlRP.Location = new System.Drawing.Point(20, 63);
+            this.pnlDetlRP.Location = new System.Drawing.Point(20, 45);
             this.pnlDetlRP.Name = "pnlDetlRP";
             this.pnlDetlRP.Size = new System.Drawing.Size(818, 223);
             this.pnlDetlRP.TabIndex = 47;
             this.pnlDetlRP.TabStop = false;
-            this.pnlDetlRP.Text = "Client Details";
+            this.pnlDetlRP.Text = "Client Details - RealPage";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(339, 190);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(78, 13);
+            this.label26.TabIndex = 49;
+            this.label26.Text = "Contact Phone";
+            // 
+            // txtPhone1
+            // 
+            this.txtPhone1.Location = new System.Drawing.Point(424, 186);
+            this.txtPhone1.MaxLength = 50;
+            this.txtPhone1.Name = "txtPhone1";
+            this.txtPhone1.Size = new System.Drawing.Size(99, 20);
+            this.txtPhone1.TabIndex = 48;
             // 
             // label22
             // 
@@ -743,22 +782,204 @@
             this.lblInactiveCli.Size = new System.Drawing.Size(30, 13);
             this.lblInactiveCli.TabIndex = 53;
             // 
-            // label26
+            // pnlDetlEntrata
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(339, 190);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(78, 13);
-            this.label26.TabIndex = 49;
-            this.label26.Text = "Contact Phone";
+            this.pnlDetlEntrata.Controls.Add(this.label28);
+            this.pnlDetlEntrata.Controls.Add(this.label29);
+            this.pnlDetlEntrata.Controls.Add(this.txtFirstDate_PS);
+            this.pnlDetlEntrata.Controls.Add(this.label27);
+            this.pnlDetlEntrata.Controls.Add(this.txtToken_PS);
+            this.pnlDetlEntrata.Controls.Add(this.label34);
+            this.pnlDetlEntrata.Controls.Add(this.txtSubDomain_PS);
+            this.pnlDetlEntrata.Controls.Add(this.label35);
+            this.pnlDetlEntrata.Controls.Add(this.txtAddress_PS);
+            this.pnlDetlEntrata.Controls.Add(this.label36);
+            this.pnlDetlEntrata.Controls.Add(this.txtPropName_PS);
+            this.pnlDetlEntrata.Controls.Add(this.chkEnable_PS);
+            this.pnlDetlEntrata.Controls.Add(this.label37);
+            this.pnlDetlEntrata.Controls.Add(this.label38);
+            this.pnlDetlEntrata.Controls.Add(this.label39);
+            this.pnlDetlEntrata.Controls.Add(this.btnCancel_PS);
+            this.pnlDetlEntrata.Controls.Add(this.btnSave_PS);
+            this.pnlDetlEntrata.Controls.Add(this.txtPMCName_PS);
+            this.pnlDetlEntrata.Controls.Add(this.txtInternalId_PS);
+            this.pnlDetlEntrata.Controls.Add(this.txtPropId_PS);
+            this.pnlDetlEntrata.Location = new System.Drawing.Point(20, 45);
+            this.pnlDetlEntrata.Name = "pnlDetlEntrata";
+            this.pnlDetlEntrata.Size = new System.Drawing.Size(818, 223);
+            this.pnlDetlEntrata.TabIndex = 54;
+            this.pnlDetlEntrata.TabStop = false;
+            this.pnlDetlEntrata.Text = "Client Details - Entrata";
             // 
-            // txtPhone1
+            // label27
             // 
-            this.txtPhone1.Location = new System.Drawing.Point(424, 186);
-            this.txtPhone1.MaxLength = 50;
-            this.txtPhone1.Name = "txtPhone1";
-            this.txtPhone1.Size = new System.Drawing.Size(99, 20);
-            this.txtPhone1.TabIndex = 48;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(68, 160);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 13);
+            this.label27.TabIndex = 44;
+            this.label27.Text = "Token";
+            // 
+            // txtToken_PS
+            // 
+            this.txtToken_PS.Location = new System.Drawing.Point(114, 156);
+            this.txtToken_PS.Name = "txtToken_PS";
+            this.txtToken_PS.Size = new System.Drawing.Size(344, 20);
+            this.txtToken_PS.TabIndex = 43;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(47, 132);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(60, 13);
+            this.label34.TabIndex = 36;
+            this.label34.Text = "Subdomain";
+            // 
+            // txtSubDomain_PS
+            // 
+            this.txtSubDomain_PS.Location = new System.Drawing.Point(114, 128);
+            this.txtSubDomain_PS.Name = "txtSubDomain_PS";
+            this.txtSubDomain_PS.Size = new System.Drawing.Size(344, 20);
+            this.txtSubDomain_PS.TabIndex = 4;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(39, 106);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(70, 13);
+            this.label35.TabIndex = 34;
+            this.label35.Text = "Prop Address";
+            // 
+            // txtAddress_PS
+            // 
+            this.txtAddress_PS.Location = new System.Drawing.Point(114, 102);
+            this.txtAddress_PS.Name = "txtAddress_PS";
+            this.txtAddress_PS.Size = new System.Drawing.Size(344, 20);
+            this.txtAddress_PS.TabIndex = 3;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(49, 79);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(60, 13);
+            this.label36.TabIndex = 32;
+            this.label36.Text = "Prop Name";
+            // 
+            // txtPropName_PS
+            // 
+            this.txtPropName_PS.Location = new System.Drawing.Point(114, 75);
+            this.txtPropName_PS.Name = "txtPropName_PS";
+            this.txtPropName_PS.Size = new System.Drawing.Size(344, 20);
+            this.txtPropName_PS.TabIndex = 2;
+            // 
+            // chkEnable_PS
+            // 
+            this.chkEnable_PS.AutoSize = true;
+            this.chkEnable_PS.Location = new System.Drawing.Point(235, 52);
+            this.chkEnable_PS.Name = "chkEnable_PS";
+            this.chkEnable_PS.Size = new System.Drawing.Size(107, 17);
+            this.chkEnable_PS.TabIndex = 2;
+            this.chkEnable_PS.Text = "Enable this Client";
+            this.chkEnable_PS.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(420, 53);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(37, 13);
+            this.label37.TabIndex = 30;
+            this.label37.Text = "Site Id";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(48, 28);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(61, 13);
+            this.label38.TabIndex = 28;
+            this.label38.Text = "PMC Name";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(30, 53);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(82, 13);
+            this.label39.TabIndex = 27;
+            this.label39.Text = "RRS Internal ID";
+            // 
+            // btnCancel_PS
+            // 
+            this.btnCancel_PS.Location = new System.Drawing.Point(751, 186);
+            this.btnCancel_PS.Name = "btnCancel_PS";
+            this.btnCancel_PS.Size = new System.Drawing.Size(49, 23);
+            this.btnCancel_PS.TabIndex = 26;
+            this.btnCancel_PS.Text = "Cancel";
+            this.btnCancel_PS.UseVisualStyleBackColor = true;
+            this.btnCancel_PS.Click += new System.EventHandler(this.btnCancel_PS_Click);
+            // 
+            // btnSave_PS
+            // 
+            this.btnSave_PS.Location = new System.Drawing.Point(696, 186);
+            this.btnSave_PS.Name = "btnSave_PS";
+            this.btnSave_PS.Size = new System.Drawing.Size(49, 23);
+            this.btnSave_PS.TabIndex = 9;
+            this.btnSave_PS.Text = "Save";
+            this.btnSave_PS.UseVisualStyleBackColor = true;
+            this.btnSave_PS.Click += new System.EventHandler(this.btnSave_PS_Click);
+            // 
+            // txtPMCName_PS
+            // 
+            this.txtPMCName_PS.Location = new System.Drawing.Point(114, 24);
+            this.txtPMCName_PS.Name = "txtPMCName_PS";
+            this.txtPMCName_PS.Size = new System.Drawing.Size(433, 20);
+            this.txtPMCName_PS.TabIndex = 0;
+            // 
+            // txtInternalId_PS
+            // 
+            this.txtInternalId_PS.Location = new System.Drawing.Point(114, 49);
+            this.txtInternalId_PS.MaxLength = 50;
+            this.txtInternalId_PS.Name = "txtInternalId_PS";
+            this.txtInternalId_PS.Size = new System.Drawing.Size(115, 20);
+            this.txtInternalId_PS.TabIndex = 1;
+            // 
+            // txtPropId_PS
+            // 
+            this.txtPropId_PS.AccessibleDescription = "l";
+            this.txtPropId_PS.Location = new System.Drawing.Point(464, 50);
+            this.txtPropId_PS.Name = "txtPropId_PS";
+            this.txtPropId_PS.Size = new System.Drawing.Size(84, 20);
+            this.txtPropId_PS.TabIndex = 2;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(234, 189);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(75, 13);
+            this.label28.TabIndex = 47;
+            this.label28.Text = "YYYY-MM-DD";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(56, 188);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(52, 13);
+            this.label29.TabIndex = 46;
+            this.label29.Text = "First Date";
+            // 
+            // txtFirstDate_PS
+            // 
+            this.txtFirstDate_PS.Location = new System.Drawing.Point(113, 184);
+            this.txtFirstDate_PS.MaxLength = 50;
+            this.txtFirstDate_PS.Name = "txtFirstDate_PS";
+            this.txtFirstDate_PS.Size = new System.Drawing.Size(115, 20);
+            this.txtFirstDate_PS.TabIndex = 45;
             // 
             // frmClients
             // 
@@ -777,6 +998,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lvClients);
+            this.Controls.Add(this.pnlDetlEntrata);
             this.Controls.Add(this.pnlDetlRP);
             this.Controls.Add(this.pnlDetl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -790,6 +1012,8 @@
             this.pnlDetl.PerformLayout();
             this.pnlDetlRP.ResumeLayout(false);
             this.pnlDetlRP.PerformLayout();
+            this.pnlDetlEntrata.ResumeLayout(false);
+            this.pnlDetlEntrata.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -868,6 +1092,27 @@
         private System.Windows.Forms.SaveFileDialog saveReport;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtPhone1;
+        private System.Windows.Forms.GroupBox pnlDetlEntrata;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtSubDomain_PS;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtAddress_PS;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox txtPropName_PS;
+        private System.Windows.Forms.CheckBox chkEnable_PS;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Button btnCancel_PS;
+        private System.Windows.Forms.Button btnSave_PS;
+        private System.Windows.Forms.TextBox txtPMCName_PS;
+        private System.Windows.Forms.TextBox txtInternalId_PS;
+        private System.Windows.Forms.TextBox txtPropId_PS;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtToken_PS;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtFirstDate_PS;
     }
 }
 

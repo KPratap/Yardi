@@ -20,7 +20,8 @@ namespace YardiClients
         private enum VendorName
         {
             Yardi,
-            Realpage
+            Realpage,
+            Entrata
         };
 
         private VendorName _vendor = VendorName.Yardi;
@@ -54,13 +55,25 @@ namespace YardiClients
                 case VendorName.Yardi:
                     pnlDetl.Visible = visible;
                     pnlDetl.Enabled = enable;
-                    pnlDetlRP.Visible = !pnlDetl.Visible;
+                    pnlDetlRP.Visible = !visible;
                     pnlDetlRP.Enabled = enable;
+                    pnlDetlEntrata.Visible = !visible;
+                    pnlDetlEntrata.Enabled = enable;
                     break;
                 case VendorName.Realpage:
-                    pnlDetlRP.Visible = Visible;
+                    pnlDetlRP.Visible = visible;
                     pnlDetlRP.Enabled = enable;
-                    pnlDetl.Visible = !pnlDetlRP.Visible;
+                    pnlDetl.Visible = !visible;
+                    pnlDetl.Enabled = enable;
+                    pnlDetlEntrata.Visible = !visible;
+                    pnlDetlEntrata.Enabled = enable;
+                    break;
+                case VendorName.Entrata:
+                    pnlDetlEntrata.Visible = visible;
+                    pnlDetlEntrata.Enabled = enable;
+                    pnlDetlRP.Visible = !visible;
+                    pnlDetlRP.Enabled = enable;
+                    pnlDetl.Visible = !visible;
                     pnlDetl.Enabled = enable;
                     break;
 
@@ -71,6 +84,7 @@ namespace YardiClients
         {
             cboVendors.Items.Add("Yardi");
             cboVendors.Items.Add("RealPage");
+            cboVendors.Items.Add("Entrata");
             cboVendors.SelectedIndex = 0;
         }
 
@@ -166,6 +180,33 @@ namespace YardiClients
 
                 }
             }
+
+            if (vn == VendorName.Entrata)
+            {
+                AddListViewColumns(vn);
+                ListViewItem lvi = null;
+                foreach (XElement el in clients)
+                {
+                    bool enabled = Convert.ToBoolean(ccfg.GetElement(el, "enabled").Value);
+                    lvi = new ListViewItem(new string[] 
+                                      {ccfg.GetElementAttrib(el,"keyword").Value
+                                      ,ccfg.GetElement(el,"siteid").Value
+                                      ,ccfg.GetElement(el,"name").Value
+                                      ,ccfg.GetElement(el,"companyname").Value
+                                      ,ccfg.GetElement(el,"enabled").Value
+                                      ,ccfg.GetElement(el,"address").Value
+                                      ,ccfg.GetElement(el,"subdomain").Value
+                                      ,ccfg.GetElement(el,"token").Value
+                                      ,ccfg.GetElement(el,"firstdate").Value
+                                        });
+                    lvi.ForeColor = enabled ? Color.Green : Color.Gray;
+                    lvClients.Items.Add(lvi);
+                    cntTot++;
+                    cntActive = enabled ? cntActive + 1 : cntActive;
+                    cntInactive = !enabled ? cntInactive + 1 : cntInactive;
+
+                }
+            }
             lblTotCli.Text = cntTot.ToString();
             lblInactiveCli.Text = cntInactive.ToString();
             lblActiveCli.Text = cntActive.ToString();
@@ -242,6 +283,31 @@ namespace YardiClients
                         rep.WriteLine(line);
                     }
                 }
+                if (vn == VendorName.Entrata)
+                {
+                    ListViewItem lvi = null;
+                    foreach (XElement el in clients)
+                    {
+                        bool enabled = Convert.ToBoolean(ccfg.GetElement(el, "enabled").Value);
+                        var kwd = ccfg.GetElementAttrib(el, "keyword").Value;
+                        if (!string.IsNullOrEmpty(kwd))
+                            continue;
+                        line = string.Join("|", new string[]
+                        {
+                            ccfg.GetElementAttrib(el,"keyword").Value
+                            ,ccfg.GetElement(el,"siteid").Value
+                            ,ccfg.GetElement(el,"name").Value
+                            ,ccfg.GetElement(el,"companyname").Value
+                            ,ccfg.GetElement(el,"enabled").Value
+                            ,ccfg.GetElement(el,"address").Value
+                            ,ccfg.GetElement(el,"subdomain").Value
+                            ,ccfg.GetElement(el,"token").Value
+                            ,ccfg.GetElement(el,"firstdate").Value
+                        });
+                        rep.WriteLine(line);
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -289,6 +355,19 @@ namespace YardiClients
                 lvClients.Columns.Add("Phone", 80);
                 return;
             }
+            if (vn == VendorName.Entrata)
+            {
+                lvClients.Columns.Add("RRS Id", 50);
+                lvClients.Columns.Add("Prop Id", 60);
+                lvClients.Columns.Add("Prop Name", 160);
+                lvClients.Columns.Add("PMC Name", 160);
+                lvClients.Columns.Add("Enabled", 60);
+                lvClients.Columns.Add("Address", 300);
+                lvClients.Columns.Add("SubDomain", 300);
+                lvClients.Columns.Add("Token", 300);
+                lvClients.Columns.Add("FirstDate", 100);
+                return;
+            }
         }
         private string GetColumnsLine(VendorName vn)
         {
@@ -322,12 +401,29 @@ namespace YardiClients
                     "Ekey"
                 });
             }
+            if (vn == VendorName.Entrata)
+            {
+                return string.Join("|", new string[]
+                {
+                    "RRS Id",
+                    "Site Id",
+                    "Site Name",
+                    "Enabled",
+                    "Address",
+                    "Subdomain",
+                    "Token",
+                    "First Date"
+                });
+            }
             return string.Empty;
         }
         private void LoadDetails(ListViewItem lvi)
         {
             XElement el = null;
             string keyword = lvi.SubItems[0].Text;
+            txtShortName.ReadOnly = _vendor == VendorName.Yardi;
+            txtInternalId_RP.ReadOnly = !string.IsNullOrEmpty(keyword);
+            txtInternalId_PS.ReadOnly = !string.IsNullOrEmpty(keyword);
             if (_vendor == VendorName.Yardi)
             {
                 el = ccfg.GetElementByAttrib(_cli, "client", "keyword", keyword);
@@ -369,6 +465,30 @@ namespace YardiClients
                 txtBalanceOwed.Text = ccfg.GetElement(el, "balanceowed").Value;
                 txtEncryptionKey.Text = ccfg.GetElement(el, "ekey").Value;
                 txtPhone1.Text = ccfg.GetElement(el, "phone1").Value;
+            }
+            if (_vendor == VendorName.Entrata)
+            {
+                string site = lvi.SubItems[1].Text;
+                var clients = ccfg.GetElements(_cli, "client");
+                foreach (var s in clients)
+                {
+                    var clsite = s.Descendants("siteid").FirstOrDefault().Value;
+                    if (clsite == site)
+                    {
+                        el = s;
+                        break;
+                    }
+                }
+                bool enabled = Convert.ToBoolean(ccfg.GetElement(el, "enabled").Value);
+                txtInternalId_PS.Text = keyword;
+                txtPMCName_PS.Text = ccfg.GetElement(el, "companyname").Value;
+                txtPropName_PS.Text = ccfg.GetElement(el, "name").Value;
+                chkEnable_PS.Checked = enabled;
+                txtPropId_PS.Text = ccfg.GetElement(el, "siteid").Value;
+                txtAddress_PS.Text = ccfg.GetElement(el, "address").Value;
+                txtToken_PS.Text = ccfg.GetElement(el, "token").Value;
+                txtSubDomain_PS.Text = ccfg.GetElement(el, "subdomain").Value;
+                txtFirstDate_PS.Text = ccfg.GetElement(el, "firstdate").Value;
             }
         }
 
@@ -501,6 +621,68 @@ namespace YardiClients
                                 AddUpdateChild(member, "ekey", txtEncryptionKey.Text);
                                 AddUpdateChild(member, "phone1", txtPhone1.Text);
                                 element.Save(_cfgFile);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            // Vendor is Entrata
+            if (_vendor == VendorName.Entrata)
+            {
+                if (element != null)
+                {
+                    var xml = (from member in element.Descendants("client")
+                               where
+                                   member.Attribute("keyword").Value == txtInternalId_PS.Text
+                               select member).SingleOrDefault();
+
+                    if (xml != null) // found client entry by keyword
+                    {
+                        xml.SetAttributeValue("keyword", txtInternalId_RP.Text);
+                        AddUpdateChild(xml, "name", txtPMCName_RP.Text);
+                        AddUpdateChild(xml, "pmcid", txtPMCId_RP.Text);
+                        AddUpdateChild(xml, "enabled", chkEnable_RP.Checked.ToString().ToLower());
+                        AddUpdateChild(xml, "siteid", txtSiteId_RP.Text);
+                        AddUpdateChild(xml, "sitename", txtSiteName_RP.Text);
+                        AddUpdateChild(xml, "siteaddress", txtSiteAddress_RP.Text);
+                        AddUpdateChild(xml, "email", txtEmail_RP.Text);
+                        AddUpdateChild(xml, "firstdate", txtFirstDate.Text);
+                        AddUpdateChild(xml, "aftermoveout", txtAfterMoveout.Text);
+                        AddUpdateChild(xml, "balanceowed", txtBalanceOwed.Text);
+                        AddUpdateChild(xml, "ekey", txtEncryptionKey.Text);
+                        AddUpdateChild(xml, "phone1", txtPhone1.Text);
+
+                        xml.SetAttributeValue("keyword", txtInternalId_PS.Text);
+                        AddUpdateChild(xml, "enabled", chkEnable_PS.Checked.ToString().ToLower());
+                        AddUpdateChild(xml, "companyname", txtPMCName_PS.Text);
+                        AddUpdateChild(xml, "name", txtPropName_PS.Text);
+                        AddUpdateChild(xml, "address", txtAddress_PS.Text);
+                        AddUpdateChild(xml, "siteid", txtPropId_PS.Text);
+                        AddUpdateChild(xml, "token", txtToken_PS.Text);
+                        AddUpdateChild(xml, "firstdate", txtFirstDate_PS.Text);
+                        AddUpdateChild(xml, "subdomain", txtSubDomain_PS.Text);
+
+                        element.Save(_cfgFile);
+                    }
+                    else // try finding entry by siteid
+                    {
+                        foreach (var member in element.Descendants("client"))
+                        {
+                            var site = member.Descendants("siteid").FirstOrDefault();
+                            if (site != null && site.Value == txtPropId_PS.Text.Trim())
+                            {
+                                member.SetAttributeValue("keyword", txtInternalId_PS.Text);
+                                AddUpdateChild(member, "enabled", chkEnable_PS.Checked.ToString().ToLower());
+                                AddUpdateChild(member, "companyname", txtPMCName_PS.Text);
+                                AddUpdateChild(member, "name", txtPropName_PS.Text);
+                                AddUpdateChild(member, "address", txtAddress_PS.Text);
+                                AddUpdateChild(member, "siteid", txtPropId_PS.Text);
+                                AddUpdateChild(member, "token", txtToken_PS.Text);
+                                AddUpdateChild(member, "firstdate", txtFirstDate_PS.Text);
+                                AddUpdateChild(member, "subdomain", txtSubDomain_PS.Text);
+                                element.Save(_cfgFile);
+                                break;
                             }
                         }
                     }
@@ -555,13 +737,26 @@ namespace YardiClients
                     )
                 rc = true;
             }
+
+            if (_vendor == VendorName.Entrata)
+            {
+                if (txtInternalId_PS.Text.Trim() == string.Empty ||
+                 txtPMCName_PS.Text.Trim() == string.Empty ||
+                 txtPropId_PS.Text.Trim() == string.Empty ||
+                 chkEnable_PS.CheckState == CheckState.Indeterminate ||
+                 txtAddress_PS.Text.Trim() == string.Empty ||
+                 txtPropId_PS.Text.Trim() == string.Empty ||
+                 txtAddress_PS.Text.Trim() == string.Empty 
+                    )
+                    rc = true;
+            }
             return rc;
         }
 
 
         private bool KeywordExists(string kw)
         {
-            var target = _vendor == VendorName.Yardi ? txtShortName.Text.Trim() : txtInternalId_RP.Text.Trim();
+            var target = _vendor == VendorName.Yardi ? txtShortName.Text.Trim() : (_vendor == VendorName.Realpage ? txtInternalId_RP.Text.Trim() : txtInternalId_PS.Text.Trim());
             return (ccfg.GetElementByAttrib(_cli, "client", "keyword", target) != null);
         }
         private void AddClientEntry()
@@ -602,6 +797,21 @@ namespace YardiClients
                     , new XElement("balanceowed", txtBalanceOwed.Text)
                     , new XElement("ekey", txtEncryptionKey.Text)
                     , new XElement("phone1", txtPhone1.Text)
+                    );
+                doc.Add(newClient);
+                doc.Save(_cfgFile);
+            }
+            if (_vendor == VendorName.Entrata)
+            {
+                XElement newClient = new XElement("client",
+                    new XAttribute("keyword", txtInternalId_PS.Text.Trim())
+                    , new XElement("companyname", txtPMCName_PS.Text.Trim())
+                    , new XElement("enabled", chkEnable_PS.Checked.ToString().ToLower())
+                    , new XElement("siteid", txtPropId_PS.Text.Trim().ToLower())
+                    , new XElement("name", txtPropName_PS.Text.Trim().ToLower())
+                    , new XElement("address", txtAddress_PS.Text.Trim().ToLower())
+                    , new XElement("subdomain", txtSubDomain_PS.Text.Trim().ToLower())
+                    , new XElement("token", txtToken_PS.Text.Trim().ToLower())
                     );
                 doc.Add(newClient);
                 doc.Save(_cfgFile);
@@ -651,6 +861,24 @@ namespace YardiClients
                 _cli = ccfg.GetConfig(_cfgFile);
                 LoadClients(_vendor);
             }
+            if (vn == VendorName.Entrata)
+            {
+                var kwd = lvClients.SelectedItems[0].SubItems[1].Text;
+                if (element != null)
+                {
+                    var xml = (from member in element.Descendants("client")
+                               where member.Descendants("siteid").FirstOrDefault().Value == kwd
+                               select member).FirstOrDefault();
+
+                    if (xml != null)
+                    {
+                        xml.Remove();
+                        element.Save(_cfgFile);
+                    }
+                }
+                _cli = ccfg.GetConfig(_cfgFile);
+                LoadClients(_vendor);
+            }
         }
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -662,10 +890,12 @@ namespace YardiClients
                 ListViewItem lvi = lvClients.SelectedItems[0];
                 pnlDetl.Enabled = _vendor == VendorName.Yardi;
                 pnlDetlRP.Enabled = _vendor == VendorName.Realpage;
+                pnlDetlEntrata.Enabled = _vendor == VendorName.Entrata;
                 txtShortName.ReadOnly = _vendor == VendorName.Yardi;
                 var intId = lvi.SubItems[0].Text;
 
                 txtInternalId_RP.ReadOnly = !string.IsNullOrEmpty(intId);
+                txtInternalId_PS.ReadOnly = !string.IsNullOrEmpty(intId);
                 LoadDetails(lvi);
                 lvClients.Enabled = false;
             }
@@ -676,8 +906,10 @@ namespace YardiClients
             ClearFields();
             pnlDetl.Enabled = _vendor == VendorName.Yardi;
             pnlDetlRP.Enabled = _vendor == VendorName.Realpage;
+            pnlDetlEntrata.Enabled = _vendor == VendorName.Entrata;
             txtShortName.ReadOnly = !pnlDetl.Enabled;
             txtInternalId_RP.ReadOnly = !pnlDetlRP.Enabled;
+            txtInternalId_PS.ReadOnly = !pnlDetlEntrata.Enabled;
             lvClients.Enabled = true;
             currMode = EditMode.None;
 
@@ -734,6 +966,18 @@ namespace YardiClients
                 txtEncryptionKey.Clear();
                 txtPhone1.Clear();
             }
+            if (_vendor == VendorName.Entrata)
+            {
+                txtInternalId_PS.Clear();
+                txtPMCName_PS.Clear();
+                txtPropId_PS.Clear();
+                txtPropName_PS.Clear();
+                txtAddress_PS.Clear();
+                txtToken_PS.Clear();
+                txtFirstDate_PS.Clear();
+                txtSubDomain_PS.Clear();
+                chkEnable_PS.Checked = true;
+            }
 
             currMode = EditMode.None;
         }
@@ -742,9 +986,13 @@ namespace YardiClients
         {
             pnlDetl.Enabled = _vendor == VendorName.Yardi;
             pnlDetlRP.Enabled = _vendor == VendorName.Realpage;
+            pnlDetlEntrata.Enabled = _vendor == VendorName.Entrata;
             ClearFields();
             txtShortName.ReadOnly = !pnlDetl.Enabled;
             txtInternalId_RP.ReadOnly = !pnlDetlRP.Enabled;
+            txtInternalId_PS.ReadOnly = !pnlDetlEntrata.Enabled;
+            txtPMCName_PS.Focus();
+            txtPMCName_PS.Focus();
             lvClients.Enabled = false;
             currMode = EditMode.Add;
         }
@@ -808,6 +1056,7 @@ namespace YardiClients
                 ListViewItem lvi = lvClients.SelectedItems[0];
                 pnlDetl.Enabled = _vendor == VendorName.Yardi;
                 pnlDetlRP.Enabled = _vendor == VendorName.Realpage;
+                pnlDetlEntrata.Enabled = _vendor == VendorName.Entrata;
                 var intId = lvi.SubItems[0].Text;
 
                 txtInternalId_RP.ReadOnly = false;
@@ -831,6 +1080,11 @@ namespace YardiClients
             {
                 _cfgFile = ConfigurationManager.AppSettings["rpconfigfilelocation"];
                 _vendor = VendorName.Realpage;
+            }
+            else if (selVendor == VendorName.Entrata)
+            {
+                _cfgFile = ConfigurationManager.AppSettings["psconfigfilelocation"];
+                _vendor = VendorName.Entrata;
             }
             else
             {
@@ -917,6 +1171,66 @@ namespace YardiClients
             }
         }
 
+        private void btnSave_PS_Click(object sender, EventArgs e)
+        {
+            string kwd = txtInternalId_PS.Text.Trim();
+            try
+            {
+                switch (currMode)
+                {
+                    case EditMode.Add:
+                        if (MissingFields())
+                        {
+                            MessageBox.Show(String.Format("All Fields are required", kwd), "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                        if (KeywordExists(kwd))
+                        {
+                            MessageBox.Show(String.Format("Entry with the name {0} already exists - please correct and retry", kwd), "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                        AddClientEntry();
+                        ClearFields();
+                        txtShortName.ReadOnly = true;
+                        pnlDetl.Enabled = false;
+                        lvClients.Enabled = true;
+                        currMode = EditMode.None;
+                        break;
+                    case EditMode.Edit:
+                        // validate 
+                        if (MissingFields())
+                        {
+                            MessageBox.Show(String.Format("All Fields are required", kwd), "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            return;
+                        }
+                        // Update Client Entry
+                        UpdateClientEntry();
+                        ClearFields();
+                        txtShortName.ReadOnly = true;
+                        pnlDetlEntrata.Enabled = false;
+                        lvClients.Enabled = true;
+                        currMode = EditMode.None;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error on Save: \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        private void btnCancel_PS_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+            txtInternalId_PS.ReadOnly = true;
+            pnlDetl.Enabled = _vendor != VendorName.Yardi;
+            pnlDetlRP.Enabled = _vendor != VendorName.Realpage;
+            pnlDetlEntrata.Enabled = _vendor != VendorName.Entrata;
+            lvClients.Enabled = true;
+            currMode = EditMode.None;
+        }
     }
 }

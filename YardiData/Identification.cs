@@ -26,7 +26,17 @@ namespace YardiData
                 if (sub.Element("IDValue") != null)
                 {
                     if (sub.Element("OrganizationName") != null)
-                        IdValues.Add(sub.Element("OrganizationName").Value.ToLower(),sub.Element("IDValue").Value);
+                    {
+                        var k = sub.Element("OrganizationName").Value.ToLower();
+                        if (!IdValues.ContainsKey(k))
+                        {
+                            IdValues.Add(sub.Element("OrganizationName").Value.ToLower(), sub.Element("IDValue").Value);
+                        }
+                        else
+                        {
+               //             Log.WarnFmt("Skipped adding dup key {0} in element {1}", k, sub);
+                        }
+                    }
                     continue;
                 }
             }

@@ -74,11 +74,28 @@
             this.retrieveAllCollectionsRpx = new System.Windows.Forms.ToolStripMenuItem();
             this.updateSitesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtResponse = new System.Windows.Forms.TextBox();
+            this.tabEntrata = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPSLeaseId = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboSiteListPS = new System.Windows.Forms.ComboBox();
+            this.btnRefreshClientEntrata = new System.Windows.Forms.Button();
+            this.btnDownloadDocPS = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.lvPSSites = new System.Windows.Forms.ListView();
+            this.cMenuPS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.retrieveCollectionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.retrieveAllColllectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateSitesFromLoginFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabRetrieval = new System.Windows.Forms.TabPage();
             this.btnClear = new System.Windows.Forms.Button();
             this.lvMsg = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabReports = new System.Windows.Forms.TabPage();
+            this.lblItemCount = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dpCutoffDate = new System.Windows.Forms.DateTimePicker();
             this.btnRunReport = new System.Windows.Forms.Button();
             this.lblDesc = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -86,6 +103,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lvReport = new System.Windows.Forms.ListView();
             this.tabFileLocations = new System.Windows.Forms.TabPage();
+            this.btnOpenEntrataLogins = new System.Windows.Forms.Button();
+            this.txtEntrataLogins = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtLicFile = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOpenCollFalse = new System.Windows.Forms.Button();
@@ -99,20 +119,20 @@
             this.lblRawXML = new System.Windows.Forms.Label();
             this.lblRunMode = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dpCutoffDate = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.cMenuReport = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.extractFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excludeHeadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.includeHeadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.debugFormatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblItemCount = new System.Windows.Forms.Label();
+            this.updateTokenFromLoginFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.tabCtl.SuspendLayout();
             this.tabClients.SuspendLayout();
             this.cMenu.SuspendLayout();
             this.tabRealPage.SuspendLayout();
             this.cMenuRpx.SuspendLayout();
+            this.tabEntrata.SuspendLayout();
+            this.cMenuPS.SuspendLayout();
             this.tabRetrieval.SuspendLayout();
             this.tabReports.SuspendLayout();
             this.tabFileLocations.SuspendLayout();
@@ -255,14 +275,14 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // releaseNotesToolStripMenuItem
             // 
             this.releaseNotesToolStripMenuItem.Name = "releaseNotesToolStripMenuItem";
-            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.releaseNotesToolStripMenuItem.Text = "Release Notes";
             this.releaseNotesToolStripMenuItem.Click += new System.EventHandler(this.releaseNotesToolStripMenuItem_Click);
             // 
@@ -273,6 +293,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabCtl.Controls.Add(this.tabClients);
             this.tabCtl.Controls.Add(this.tabRealPage);
+            this.tabCtl.Controls.Add(this.tabEntrata);
             this.tabCtl.Controls.Add(this.tabRetrieval);
             this.tabCtl.Controls.Add(this.tabReports);
             this.tabCtl.Controls.Add(this.tabFileLocations);
@@ -473,7 +494,8 @@
             // 
             // lvRealPageSites
             // 
-            this.lvRealPageSites.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lvRealPageSites.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvRealPageSites.ContextMenuStrip = this.cMenuRpx;
             this.lvRealPageSites.FullRowSelect = true;
@@ -531,6 +553,159 @@
             this.txtResponse.TabIndex = 2;
             this.txtResponse.Visible = false;
             // 
+            // tabEntrata
+            // 
+            this.tabEntrata.Controls.Add(this.label7);
+            this.tabEntrata.Controls.Add(this.txtPSLeaseId);
+            this.tabEntrata.Controls.Add(this.label8);
+            this.tabEntrata.Controls.Add(this.cboSiteListPS);
+            this.tabEntrata.Controls.Add(this.btnRefreshClientEntrata);
+            this.tabEntrata.Controls.Add(this.btnDownloadDocPS);
+            this.tabEntrata.Controls.Add(this.button3);
+            this.tabEntrata.Controls.Add(this.lvPSSites);
+            this.tabEntrata.Controls.Add(this.textBox2);
+            this.tabEntrata.Location = new System.Drawing.Point(4, 22);
+            this.tabEntrata.Name = "tabEntrata";
+            this.tabEntrata.Size = new System.Drawing.Size(779, 412);
+            this.tabEntrata.TabIndex = 5;
+            this.tabEntrata.Text = "Entrata Clients";
+            this.tabEntrata.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(547, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "LeaseId";
+            // 
+            // txtPSLeaseId
+            // 
+            this.txtPSLeaseId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPSLeaseId.Location = new System.Drawing.Point(597, 18);
+            this.txtPSLeaseId.Name = "txtPSLeaseId";
+            this.txtPSLeaseId.ShortcutsEnabled = false;
+            this.txtPSLeaseId.Size = new System.Drawing.Size(72, 22);
+            this.txtPSLeaseId.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(380, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "SiteId";
+            // 
+            // cboSiteListPS
+            // 
+            this.cboSiteListPS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSiteListPS.FormattingEnabled = true;
+            this.cboSiteListPS.Location = new System.Drawing.Point(420, 18);
+            this.cboSiteListPS.Name = "cboSiteListPS";
+            this.cboSiteListPS.Size = new System.Drawing.Size(115, 21);
+            this.cboSiteListPS.TabIndex = 34;
+            // 
+            // btnRefreshClientEntrata
+            // 
+            this.btnRefreshClientEntrata.Location = new System.Drawing.Point(17, 16);
+            this.btnRefreshClientEntrata.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefreshClientEntrata.Name = "btnRefreshClientEntrata";
+            this.btnRefreshClientEntrata.Size = new System.Drawing.Size(129, 26);
+            this.btnRefreshClientEntrata.TabIndex = 33;
+            this.btnRefreshClientEntrata.Text = "Refresh Client List";
+            this.toolTip1.SetToolTip(this.btnRefreshClientEntrata, "Reload the Realpage Clients from file; user after updating client information aft" +
+        "er using Client Tool");
+            this.btnRefreshClientEntrata.UseVisualStyleBackColor = true;
+            this.btnRefreshClientEntrata.Click += new System.EventHandler(this.btnRefreshClientEntrata_Click);
+            // 
+            // btnDownloadDocPS
+            // 
+            this.btnDownloadDocPS.Location = new System.Drawing.Point(674, 16);
+            this.btnDownloadDocPS.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDownloadDocPS.Name = "btnDownloadDocPS";
+            this.btnDownloadDocPS.Size = new System.Drawing.Size(94, 26);
+            this.btnDownloadDocPS.TabIndex = 32;
+            this.btnDownloadDocPS.Text = "Download Docs";
+            this.toolTip1.SetToolTip(this.btnDownloadDocPS, "Adhoc Document Download;  SiteId and ReshId required");
+            this.btnDownloadDocPS.UseVisualStyleBackColor = true;
+            this.btnDownloadDocPS.Click += new System.EventHandler(this.btnDownloadDocPS_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(255, 16);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 26);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Update Clients";
+            this.toolTip1.SetToolTip(this.button3, "Update Sites from RealPage");
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            // 
+            // lvPSSites
+            // 
+            this.lvPSSites.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvPSSites.ContextMenuStrip = this.cMenuPS;
+            this.lvPSSites.FullRowSelect = true;
+            this.lvPSSites.GridLines = true;
+            this.lvPSSites.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvPSSites.HideSelection = false;
+            this.lvPSSites.Location = new System.Drawing.Point(15, 52);
+            this.lvPSSites.Name = "lvPSSites";
+            this.lvPSSites.Size = new System.Drawing.Size(748, 344);
+            this.lvPSSites.TabIndex = 31;
+            this.lvPSSites.UseCompatibleStateImageBehavior = false;
+            this.lvPSSites.View = System.Windows.Forms.View.Details;
+            // 
+            // cMenuPS
+            // 
+            this.cMenuPS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.retrieveCollectionsToolStripMenuItem1,
+            this.retrieveAllColllectionsToolStripMenuItem,
+            this.updateSitesFromLoginFileToolStripMenuItem,
+            this.updateTokenFromLoginFolderToolStripMenuItem});
+            this.cMenuPS.Name = "cMenuPS";
+            this.cMenuPS.Size = new System.Drawing.Size(252, 114);
+            // 
+            // retrieveCollectionsToolStripMenuItem1
+            // 
+            this.retrieveCollectionsToolStripMenuItem1.Name = "retrieveCollectionsToolStripMenuItem1";
+            this.retrieveCollectionsToolStripMenuItem1.Size = new System.Drawing.Size(251, 22);
+            this.retrieveCollectionsToolStripMenuItem1.Text = "Retrieve Collections";
+            this.retrieveCollectionsToolStripMenuItem1.Click += new System.EventHandler(this.retrieveCollectionsToolStripMenuItem1_Click);
+            // 
+            // retrieveAllColllectionsToolStripMenuItem
+            // 
+            this.retrieveAllColllectionsToolStripMenuItem.Name = "retrieveAllColllectionsToolStripMenuItem";
+            this.retrieveAllColllectionsToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.retrieveAllColllectionsToolStripMenuItem.Text = "Retrieve All Colllections";
+            this.retrieveAllColllectionsToolStripMenuItem.Click += new System.EventHandler(this.retrieveAllColllectionsToolStripMenuItem_Click);
+            // 
+            // updateSitesFromLoginFileToolStripMenuItem
+            // 
+            this.updateSitesFromLoginFileToolStripMenuItem.Name = "updateSitesFromLoginFileToolStripMenuItem";
+            this.updateSitesFromLoginFileToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.updateSitesFromLoginFileToolStripMenuItem.Text = "Update Sites from Login File";
+            this.updateSitesFromLoginFileToolStripMenuItem.Click += new System.EventHandler(this.updateSitesFromLoginFileToolStripMenuItem_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Location = new System.Drawing.Point(15, 89);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox2.Size = new System.Drawing.Size(748, 297);
+            this.textBox2.TabIndex = 30;
+            this.textBox2.Visible = false;
+            // 
             // tabRetrieval
             // 
             this.tabRetrieval.Controls.Add(this.btnClear);
@@ -544,6 +719,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.Location = new System.Drawing.Point(663, 380);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(96, 23);
@@ -593,6 +769,32 @@
             this.tabReports.TabIndex = 4;
             this.tabReports.Text = "Reports";
             this.tabReports.UseVisualStyleBackColor = true;
+            // 
+            // lblItemCount
+            // 
+            this.lblItemCount.AutoSize = true;
+            this.lblItemCount.Location = new System.Drawing.Point(346, 28);
+            this.lblItemCount.Name = "lblItemCount";
+            this.lblItemCount.Size = new System.Drawing.Size(64, 13);
+            this.lblItemCount.TabIndex = 34;
+            this.lblItemCount.Text = "Item Count: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(495, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Cut-off Date:";
+            // 
+            // dpCutoffDate
+            // 
+            this.dpCutoffDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpCutoffDate.Location = new System.Drawing.Point(567, 24);
+            this.dpCutoffDate.Name = "dpCutoffDate";
+            this.dpCutoffDate.Size = new System.Drawing.Size(100, 20);
+            this.dpCutoffDate.TabIndex = 32;
             // 
             // btnRunReport
             // 
@@ -662,6 +864,9 @@
             // 
             // tabFileLocations
             // 
+            this.tabFileLocations.Controls.Add(this.btnOpenEntrataLogins);
+            this.tabFileLocations.Controls.Add(this.txtEntrataLogins);
+            this.tabFileLocations.Controls.Add(this.label9);
             this.tabFileLocations.Controls.Add(this.txtLicFile);
             this.tabFileLocations.Controls.Add(this.label1);
             this.tabFileLocations.Controls.Add(this.btnOpenCollFalse);
@@ -681,10 +886,38 @@
             this.tabFileLocations.Text = "File Locations";
             this.tabFileLocations.UseVisualStyleBackColor = true;
             // 
+            // btnOpenEntrataLogins
+            // 
+            this.btnOpenEntrataLogins.Location = new System.Drawing.Point(669, 173);
+            this.btnOpenEntrataLogins.Name = "btnOpenEntrataLogins";
+            this.btnOpenEntrataLogins.Size = new System.Drawing.Size(75, 23);
+            this.btnOpenEntrataLogins.TabIndex = 35;
+            this.btnOpenEntrataLogins.Text = "Open";
+            this.btnOpenEntrataLogins.UseVisualStyleBackColor = true;
+            this.btnOpenEntrataLogins.Click += new System.EventHandler(this.btnOpenEntrataLogins_Click);
+            // 
+            // txtEntrataLogins
+            // 
+            this.txtEntrataLogins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntrataLogins.Location = new System.Drawing.Point(178, 175);
+            this.txtEntrataLogins.Name = "txtEntrataLogins";
+            this.txtEntrataLogins.ReadOnly = true;
+            this.txtEntrataLogins.Size = new System.Drawing.Size(473, 22);
+            this.txtEntrataLogins.TabIndex = 34;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(99, 179);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Entrata Logins";
+            // 
             // txtLicFile
             // 
             this.txtLicFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLicFile.Location = new System.Drawing.Point(178, 171);
+            this.txtLicFile.Location = new System.Drawing.Point(178, 288);
             this.txtLicFile.Name = "txtLicFile";
             this.txtLicFile.ReadOnly = true;
             this.txtLicFile.Size = new System.Drawing.Size(473, 22);
@@ -693,7 +926,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 175);
+            this.label1.Location = new System.Drawing.Point(82, 292);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 31;
@@ -795,23 +1028,6 @@
             this.lblRunMode.Text = "Run mode";
             this.lblRunMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dpCutoffDate
-            // 
-            this.dpCutoffDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpCutoffDate.Location = new System.Drawing.Point(567, 24);
-            this.dpCutoffDate.Name = "dpCutoffDate";
-            this.dpCutoffDate.Size = new System.Drawing.Size(100, 20);
-            this.dpCutoffDate.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(495, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Cut-off Date:";
-            // 
             // cMenuReport
             // 
             this.cMenuReport.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -850,14 +1066,12 @@
             this.debugFormatToolStripMenuItem1.Text = "Debug Format";
             this.debugFormatToolStripMenuItem1.Click += new System.EventHandler(this.debugFormatToolStripMenuItem1_Click);
             // 
-            // lblItemCount
+            // updateTokenFromLoginFolderToolStripMenuItem
             // 
-            this.lblItemCount.AutoSize = true;
-            this.lblItemCount.Location = new System.Drawing.Point(346, 28);
-            this.lblItemCount.Name = "lblItemCount";
-            this.lblItemCount.Size = new System.Drawing.Size(64, 13);
-            this.lblItemCount.TabIndex = 34;
-            this.lblItemCount.Text = "Item Count: ";
+            this.updateTokenFromLoginFolderToolStripMenuItem.Name = "updateTokenFromLoginFolderToolStripMenuItem";
+            this.updateTokenFromLoginFolderToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.updateTokenFromLoginFolderToolStripMenuItem.Text = "Update Tokens from Login Folder";
+            this.updateTokenFromLoginFolderToolStripMenuItem.Click += new System.EventHandler(this.updateTokenFromLoginFolderToolStripMenuItem_Click);
             // 
             // frmDash
             // 
@@ -882,6 +1096,9 @@
             this.tabRealPage.ResumeLayout(false);
             this.tabRealPage.PerformLayout();
             this.cMenuRpx.ResumeLayout(false);
+            this.tabEntrata.ResumeLayout(false);
+            this.tabEntrata.PerformLayout();
+            this.cMenuPS.ResumeLayout(false);
             this.tabRetrieval.ResumeLayout(false);
             this.tabReports.ResumeLayout(false);
             this.tabReports.PerformLayout();
@@ -973,6 +1190,24 @@
         private System.Windows.Forms.ToolStripMenuItem includeHeadersToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem debugFormatToolStripMenuItem1;
         private System.Windows.Forms.Label lblItemCount;
+        private System.Windows.Forms.TabPage tabEntrata;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPSLeaseId;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cboSiteListPS;
+        private System.Windows.Forms.Button btnRefreshClientEntrata;
+        private System.Windows.Forms.Button btnDownloadDocPS;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListView lvPSSites;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ContextMenuStrip cMenuPS;
+        private System.Windows.Forms.Button btnOpenEntrataLogins;
+        private System.Windows.Forms.TextBox txtEntrataLogins;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolStripMenuItem retrieveCollectionsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem retrieveAllColllectionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateSitesFromLoginFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateTokenFromLoginFolderToolStripMenuItem;
     }
 }
 

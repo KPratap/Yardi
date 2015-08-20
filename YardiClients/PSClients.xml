@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clients>
+  <client keyword="RRSClientNew">
+    <name>New Client</name>
+    <address>Test Address</address>
+    <url>https://www.iyardiasp.com/8223thirddev/Webservices/itfcollections.asmx</url>
+    <token>03f74201468b8c93b66494b6828171f9ab9e084f</token>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <enabled>true</enabled>
+    <siteid>rentrec1</siteid>
+  </client>
+  <client keyword="RRSClientold">
+    <name>Old Client</name>
+    <address>Test Address</address>
+    <url>https://www.iyardiasp.com/8223thirdqa/webservices/itfcollections.asmx</url>
+    <token>03f74201468b8c93b66494b6828171f9ab9e084f</token>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <enabled>true</enabled>
+    <siteid>rentrec2</siteid>
+  </client>
+  <client keyword="TestClient">
+    <name>Old Client</name>
+    <address>Test Address</address>
+    <url>https://www.iyardiasp.com/8223thirdqa/webservices/itfcollections.asmx</url>
+    <token>03f74201468b8c93b66494b6828171f9ab9e084f</token>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <enabled>false</enabled>
+    <siteid>rentrec2</siteid>
+  </client>
+  <client keyword="test01">
+    <name>pcr_test</name>
+    <enabled>true</enabled>
+    <address>Test Address</address>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <token>03f74201468b8c93b66494b6828171f9ab9e084f</token>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>pcr</siteid>
+  </client>
+  <client keyword="tsr">
+    <name>trade street residential</name>
+    <address>Test Address</address>
+    <enabled>true</enabled>
+    <url>https://www.yardiasp14.com/35679trade/webservices/itfcollections.asmx</url>
+    <token>03f74201468b8c93b66494b6828171f9ab9e084f</token>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>trade</siteid>
+  </client>
+  <client keyword="RRSClient708">
+    <name>RRSClient708</name>
+    <address>Test Address</address>
+    <enabled>true</enabled>
+    <url>https://www.iyardiasp.com/8223thirdparty708dev/webservices/itfcollections.asmx</url>
+    <token>03f74201468b8c93b66494b6828171f9ab9e084f</token>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>rentrec1</siteid>
+  </client>
+  <client keyword="002967">
+    <name>St George Villas</name>
+    <address>Test Address</address>
+    <enabled>true</enabled>
+    <url>https://yardiasp14.com/34557aamci/webservices/itfcollections.asmx</url>
+    <token>03f74201468b8c93b66494b6828171f9ab9e084f</token>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>SGG</siteid>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>320 Atlanta Avenue</name>
+    <enabled>false</enabled>
+    <address>320 Atlanta Avenue SE, Atlanta, GA 30315</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162925</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>478 Highland</name>
+    <enabled>false</enabled>
+    <address>478 North Highland Avenue, Atlanta, GA 30307</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162910</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Amberwood Village</name>
+    <enabled>false</enabled>
+    <address>180 Flat Shoals Ave, Atlanta, GA 30316</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162912</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Beverly Hills Apartments</name>
+    <enabled>false</enabled>
+    <address>2397 Beverly Hills Drive, Atlanta, GA 30341</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162933</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Briarcliff Court Condos</name>
+    <enabled>false</enabled>
+    <address>913 Briarcliff Road, Atlanta, GA 30306</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162939</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Don Juan Duplexes</name>
+    <enabled>false</enabled>
+    <address>41 Clairview Drive, Atlanta, GA 30341</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162914</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Durand Drive Apartments</name>
+    <enabled>false</enabled>
+    <address>451 Durand Dr. NE, Atlanta, GA 30307</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162938</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Foxwood Apartments</name>
+    <enabled>false</enabled>
+    <address>3852 McElroy Road, Doraville, GA 30340</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162923</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Hickory Grove Apartments</name>
+    <enabled>false</enabled>
+    <address>6069 S Norcross Tucker Rd, Norcross, GA 30093</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162916</siteid>
+    <token>de0cc1d4fe1973b569a1b6ab85d7f0630089dc58</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+</clients>

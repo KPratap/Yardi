@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Summary>
+    <dataelement location="TotalProperties" outputname="TotalProperties" enabled ="1" />
+    <dataelement location="TotalLeaseFiles" outputname="TotalLeaseFiles" enabled="1" />
+    <dataelement location="TotalTenants" outputname="TotalTenants" enabled="1" />
+    <dataelement location="TotalOpenAmount" outputname="TotalOpenAmount" enabled="1" />
+  </Summary>
+  <Property>
+    <dataelement location="Identification" outputname="PropId" enabled ="1" />
+    <dataelement location="MarketingName" outputname="MarketingName" enabled="1" />
+    <dataelement location="Address/Address" outputname="PropAddress" enabled="1" />
+    <dataelement location="Address/City" outputname="City" enabled="1" />
+    <dataelement location="Address/State" outputname="State" enabled="1" />
+  </Property>
+  <LeaseFile>
+    <dataelement location="Identification" outputname="LeaseTenantId" idtype="Lease ID" enabled ="1" />
+    <dataelement location="Unit/UnitNumber" outputname="UnitCode" enabled ="1" />
+    <dataelement location="CollectionStatus" outputname="CollectionStatus" enabled="1" />
+    <dataelement location="MoveOutDate" outputname="LastChangeDate" date="1" enabled="1" />
+    <dataelement location="MonthlyRentAmount" outputname="MonthlyRentAmount" enabled="1" />
+    <dataelement location="MoveInDate" outputname="MoveInDate" date="1" enabled="1" />
+    <dataelement location="MoveOutDate" outputname="MoveOutDate" date="1" enabled="1" />
+    <dataelement location="LeaseBegin" outputname="LeaseBegin" date="1" enabled="1" />
+    <dataelement location="LeaseEnd" outputname="LeaseEnd" date="1" enabled="1" />
+  </LeaseFile>
+  
+  <Tenants maxcount="4" note="New expanded file; Feb14">
+    <dataelement location="PersonDetails/Identification" outputname="TenantId" enabled ="0" />
+    <dataelement location="PersonDetails/Name/FirstName" outputname="TenantFirstName" enabled ="1" />
+    <dataelement location="PersonDetails/Name/LastName" outputname="TenantLastName" enabled ="1" />
+    <dataelement location="PersonDetails/Address/Address" outputname="CurrAddr" addresstype="current" enabled ="1" />
+    <dataelement location="PersonDetails/Address/City" outputname="City" addresstype="current" enabled ="1" />
+    <dataelement location="PersonDetails/Address/State" outputname="State" addresstype="current" enabled ="1" />
+    <dataelement location="PersonDetails/Address/PostalCode" outputname="Zip" addresstype="current" enabled ="1" />
+    <dataelement location="PersonDetails/Address/Email" outputname="Email" addresstype="other" enabled ="1" />
+    <dataelement location="PersonDetails/Phone/PhoneNumber" outputname="HomePh" phonetype="personal" enabled ="1" />
+    <dataelement location="PersonDetails/Phone/PhoneNumber" outputname="CellPh" phonetype="cell" enabled ="1" />
+    <dataelement location="PersonDetails/Phone/PhoneNumber" outputname="OfficePh" phonetype="office" enabled ="1" />
+    <dataelement location="Contact/Name/FirstName" outputname="ContactFN" enabled ="1" />
+    <dataelement location="Contact/Name/LastName" outputname="ContactLN" enabled ="1" />
+    <dataelement location="Contact/Phone/PhoneNumber" outputname="ContactPhone" phonetype="personal" enabled ="1" />
+    <dataelement location="SSN" outputname="Tenant SSN" enabled ="1" />
+    <dataelement location="Guarantor" outputname="Guarantor" enabled ="1" />
+    <dataelement location="DateOfBirth" outputname="Tenant DOB" date="1" enabled ="1" />
+    <dataelement location="DriversLicense" outputname="Tenant DL" enabled ="0" />
+    <dataelement location="Employer/EmployerDetails/CompanyName" outputname="EmployerName" enabled ="0" note="disabled; now in custom rec" />
+    <dataelement location="Employer/EmployerDetails/Phone/PhoneNumber" outputname="EmployerPhone" enabled ="0"  note="disabled; now in custom rec"/>
+    <dataelement location="CustomRecords/Other1" outputname="Other1" enabled ="1" />
+    <dataelement location="CustomRecords/Other2" outputname="Other2" enabled ="1" />
+    <dataelement location="CustomRecords/Other3" outputname="Other3" enabled ="1" />
+    <dataelement location="CustomRecords/Other4" outputname="Other4" enabled ="1" />
+    <dataelement location="CustomRecords/Employer" outputname="EmployerName" enabled ="1" note="added here looking at the data" />
+    <dataelement location="CustomRecords/EmployerPhone" outputname="EmployerPhone" enabled ="1" note="added here looking at the data" />
+  </Tenants>
+  
+  <FileTransactions maxcount="20" note="New expanded file; feb14">
+    <dataelement location="AssignedAmount" outputname="AssignedAmount" enabled ="1" />
+    <dataelement location="Identification" outputname="TransId" enabled ="0" />
+    <dataelement location="TransDate" outputname="TransDate" enabled ="0" />
+    <dataelement location="TransType" outputname="TransType" enabled ="0" />
+  <dataelement location="OpenAmount" outputname="OpenAmount" enabled ="1" />
+   <dataelement location="TransTypeDesc" outputname="TransTypeDesc" enabled ="1" />
+    <dataelement location="TransAmount" outputname="TransAmount" enabled ="0" />
+       <dataelement location="CustChargeCode" outputname="CustChargeCode" enabled ="0" />
+    <dataelement location="CustChargeCodeDesc" outputname="CustChargeCodeDesc" enabled ="0" />
+  </FileTransactions>
+</root>

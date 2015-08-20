@@ -1,14 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Configuration;
 using System.Xml.Linq;
 using log4net;
+using log4net.Repository.Hierarchy;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NSConfig;
 using System.IO;
 using YardiDashboard.RPXCollections;
@@ -18,6 +24,7 @@ namespace YardiDashboard
 {
     public partial class frmDash : Form
     {
+        private Thread worker; 
        // private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private const string _FileLocationsTool = "YardiFileLocator.exe";
         private const string _YardiClientsTool = "YardiClients.exe";
@@ -39,13 +46,24 @@ namespace YardiDashboard
         string rpcliConfig = string.Empty;
         DateTime filenotextractedcutoffdate;
         XDocument rpcliFile = null;
+
+        private string pscliconfig = string.Empty;
+        private XDocument pscliFile = null;
+
+        private static string _apiurl = "https://sync.propertysolutions.com/api/oauth";
+        private static string _leaseUrlSuffix = ".propertysolutions.com/api/leases";
+        private static string _clientId = "80aa0055c39ea084d2bd.rrs_mult";
+        //"dde8541e13ec4ed241f9.rent_rec";  // Supplied by property Solutions
+        private static string _clientSecret = "57102b11720fd1c7cb9b08cd50e6374e"; // Supplied by property Solutions
         private enum VendorName
         {
             Yardi,
             Realpage,
+            PropertySolutions,
             VendorUnknown=-1
         };
 
+        private BackgroundWorker bw = null;
 
         public frmDash()
         {
@@ -103,7 +121,7 @@ namespace YardiDashboard
 
         private void frmDash_Load(object sender, EventArgs e)
         {
-    //        SetRunMode(runUnattendedToolStripMenuItem.Checked);
+            SetRunMode(runUnattendedToolStripMenuItem.Checked);
             tabCtl.SelectTab("tabRetrieval");
             AddMessage("Application started..");
             try
@@ -145,11 +163,15 @@ namespace YardiDashboard
 
                 if (!CheckClients_RP())
                 {
-                    MessageBox.Show("Error Loading Clients", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error Loading Realpage Clients", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
-
-
+                // Property Solutions appsettings verification
+                if (!CheckClients_PS())
+                {
+                    MessageBox.Show("Error Loading Property Solutions Clients", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Close();
+                }
 
             }
             catch (Exception ex)
@@ -177,7 +199,7 @@ namespace YardiDashboard
             dpCutoffDate.Value = filenotextractedcutoffdate;
             if (rpcliConfig == null)
             {
-                MessageBox.Show("Unable to find 'clientconfiguration' element in the configuration file; please fix and retry!", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Unable to find 'rpclientconfiguration' element in the configuration file; please fix and retry!", "Error", MessageBoxButtons.OK);
                 this.Close();
             }
             rpcliFile = ccfg.GetConfig(rpcliConfig);
@@ -189,6 +211,27 @@ namespace YardiDashboard
             ret = true;
             return ret;
         }
+
+        private bool CheckClients_PS()
+        {
+            bool ret = false;
+            pscliconfig = ConfigurationManager.AppSettings["psclientconfiguration"];
+
+            if (pscliconfig == null)
+            {
+                MessageBox.Show("Unable to find 'psclientconfiguration' element in the configuration file; please fix and retry!", "Error", MessageBoxButtons.OK);
+                this.Close();
+            }
+            pscliFile = ccfg.GetConfig(pscliconfig);
+            if (pscliconfig == null)
+            {
+                return false;
+            }
+            LoadClients_PS(pscliFile);
+            ret = true;
+            return ret;
+        }
+
 
         private bool CheckRealPageSettings()
         {
@@ -330,6 +373,60 @@ namespace YardiDashboard
             cboSiteList.ValueMember = "Value";
             cboSiteList.DataSource = new BindingSource(cboSorted, null); 
         }
+
+        private void LoadClients_PS(XDocument cliFile)
+        {
+            cboSiteListPS.DataSource = null;
+
+            List<XElement> clients = ccfg.GetElements(cliFile, "client");
+            lvPSSites.Columns.Clear();
+            lvPSSites.Items.Clear();
+            lvPSSites.Columns.Add("RRS Id", 50);
+            lvPSSites.Columns.Add("PS Propid", 60);
+            lvPSSites.Columns.Add("Site Name", 160);
+            lvPSSites.Columns.Add("Address", 300);
+            lvPSSites.Columns.Add("Enabled", 60);
+            lvPSSites.Columns.Add("Url", 160);
+            lvPSSites.Columns.Add("Subdomain", 160);
+            lvPSSites.Columns.Add("Token", 160);
+            lvPSSites.Columns.Add("FirstDate", 160);
+
+            Dictionary<string, string> cboDict = new Dictionary<string, string>();
+            cboDict.Add("_Select Site_", string.Empty);
+            cboSiteListPS.Items.Clear();
+            var kwd = string.Empty;
+            foreach (XElement el in clients)
+            {
+                var enabledFlag = ccfg.GetElement(el, "enabled").Value;
+                if (enabledFlag == "false")
+                    continue;
+                if (enabledFlag == "true")
+                    lvPSSites.Items.Add(new ListViewItem(new string[] 
+                                      {ccfg.GetElementAttrib(el,"keyword").Value
+                                      ,ccfg.GetElement(el,"siteid").Value
+                                      ,ccfg.GetElement(el,"name").Value
+                                      ,ccfg.GetElement(el,"address").Value
+                                      ,ccfg.GetElement(el,"enabled").Value
+                                      ,ccfg.GetElement(el,"url").Value
+                                      ,ccfg.GetElement(el,"subdomain").Value
+                                      ,ccfg.GetElement(el,"token").Value
+                                      ,ccfg.GetElement(el,"firstdate").Value
+                                        }));
+                kwd = ccfg.GetElementAttrib(el, "keyword").Value.Replace(" ", "_");
+                if (!string.IsNullOrEmpty(kwd))
+                {
+                    cboDict.Add(kwd + "_" + ccfg.GetElement(el, "siteid").Value, kwd);
+                }
+            }
+            var cboSorted = from pair in cboDict
+                            orderby pair.Key ascending
+                            select pair;
+
+            cboSiteListPS.DisplayMember = "Key";
+            cboSiteListPS.ValueMember = "Value";
+            cboSiteListPS.DataSource = new BindingSource(cboSorted, null);
+        }
+
         private bool CheckClients()
         {
             bool ret = false;
@@ -360,6 +457,7 @@ namespace YardiDashboard
             txtRawXML.Text = GetFileLoc("rawxml",locFile);
             txtColl.Text = GetFileLoc("collections", locFile);
             txtCollFalse.Text = GetFileLoc("collectionsfalse", locFile);
+            txtEntrataLogins.Text = GetFileLoc("entratalogins", locFile);
             ret = true;
             return ret;
         }
@@ -665,6 +763,9 @@ namespace YardiDashboard
                 case VendorName.Realpage:
                     ExtractRealPageFile(fn, outputHeader, dbg);
                     break;
+                case VendorName.PropertySolutions:
+                    ExtractPropertySolutionsFile(fn, outputHeader, dbg);
+                    break;
             }
         }
 
@@ -720,10 +821,46 @@ namespace YardiDashboard
             }
             catch (Exception ex)
             {
-                Log.ErrorFmt(ex);
+                var fullstr = ex.ToString();
+                var dispStr = fullstr.Length > 500 ? fullstr.Substring(0,500) + "...." : fullstr;
+                Log.ErrorFmt(ex.ToString());
+                MessageBox.Show("Error in Extract. Please refer to the log for details: \n" + ex.InnerException + "\n" +  dispStr, "Error", MessageBoxButtons.OK);
+            }
+        }
+
+        private void ExtractPropertySolutionsFile(string fn, bool outputHeader, bool dbg)
+        {
+            try
+            {
+                var siteFromXml = GetSiteIdFromRawXmlPS(fn);
+                if (siteFromXml == string.Empty)
+                {
+                    MessageBox.Show("Unable to find sideId in the raw xml file", "Error", MessageBoxButtons.OK);
+                    return;
+                }
+                var cle = GetClientEntryPS(siteFromXml);
+                if (cle == null)
+                {
+                    AddMessage("Extract failure; Unable to locate siteid entry " + siteFromXml + " in the client list; ");
+                    return;
+                }
+                var outputDirColl = GetOutputFolderPS(txtColl.Text, cle);
+                var yd = new PSData.PSData(txtRawXML.Text, outputDirColl, txtCollFalse.Text);
+                yd.OutputHeader = outputHeader;
+                yd.Extract(fn, dbg);
+                AddMessage("File Extracted to " + yd.foutColl);
+                if (yd.CollStatusFalseCount > 0)
+                    AddMessage("File Extracted to " + yd.foutCollFalse);
+                var leases = yd.LeaseIdentifiers;
+                DownloadLeaseDocumentsPS(leases, yd.foutColl, cle);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error in Extract: \n" + ex);
                 MessageBox.Show("Error in Extract: \n" + ex, "Error", MessageBoxButtons.OK);
             }
         }
+
 
         private string GetSiteIdFromRawXml(string fn)
         {
@@ -750,6 +887,39 @@ namespace YardiDashboard
             return site;
         }
 
+        private string GetSiteIdFromRawXmlPS(string fn)
+        {
+
+        //          <PropertyFiles>
+        //<PropertyFile>
+        //  <Property>
+            //    <PropertyFile IDType="Property ID" IDRank="primary" IDScopeType="sender">
+        //      <IDValue>162914</IDValue>
+
+
+            string site = string.Empty;
+            XDocument doc = XDocument.Load(fn);
+            XElement sites = doc.Descendants("PropertyFiles").FirstOrDefault();
+            if (sites == null)
+            {
+                return site;
+            }
+
+            var firstSite = sites.Descendants("PropertyFile").FirstOrDefault();
+            if (firstSite == null)
+            {
+                return site;
+            }
+
+            var firstSiteIdNode = firstSite.Descendants("Property").FirstOrDefault();
+            if (firstSiteIdNode == null)
+            {
+                return site;
+            }
+            site = firstSite.Descendants("IDValue").FirstOrDefault().Value;
+            return site;
+        }
+
         private void DownloadTenantDocuments(List<RealpageData.Resident> tenants, string fn, ClientEntry cle)
         {
             AddMessage("Downloading tenant Documents..");
@@ -760,6 +930,22 @@ namespace YardiDashboard
             }
             AddMessage("Download Complete..");
 
+        }
+        private void DownloadLeaseDocumentsPS(List<string> leases, string fn, PSClientEntry cle)
+        {
+            AddMessage("Downloading lease Documents..");
+            string path = Path.GetDirectoryName(fn);
+            foreach (var leas in leases)
+            {
+                try
+                {
+                    DownloadDocumentsPS(cle, leas, path);
+                }
+                catch (Exception ex)
+                {
+                    AddMessage("Error downloading documents for " + cle.SiteName + "-" + cle.SiteId + "- LeaseId " + leas);
+                }
+            }
         }
 
         private void BuildAndDownLoadDocument(RealpageData.Resident res, string folder, ClientEntry cle)
@@ -878,8 +1064,15 @@ namespace YardiDashboard
         private VendorName IdentifyVendor(string fn)
         {
             var doc = XDocument.Load(fn);
-            if (doc.Descendants("MITS-Collections").FirstOrDefault() != null)
+            var mitsColl = doc.Descendants("MITS-Collections").FirstOrDefault();
+            if (mitsColl != null)
             {
+                var srcOrg = mitsColl.Descendants("SourceOrganization").FirstOrDefault();
+                if (srcOrg != null)
+                {
+                    if (srcOrg.Value.Contains("Property Solutions") || srcOrg.Value.Contains("Entrata"))
+                        return VendorName.PropertySolutions;
+                }
                 return VendorName.Yardi;
             }
             if (doc.Descendants("Response").FirstOrDefault() != null)
@@ -894,7 +1087,7 @@ namespace YardiDashboard
         {
             string fname = string.Empty;
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Choose file to extract";
+            ofd.Title = "Choose file";
             ofd.InitialDirectory = path;
             DialogResult dr = ofd.ShowDialog();
             if (dr == DialogResult.OK)
@@ -1076,13 +1269,45 @@ namespace YardiDashboard
             {
                 lblRunMode.Text = "Running Unattended";
                 lblRunMode.BackColor = Color.Red;
+                StartWorkerThread();
                 AddMessage("..started Unattended Run mode ..");
+
             }
             else
             {
                 lblRunMode.Text = string.Empty;
                 lblRunMode.BackColor = Control.DefaultBackColor;
-                AddMessage("..stopped Unattended Run mode ..");
+                //while (worker.IsAlive)
+                //{
+                //    worker.Abort();
+                //}
+                //if (!worker.IsAlive)
+                //{
+                //    AddMessage("..stopped Unattended Run mode ..");
+                //}
+            }
+        }
+
+        private void StartWorkerThread()
+        {
+            worker = new Thread(DummyExtract);
+            worker.Start();
+        }
+
+        private void DummyExtract()
+        {
+            try
+            {
+                while (true)
+                {
+                    Log.Debug("..sleep ..");
+                    Thread.Sleep(5000);
+                    Log.Debug("..work ..");
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Debug("Stopped Worker");
             }
         }
 
@@ -1273,6 +1498,29 @@ namespace YardiDashboard
             cl.BalanceOwed = clientElement.Descendants("balanceowed").FirstOrDefault().Value;
             return cl;
         }
+
+        private PSClientEntry GetClientEntryPS(string site)
+        {
+            XDocument doc = ccfg.GetConfig(pscliconfig);
+            XElement clientElement = ccfg.GetClientElementForSiteId(doc, site);
+            if (clientElement == null)
+            {
+                return null;
+            }
+            var cl = new PSClientEntry();
+            cl.RrsId = clientElement.Attribute("keyword") != null ? clientElement.Attribute("keyword").Value : string.Empty;
+            cl.SiteId = clientElement.Descendants("siteid").FirstOrDefault().Value;
+            cl.SiteName = clientElement.Descendants("name").FirstOrDefault().Value;
+            cl.Enabled = Convert.ToBoolean(clientElement.Descendants("enabled").FirstOrDefault().Value);
+            cl.Token = clientElement.Descendants("token").FirstOrDefault().Value;
+            cl.Subdomain = clientElement.Descendants("subdomain").FirstOrDefault().Value;
+            var work =clientElement.Descendants("firstdate").FirstOrDefault(); //.Value;
+            cl.FirstDate = work != null
+                ? cl.FirstDate.Replace("-", "/")
+                : DateTime.Today.AddDays(-30).ToString("MM-dd-yyyy");
+            return cl;
+        }
+
         private void RetrievePlacementsByDate(ClientEntry clEntry)
         {
 
@@ -1339,7 +1587,25 @@ namespace YardiDashboard
             }
             return dir;
         }
+
+        private string GetOutputFolderPS(string folderBase, PSClientEntry clEntry)
+        {
+            string subDir = (clEntry.RrsId + "_" + clEntry.SiteName).Replace(" ", "_").Replace(",", "");
+            string dir = folderBase + @"\" + subDir;
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+            return dir;
+        }
+
         private string GetOutputSubdir(ClientEntry clEntry)
+        {
+            string subDir = (clEntry.RrsId + "_" + clEntry.SiteName).Replace(" ", "_").Replace(",", "");
+            return subDir;
+        }
+
+        private string GetOutputSubdirPS(PSClientEntry clEntry)
         {
             string subDir = (clEntry.RrsId + "_" + clEntry.SiteName).Replace(" ", "_").Replace(",", "");
             return subDir;
@@ -1630,6 +1896,812 @@ namespace YardiDashboard
         {
 
         }
+
+        private void btnRefreshClientEntrata_Click(object sender, EventArgs e)
+        {
+            if (!CheckClients_PS())
+            {
+                MessageBox.Show("Error Loading Client List", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            AddMessage("Entrata Clients Refreshed");
+        }
+
+        private void btnOpenEntrataLogins_Click(object sender, EventArgs e)
+        {
+            OpenFolder(txtEntrataLogins.Text);
+
+        }
+
+        private void updateSitesFromLoginFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImportSitesFromLoginFile();
+        }
+
+        private void ImportSitesFromLoginFile()
+        {
+            string fn = GetFileToExtract(txtEntrataLogins.Text);
+            if (string.IsNullOrEmpty(fn))
+            {
+                return;
+            }
+            AddMessage("Begin Updating sites from " + fn);
+            UpdatePSClients(fn);
+            AddMessage("End Update");
+        }
+
+        private void UpdatePSClients(string fn)
+        {
+            JsonClientEntry entry = null;
+
+            try
+            {
+                using (var sr = new StreamReader(fn))
+                {
+                    var ln = string.Empty;
+                    while (sr.Peek() > -1)
+                    {
+                        ln = sr.ReadLine();
+                        entry = JsonConvert.DeserializeObject<JsonClientEntry>(ln);
+                        AddUpdatePSEntry(entry);
+                    }
+                }
+                XDocument doc = ccfg.GetConfig(pscliconfig);
+                LoadClients_PS(doc);
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        private void AddUpdatePSEntry(JsonClientEntry entry)
+        {
+
+            XDocument doc = ccfg.GetConfig(pscliconfig);
+            var clients = ccfg.GetElement(doc, "clients");
+            var srchRslt = clients.Descendants("siteid").Where(i => i.Value == entry.property.id.ToString());
+            if (!srchRslt.Any())
+            {
+                XElement newClient = new XElement("client",
+                    new XAttribute("keyword", string.Empty)
+                    , new XElement("companyname", entry.company_name)
+                    , new XElement("name", entry.property.name)
+                    , new XElement("enabled", "false")
+                    , new XElement("address", entry.property.address)
+                    , new XElement("subdomain", entry.subdomain)
+                    , new XElement("siteid", entry.property.id)
+                    , new XElement("token", entry.token)
+                    , new XElement("url", "https://" + entry.subdomain + ".propertysolutions.com/api/leases")
+                    , new XElement("firstdate", DateTime.Today.ToString("yyyy-MM-dd"))
+                    );
+                clients.Add(newClient);
+                AddMessage("New Client Entry created for Site: " + entry.property.name + ", PopertyId : " +
+                           entry.property.id);
+                doc.Save(pscliconfig);
+            }
+            else
+            {
+                foreach (var member in clients.Descendants("client"))
+                {
+                    var site = member.Descendants("siteid").FirstOrDefault();
+                    if (site != null && site.Value == entry.property.id.ToString())
+                    {
+                        AddUpdateChild(member, "token", entry.token);
+                        AddMessage("Client Entry token updated for Site: " + entry.property.name + ", PopertyId : " + entry.property.id);
+                       // AddUpdateChild(member, "firstdate", );
+                        clients.Save(pscliconfig);
+                        break;
+                    }
+                }
+            }
+
+        }
+        private void AddUpdateChild(XElement xml, string name, string val)
+        {
+            if (xml.Descendants(name).FirstOrDefault() == null)
+            {
+                var child = new XElement(name, val);
+                xml.Add(child);
+            }
+            else
+                xml.Descendants(name).First().Value = val.Trim();
+        }
+
+
+
+        private void retrieveCollectionsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PSClientEntry clEntry;
+            bool enabled;
+            if (lvPSSites.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a site", "Error", MessageBoxButtons.OK);
+                return;
+            }
+            AddMessage("Reteieving selected item(s)");
+            foreach (ListViewItem row in lvPSSites.SelectedItems)
+            {
+                clEntry = GetClientEntryPS(row);
+                if (string.IsNullOrEmpty(clEntry.RrsId))
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been configured for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (!clEntry.Enabled)
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been enabled for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                tabCtl.SelectTab("tabRetrieval");
+                AddMessage(string.Format("Retrieving data for RRSId {0} - {1} ", clEntry.RrsId, clEntry.SiteName));
+                UpdateTokenForClientPS(clEntry);
+                RetrieveLeasePS(clEntry);
+            }
+            AddMessage("Reteieving selected item(s) complete");
+
+        }
+
+        private void RetrieveLeasePS(PSClientEntry clEntry)
+        {
+
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                var resp = GetLeasePS(clEntry.Subdomain, clEntry.Token, clEntry.SiteId, clEntry.FirstDate);
+                var respXml = XDocument.Parse(resp);
+                var errMsg = ParseErrorResponse(respXml);
+                if (!string.IsNullOrEmpty(errMsg))
+                {
+                    AddMessage(errMsg);
+                    return;
+                }
+                var succMsg = ParseSuccessResponse(respXml);
+                if (!string.IsNullOrEmpty(succMsg))
+                {
+                    AddMessage(succMsg);
+                    return;
+                }
+                var respNode = respXml.Descendants("response").FirstOrDefault();
+                if (LeaseFileCount(respNode) == 0)
+                {
+                    AddMessage("No lease files found in site " + clEntry.SiteId + ", file not created");
+                    return;
+                }
+
+                string dir = GetOutputFolderPS(txtRawXML.Text, clEntry);
+
+                string fullfname = dir + @"\" + GetOutputSubdirPS(clEntry) + "_" + DateTime.Now.ToString("MMddyyyy_HHmm") + ".xml";
+                string fname = GetOutputSubdirPS(clEntry) + "_" + DateTime.Now.ToString("MMddyyyy_HHmm") + ".xml";
+                SaveRawFile(respNode, fullfname);
+                AddMessage("XML File saved as " + fname);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error on getMitsCollections Call \n" + ex);
+                MessageBox.Show("Error on getMitsCollections Call \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void RetrieveLeaseDocumentsPS(PSClientEntry clEntry)
+        {
+
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                var apiResp = string.Empty;
+                var resp = GetLeasePS(clEntry.Subdomain, clEntry.Token, clEntry.SiteId, clEntry.FirstDate);
+                var respXml = XDocument.Parse(resp);
+                var errMsg = ParseErrorResponse(respXml);
+                if (!string.IsNullOrEmpty(errMsg))
+                {
+                    AddMessage(errMsg);
+                    return;
+                }
+                var succMsg = ParseSuccessResponse(respXml);
+                if (!string.IsNullOrEmpty(succMsg))
+                {
+                    AddMessage(succMsg);
+                    return;
+                }
+                var respNode = respXml.Descendants("response").FirstOrDefault();
+                if (LeaseFileCount(respNode) == 0)
+                {
+                    AddMessage("No lease files found in site " + clEntry.SiteId + ", file not created");
+                    return;
+                }
+
+                string dir = GetOutputFolderPS(txtRawXML.Text, clEntry);
+
+                string fullfname = dir + @"\" + GetOutputSubdirPS(clEntry) + "_" + DateTime.Now.ToString("MMddyyyy_HHmm") + ".xml";
+                string fname = GetOutputSubdirPS(clEntry) + "_" + DateTime.Now.ToString("MMddyyyy_HHmm") + ".xml";
+                SaveRawFile(respNode, fullfname);
+                AddMessage("XML File saved as " + fname);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error on getMitsCollections Call \n" + ex);
+                MessageBox.Show("Error on getMitsCollections Call \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+
+
+        /*
+         * Exampl Success Response
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <result>
+    <success>No Records Found.</success>
+  </result>
+</response>
+         */
+        private string ParseSuccessResponse(XDocument respXml)
+        {
+            string ret = string.Empty;
+            if (respXml.Descendants("response") != null)
+            {
+                if (respXml.Descendants("result") != null)
+                {
+                    var sucNode = respXml.Descendants("success").FirstOrDefault();
+                    if (sucNode != null)
+                    {
+                        ret = sucNode.Value;
+                    }
+                }
+            }
+            return ret;
+        }
+
+        /* Example 
+         <?xml version="1.0" encoding="UTF-8"?>
+    <response>
+      <error>
+        <code>311</code>
+        <message>App doesn't have permission to the property.</message>
+      </error>
+    </response>
+         */
+
+        private string ParseErrorResponse(XDocument respXml)
+        {
+            string ret = string.Empty;
+            if (respXml.Descendants("response").FirstOrDefault() != null)
+            {
+                if (respXml.Descendants("error").FirstOrDefault() != null)
+                {
+                    var errNode = respXml.Descendants("error").FirstOrDefault();
+                    if (errNode.Descendants("code").FirstOrDefault() != null)
+                    {
+                        ret = "Error Code " + errNode.Descendants("code").FirstOrDefault().Value + " - " +
+                              errNode.Descendants("message").FirstOrDefault().Value;
+                    }
+                }
+            }
+            return ret;
+        }
+
+
+        public string GetLeasePS(string subDomain, string token, string propId, string firstDate)
+        {
+            
+            string ret = string.Empty;
+            //string body = BuildJson_GetLease(propId);
+            string body = BuildXml_GetLease(propId, firstDate);
+            var apiUrl = "https://" + subDomain + _leaseUrlSuffix;
+            try
+            {
+                //ret = APIRequest(apiUrl, body, token);
+                ret = APIRequestXML(apiUrl, body, token);
+
+            }
+            catch
+            {
+                throw new Exception("Get user info token " + token);
+            }
+            return ret;
+        }
+
+        public string GetLeaseDocumentsPS(string subDomain, string token, string propId, string leaseId)
+        {
+            string ret = string.Empty;
+            string body = BuildXml_DownloadDocuments(propId, leaseId);
+            var apiUrl = "https://" + subDomain + _leaseUrlSuffix;
+            try
+            {
+                //ret = APIRequest(apiUrl, body, token);
+                ret = APIRequestXML(apiUrl, body, token);
+
+            }
+            catch( Exception ex)
+            {
+                Log.Error("Error Getting document, see log");
+                throw ex;
+            }
+            return ret;
+        }
+
+
+        private  string BuildJson_GetLease(string propId)
+        {
+
+            string ret = 
+                  "{" +
+                  "\"auth\":"  +
+                  "{\"type\": \"oauth\"},\"method\": {\"name\": \"getMitsCollections\"," +
+                  "\"params\": {\"propertyId\" : " + "\"" + propId + "\"" + " }" +
+                  "}" +
+                "}";
+
+            return ret;
+        }
+
+        private string BuildXml_GetLease(string propId, string dtFrom = "")
+        {
+            dtFrom = String.IsNullOrEmpty(dtFrom) ? DateTime.Today.AddDays(-30).ToString("MM/dd/yyyy") : DateTime.Parse(dtFrom).ToString("MM/dd/yyyy");
+            string xmlRequest = 
+				"<request>" +
+					"<auth>" +
+						"<type>oauth</type>" +
+					"</auth>" +
+					"<method>" +
+						"<name>getMitsCollections</name>" +
+						"<params>" +
+                        	"<propertyId>" + propId + "</propertyId>" + 
+			                "<fromDate>" + dtFrom + "</fromDate>" + 
+						"</params>" +
+					"</method>" +
+				"</request>";
+            return xmlRequest;
+        }
+
+        private string BuildXml_DownloadDocuments(string propId, string leaseId)
+        {
+            string xmlRequest = 
+                "<request>" +
+					"<auth>" +
+						"<type>oauth</type>" +
+					"</auth>" + 
+                    "<method>" +
+		                    "<name>getLeaseDocuments</name>" +
+		                    "<params>" +
+			                    "<propertyId>" + propId + "</propertyId>" + 
+			                    "<leaseId>" + leaseId + "</leaseId>" +
+			                    "<fileTypesCode></fileTypesCode>" +
+                                "<showDeletedFile>1</showDeletedFile>" +
+		                    "</params>" +
+	                    "</method>" +
+                    "</request>";
+            return xmlRequest;
+        }
+
+        // JSON Request not used here
+        private string APIRequest(string url, string body, string token = "")
+        {
+            string resp = string.Empty;
+            byte[] bodyByte = System.Text.Encoding.UTF8.GetBytes(body);
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
+            req.Method = "POST";
+            req.ContentLength = bodyByte.Length;
+            req.ContentType = "application/json";
+            if (token != string.Empty)
+                req.Headers.Add("Authorization", "Bearer " + token);
+            if (bodyByte.Length > 0)
+            {
+                using (Stream stream = req.GetRequestStream())
+                    stream.Write(bodyByte, 0, bodyByte.Length);
+
+                try
+                {
+                    HttpWebResponse webResp = (HttpWebResponse)req.GetResponse();
+                    Stream respStream = webResp.GetResponseStream();
+                    StreamReader sr = new StreamReader(respStream);
+                    resp = sr.ReadToEnd();
+                    webResp.Close();
+                    //Log.Write("Req:" + url);
+                 //   Log.Write("Resp:" + resp);
+                    return resp;
+
+                }
+                catch (WebException ex)
+                {
+                    HttpStatusCode scode = ((HttpWebResponse)ex.Response).StatusCode;
+                    resp = "Status Code " + scode + "\r\n" + ex.ToString();
+                    Log.Error(resp);
+                    return resp;
+                }
+            }
+          //  Log.Write("Body is empty " + url);
+            return resp;
+        }
+
+        private string APIRequestXML(string url, string body, string token = "")
+        {
+
+            Log.Debug("Entrata API Request:" + url + " Token: " + token);
+            Log.Debug("Body:" + body);
+            string resp = string.Empty;
+            byte[] bodyByte = System.Text.Encoding.UTF8.GetBytes(body);
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
+            req.Timeout = 60000;
+            req.Method = "POST";
+            req.ContentLength = bodyByte.Length;
+            req.ContentType = "APPLICATION/XML; CHARSET=UTF-8";
+            if (string.IsNullOrEmpty(token))
+            {
+                Log.Error("Token is not present ; request not sent");
+                return resp;
+            }
+            req.Headers.Add("Authorization", "Bearer " + token);
+            if (bodyByte.Length > 0)
+            {
+                using (Stream stream = req.GetRequestStream())
+                    stream.Write(bodyByte, 0, bodyByte.Length);
+
+                try
+                {
+                    HttpWebResponse webResp = (HttpWebResponse)req.GetResponse();
+                    Stream respStream = webResp.GetResponseStream();
+                    StreamReader sr = new StreamReader(respStream);
+                    resp = sr.ReadToEnd();
+
+                    webResp.Close();
+                    //Log.Debug("Response: " + resp);
+                    return resp;
+                }
+                catch (WebException ex)
+                {
+                    HttpStatusCode scode = ((HttpWebResponse)ex.Response).StatusCode;
+                    resp = "Status Code " + scode + "\r\n" + ex.ToString();
+                    Log.Error(url);
+                    Log.Error(body);
+                    Log.Error(resp);
+                    return resp;
+                }
+                catch (Exception ex)
+                {
+                    Log.Error(url);
+                    Log.Error(body);
+                    Log.Error(resp);
+                    Log.Error(ex.ToString());
+                    return resp;
+                }
+            }
+            return resp;
+        }
+
+        private PSClientEntry GetClientEntryPS(ListViewItem row)
+        {
+            var cl = new PSClientEntry();
+            cl.RrsId = row.SubItems[0].Text;
+            cl.SiteId = row.SubItems[1].Text;
+            cl.SiteName = row.SubItems[2].Text;
+            cl.Enabled = Convert.ToBoolean(row.SubItems[4].Text);
+            cl.Subdomain = row.SubItems[6].Text;
+            cl.Token = row.SubItems[7].Text;
+            cl.FirstDate = row.SubItems[8].Text.Replace("-", "/");
+            return cl;
+        }
+
+        private void retrieveAllColllectionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PSClientEntry clEntry;
+            bool enabled;
+            AddMessage("Retrieve all collections");
+            foreach (ListViewItem row in lvPSSites.Items)
+            {
+                clEntry = GetClientEntryPS(row);
+                if (string.IsNullOrEmpty(clEntry.RrsId))
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been configured for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (!clEntry.Enabled)
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been enabled for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                tabCtl.SelectTab("tabRetrieval");
+                AddMessage(string.Format("Retrieving data for RRSId {0} - {1}", clEntry.RrsId, clEntry.SiteName));
+                RetrieveLeasePS(clEntry);
+            }
+            AddMessage("Retrievals complete");
+        }
+
+        private void btnDownloadDocPS_Click(object sender, EventArgs e)
+        {
+
+            KeyValuePair<string, string> selectedPair = (KeyValuePair<string, string>)cboSiteListPS.SelectedItem;
+
+            var folder = txtColl.Text;
+            var siteId = selectedPair.Key.Split('_')[1];
+            var cboRrsId = selectedPair.Value;
+            int leaseId = 0;
+            int.TryParse(txtPSLeaseId.Text.Trim(), out leaseId);
+            if (leaseId == 0 || string.IsNullOrEmpty(cboRrsId))
+            {
+                MessageBox.Show("Please select a siteId and  enter a LeaseId", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            tabCtl.SelectTab("tabRetrieval");
+            PSClientEntry clEntry = GetClientEntryPS(siteId);
+
+
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                var resp = GetLeaseDocumentsPS(clEntry.Subdomain, clEntry.Token, clEntry.SiteId, leaseId.ToString());
+                if (string.IsNullOrEmpty(resp))
+                {
+                    AddMessage("Error: Empty repsonse from Doc request for client " + clEntry.SiteName + " - " + clEntry.SiteId + " - lease " + leaseId);
+                    return;
+                }
+                var respXml = XDocument.Parse(resp);
+                var errMsg = ParseErrorResponse(respXml);
+                if (!string.IsNullOrEmpty(errMsg))
+                {
+                    AddMessage(errMsg);
+                    return;
+                }
+                var succMsg = ParseSuccessResponse(respXml);
+                if (!string.IsNullOrEmpty(succMsg))
+                {
+                    AddMessage(succMsg);
+                    return;
+                }
+                var dirOut = GetOutputFolderPS(folder, clEntry);
+                AddMessage("Downloading documents for ");
+                var dlFile = dirOut + @"\" + clEntry.RrsId + "_" + siteId + "_" + leaseId  + "_" + DateTime.Now.ToString("MMddyyyy_HHmm") + "_";
+
+                SaveRawDocumentPS(respXml, dlFile);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error Downloading Documents \n" + ex);
+                MessageBox.Show("Error on API Call \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+
+        }
+        /*
+      <LeaseDocument Id="4851222">
+        <AppliesTo>All</AppliesTo>
+        <Type>Upload (Upload - STC)</Type>
+        <Title>Sent_to_collections_07-06-2015_13.55.pdf</Title>
+        <Name>Sent_to_collections_07-06-2015_13.55.pdf</Name>
+        <Path>sent_to_collections_statements/10486947/</Path>
+        <FileData>JVBERi0xLjMKMyAwIG9iago8PC9UeXBlIC9QYWdlC</FileData>
+        <AddedOn>07/06/2015 13:55:46</AddedOn>
+      </LeaseDocument>
+         * 
+         */
+
+        private void SaveRawDocumentPS(XDocument respXml, string partName)
+        {
+            string name = string.Empty;
+            string fileData = string.Empty;
+            var ldNodes = respXml.Descendants("LeaseDocument");
+            if (ldNodes.Count() == 0)
+            {
+                AddMessage("No LeaseDocument nodes in response");
+                return;
+            }
+
+            foreach (var doc in ldNodes)
+            {
+                name = partName + doc.Descendants("Name").FirstOrDefault().Value;
+                if (!name.EndsWith("pdf"))
+                {
+                    continue;
+                }
+                fileData = doc.Descendants("FileData").FirstOrDefault().Value;
+                File.WriteAllBytes(name, Convert.FromBase64String(fileData));
+                AddMessage("Document File saved as " + name);
+            }
+        }
+
+        private void WriteDocumentToToFile(string stringToDecode, string fn)
+        {
+            stringToDecode =
+                "JVBERi0xLjMKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovQ29udGVudHMgNCAwIFI+PgplbmRvYmoKNCAwIG9iago8PC9GaWx0ZXIgL0ZsYXRlRGVjb2RlIC9MZW5ndGggOTE3Pj4Kc3RyZWFtCnic1VhLc9MwEL73V+yBAzAZYfkh272FFjrDq0AzMAzDQbGVWGBbQVYa8u9ZySl1IO0QYk9LDp7okd1vP+1+WseHF0ceiWJYHT2dwJPnFCglngeTGTybHNmvHsyPPn8BD3LcaIeTnVu/g0doEGw99Rxwp5+SOIbECwiNYJLDw1NuxONHMPmKv4N3G6tnv5xt4FxNowPdPnZ43QD7Hd8hQOM4JAl1QM/rtVj1CtQ6dz+2/lhC/KjrD659HcQ4S0mSdg2/lNVwYaQB8ba8wU2fG8Lr7+gPsrRZSf9YOMR2fzn7i2/KIuInEDOPsMAR/pSXvM4EnC7F8TXH++V+wEiado3CgzDyfs+ayWqIct0LKcWyoT7EISMhc0gH1JL7aGlvwmLMl6BL2HvRyFzUBsZ5rkXT9EvgVrIGlFBMK4pn1orDqeC6L52LGGGsa3xgwU4je4V1/N1zRdsWtu6Gvxab9vxY4q5GG/KkkA3UykjUG/xmFMh6pnQFa7UEU3CDDwHTjSKpmZ3XwLNMLWszws1unVd2iKNcZtgN5MCn6lKMYCXLEqYCmuW0kgYXbpWzfaPAQohSFwXCzlRZisxIVTfA6xwWJc8QiKpbxJkWuTSgxUJpQ2CHEPYAiFES+g7QSQeNI0HV5doyoUWFzOQgHZN2iKgWfF3Z+sUwLJvXoQCfC0uz0pBLjXNoBDedaSHqUvBZr3SGse1fLPrXvEbHDtKrVyc72drXeIBdRZtxpy6Qq5gbyHhtiam4LJEXo44HbSX/Ei5qQuo5uH6MS28waQrBGwPPfiysxK74+j7A9EISt9f7xVIaASfszzv+DnBFKbpqU2lsUDkMH8HZGAIvCKPbcumur9b2jSGKGQkSh/4jSpvGguRlKeu5K86Ko45pW4WtEuKodqW6kqZwO0yhlvPCXKvnVXlXfA0Fv0Q5xfIFlAFdKvVN5OSQ+tpgDhPihQ7zJwtroVW1MK28GCfdV1LMF5jAmbQq3YdfmhLWavCFRDdalOvRP5i97TzClJKgjW1cTYVeKZXDBwwHNeoukn031jbzwzgmtNU5mnjwvMQUuCgULxsYXw6I9q5rJsT8S/xuxQ/7ns26Hkd9NaCxT9Ity2fjQd+zse3sOOsrihQvhahrGHWXsuECoZgCUXLTgey4HsIgJKy9Hs5nM9t5vi1ULY7/j/a7r78m/O5fE24m6M5si20SkSSxpsKNuDyht/Z+PwGAe4vPCmVuZHN0cmVhbQplbmRvYmoKMSAwIG9iago8PC9UeXBlIC9QYWdlcwovS2lkcyBbMyAwIFIgXQovQ291bnQgMQovTWVkaWFCb3ggWzAgMCA1OTUuMjggODQxLjg5XQo+PgplbmRvYmoKNSAwIG9iago8PC9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNiAwIG9iago8PC9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago3IDAgb2JqCjw8L1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8Ci9GMSA1IDAgUgovRjIgNiAwIFIKL0YzIDcgMCBSCj4+Ci9YT2JqZWN0IDw8Cj4+Cj4+CmVuZG9iago4IDAgb2JqCjw8Ci9Qcm9kdWNlciAoRlBERiAxLjcpCi9DcmVhdG9yIChIVE1MMkZQREYgPj4gaHR0cDovL2h0bWwyZnBkZi5zZi5uZXQpCi9DcmVhdGlvbkRhdGUgKEQ6MjAxNTA3MDYxMzU1NDYpCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgo+PgplbmRvYmoKeHJlZgowIDEwCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMTA3NCAwMDAwMCBuIAowMDAwMDAxNDYyIDAwMDAwIG4gCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA4NyAwMDAwMCBuIAowMDAwMDAxMTYxIDAwMDAwIG4gCjAwMDAwMDEyNTcgMDAwMDAgbiAKMDAwMDAwMTM1OCAwMDAwMCBuIAowMDAwMDAxNTg2IDAwMDAwIG4gCjAwMDAwMDE3MDkgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMAovUm9vdCA5IDAgUgovSW5mbyA4IDAgUgo+PgpzdGFydHhyZWYKMTc1OAolJUVPRgo=";
+            // string s = Encoding.UTF8.GetString(Convert.FromBase64String(stringToDecode));
+      //      StreamWriter sw = new StreamWriter(@"c:\Docs\test.pdf");
+            File.WriteAllBytes(@"c:\Docs\test.pdf", Convert.FromBase64String(stringToDecode));
+            //sw.WriteLine(s);
+            //sw.Flush();
+            //sw.Close();
+
+        }
+
+
+        private void DownloadDocumentsPS(PSClientEntry clEntry, string leaseId, string folder )
+        {
+            try
+            {
+                var apiResp = string.Empty;
+                AddMessage("Downloading documents for" + clEntry.SiteName + "-" + clEntry.SiteId + "- LeaseId " + leaseId);
+                var resp = GetLeaseDocumentsPS(clEntry.Subdomain, clEntry.Token, clEntry.SiteId, leaseId);
+                if (string.IsNullOrEmpty(resp))
+                {
+                    AddMessage("Error: Empty repsonse from Doc request for client " + clEntry.SiteName + " - " + clEntry.SiteId + "+ lease " + leaseId );
+                    return;
+                }
+                var respXml = XDocument.Parse(resp);
+
+                var errMsg = ParseErrorResponse(respXml);
+                if (!string.IsNullOrEmpty(errMsg))
+                {
+                    AddMessage(errMsg);
+                    return;
+                }
+                var succMsg = ParseSuccessResponse(respXml);
+                if (!string.IsNullOrEmpty(succMsg))
+                {
+                    AddMessage(succMsg);
+                    return;
+                }
+
+                var dlFile = folder + @"\" + clEntry.RrsId + "_" + clEntry.SiteId + "_" + leaseId + "_" +
+                             DateTime.Now.ToString("MMddyyyy_HHmm") + "_";
+
+                var dCnt = respXml.Descendants("LeaseDocument").Count();
+                AddMessage("Document count for client " + clEntry.SiteName + " - " + clEntry.SiteId + " - lease " + leaseId + " : " + dCnt  );
+                SaveRawDocumentPS(respXml, dlFile);
+                AddMessage("Download complete");
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Error Downloading Documents \n" + ex);
+                MessageBox.Show("Error on API Call \n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void updateTokenFromLoginFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PSClientEntry clEntry;
+            bool enabled;
+            if (lvPSSites.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a site", "Error", MessageBoxButtons.OK);
+                return;
+            }
+            foreach (ListViewItem row in lvPSSites.SelectedItems)
+            {
+                clEntry = GetClientEntryPS(row);
+                if (string.IsNullOrEmpty(clEntry.RrsId))
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been configured for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (!clEntry.Enabled)
+                {
+                    MessageBox.Show("Site " + clEntry.SiteName + " has not been enabled for retrieval! \n Please configure via client utility and refresh this list", "Site not configured", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                tabCtl.SelectTab("tabRetrieval");
+                AddMessage(String.Format("Updating Token for rrsId {0} - {1} (SiteId {2}) ",clEntry.RrsId, clEntry.SiteName, clEntry.SiteId));
+
+                UpdateTokenForClientPS(clEntry);
+            }
+            AddMessage("Token Update complete");
+
+        }
+
+        private void UpdateTokenForClientPS(PSClientEntry clEntry)
+        {
+            var loginFolder = txtEntrataLogins.Text.Trim();
+            if (string.IsNullOrEmpty(loginFolder))
+            {
+                AddMessage("Entrata login folder has not been configured; Please use folder location utility");
+                return;
+            }
+            var dirInfo = new DirectoryInfo(loginFolder);
+            var fileList = dirInfo.GetFiles().OrderByDescending(i => i.CreationTime);
+            foreach (var fitm in fileList)
+            {
+                if (ProcessLoginFilePS(fitm, clEntry))
+                {
+                    break;
+                }
+            }
+        }
+
+        private bool ProcessLoginFilePS(FileInfo fitm, PSClientEntry clEntry)
+        {
+            JsonClientEntry entry = null;
+            bool foundSite = false;
+            try
+            {
+                using (var sr = new StreamReader(fitm.FullName))
+                {
+                    var ln = string.Empty;
+                    while (sr.Peek() > -1)
+                    {
+                        ln = sr.ReadLine();
+                        entry = JsonConvert.DeserializeObject<JsonClientEntry>(ln);
+                        //AddUpdatePSEntry(entry);
+                        var sid = entry.property.id;
+                        if (sid.ToString() == clEntry.SiteId)
+                        {
+                            Log.Debug(string.Format("File {0} SiteId {1}, Token {2} {3} {4} ", fitm.Name, sid, entry.token, entry.token == clEntry.Token ? " = " : " <>", clEntry.Token));
+                            if (entry.token != clEntry.Token)
+                            {
+                                UpdatePSEntryToken(entry);
+                                XDocument doc = ccfg.GetConfig(pscliconfig);
+                                LoadClients_PS(doc);
+                            }
+                            else
+                            {
+                                AddMessage("Client Entry token is UP-TO-DATE for Site: " + entry.property.name + ", PopertyId : " + entry.property.id);
+                            }
+                            foundSite = true;
+                            break;
+                        }
+                    }
+                }
+                return foundSite;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        private void UpdatePSEntryToken(JsonClientEntry entry)
+        {
+
+            XDocument doc = ccfg.GetConfig(pscliconfig);
+            var clients = ccfg.GetElement(doc, "clients");
+            var srchRslt = clients.Descendants("siteid").Where(i => i.Value == entry.property.id.ToString());
+            if (srchRslt.Any())
+            {
+                foreach (var member in clients.Descendants("client"))
+                {
+                    var site = member.Descendants("siteid").FirstOrDefault();
+                    if (site != null && site.Value == entry.property.id.ToString())
+                    {
+                        AddUpdateChild(member, "token", entry.token);
+                        AddMessage("Client Entry token updated for Site: " + entry.property.name + ", PopertyId : " + entry.property.id);
+                        Log.DebugFmt("New Token is {0}",entry.token);
+                        clients.Save(pscliconfig);
+                        break;
+                    }
+                }
+            }
+
+        }
+
+        // Backgroundworker methods
+        //private void BwInit(BackgroundWorker bw)
+        //{
+        //    bw.WorkerReportsProgress = true;
+        //    bw.WorkerSupportsCancellation = true;
+        //    bw.DoWork += new DoWorkEventHandler(BwDoWork);
+        //    bw.ProgressChanged += new ProgressChangedEventHandler(bw_ProgressChanged);
+        //    bw.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bw_RunWorkerCompleted);
+        //}
+
+        //private void BwDoWork(object sender, DoWorkEventArgs e)
+        //{
+        //    BackgroundWorker worker = sender as BackgroundWorker;
+        //worker.ReportProgress()
+        //}
 
     }
 }

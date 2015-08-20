@@ -41,6 +41,9 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.folderBrw = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnSetEntrataLoginFolder = new System.Windows.Forms.Button();
+            this.txtEntrataLoginFolder = new System.Windows.Forms.TextBox();
+            this.lblEntrataLogin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSetXMLFolder
@@ -139,7 +142,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(561, 194);
+            this.btnSave.Location = new System.Drawing.Point(561, 270);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 3;
@@ -149,7 +152,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(658, 194);
+            this.btnExit.Location = new System.Drawing.Point(658, 270);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 4;
@@ -157,11 +160,42 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnSetEntrataLoginFolder
+            // 
+            this.btnSetEntrataLoginFolder.Location = new System.Drawing.Point(658, 179);
+            this.btnSetEntrataLoginFolder.Name = "btnSetEntrataLoginFolder";
+            this.btnSetEntrataLoginFolder.Size = new System.Drawing.Size(75, 23);
+            this.btnSetEntrataLoginFolder.TabIndex = 22;
+            this.btnSetEntrataLoginFolder.Text = "Change..";
+            this.btnSetEntrataLoginFolder.UseVisualStyleBackColor = true;
+            this.btnSetEntrataLoginFolder.Click += new System.EventHandler(this.btnSetEntrataLoginFolder_Click);
+            // 
+            // txtEntrataLoginFolder
+            // 
+            this.txtEntrataLoginFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntrataLoginFolder.Location = new System.Drawing.Point(151, 180);
+            this.txtEntrataLoginFolder.Name = "txtEntrataLoginFolder";
+            this.txtEntrataLoginFolder.ReadOnly = true;
+            this.txtEntrataLoginFolder.Size = new System.Drawing.Size(501, 22);
+            this.txtEntrataLoginFolder.TabIndex = 24;
+            // 
+            // lblEntrataLogin
+            // 
+            this.lblEntrataLogin.AutoSize = true;
+            this.lblEntrataLogin.Location = new System.Drawing.Point(58, 184);
+            this.lblEntrataLogin.Name = "lblEntrataLogin";
+            this.lblEntrataLogin.Size = new System.Drawing.Size(75, 13);
+            this.lblEntrataLogin.TabIndex = 23;
+            this.lblEntrataLogin.Text = "Entrata Logins";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 262);
+            this.ClientSize = new System.Drawing.Size(790, 325);
+            this.Controls.Add(this.btnSetEntrataLoginFolder);
+            this.Controls.Add(this.txtEntrataLoginFolder);
+            this.Controls.Add(this.lblEntrataLogin);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCollFalse);
@@ -201,6 +235,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.FolderBrowserDialog folderBrw;
+        private System.Windows.Forms.Button btnSetEntrataLoginFolder;
+        private System.Windows.Forms.TextBox txtEntrataLoginFolder;
+        private System.Windows.Forms.Label lblEntrataLogin;
 
     }
 }

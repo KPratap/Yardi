@@ -5,9 +5,9 @@ using System.Text;
 using System.Xml.Linq;
 using NSConfig;
 using System.IO;
-namespace YardiData
+namespace PSData
 {
-    public class YardiData
+    public class PSData
     {
 
         private string FileName { get; set; }
@@ -31,6 +31,9 @@ namespace YardiData
 
         private StreamWriter writer;
         private StreamWriter writerFalse;
+
+
+        public List<string> LeaseIdentifiers { get; set; }
         public string foutColl { get; set; }
         public string foutCollFalse { get; set; }
         public bool OutputHeader { get; set; }
@@ -42,9 +45,9 @@ namespace YardiData
         private int ftransMaxCount = 0;
         private int tenantMaxCnt = 0;
         private bool debugFormat = false;
-
+        private const string _dataElem = "PSdataelements.xml";
         //IEnumerable<XElement> dateElements;
-        public YardiData(string rawfolder, string collFolder, string collFalseFolder)
+        public PSData(string rawfolder, string collFolder, string collFalseFolder)
         {
             RawFolder = rawfolder;
             CollFolder = collFolder;
@@ -52,7 +55,7 @@ namespace YardiData
             OutputHeader = false;
             try
             {
-                _cli = ccfg.GetConfig("DataElements.xml");
+                _cli = ccfg.GetConfig(_dataElem);
             }
             catch (Exception ex)
             {
@@ -131,7 +134,13 @@ namespace YardiData
             {
                 collStatusFalse = false;
                 //Console.WriteLine(ExtractLeaseInfo(lease));
+                LeaseIdentifiers = new List<string>();
+
                 dictLease = ExtractLeaseInfo(lease);
+                if (dictLease["LeaseTenantId"] != null)
+                {
+                    LeaseIdentifiers.Add(dictLease["LeaseTenantId"]);
+                }
                 //dictLeases.Add(dictLease);
                 if (dictLease["CollectionStatus"] == "false")
                 {
@@ -317,7 +326,7 @@ namespace YardiData
                     sline.Append("\r\n--- Tenant Info ---\r\n");
                 if (hdr[i].StartsWith("AssignedAmount"))
                     sline.Append("\r\n--- File Transactions Info ---\r\n");
-                sline.Append(hdr[i] + " = " + (!string.IsNullOrEmpty(data[i]) ? data[i] : "<empty>") + "\r\n");
+                sline.Append("(" + (i+1) + ")" + hdr[i] + " = " + (!string.IsNullOrEmpty(data[i]) ? data[i] : "<empty>") + "\r\n");
             }
             sline.Append("------------- End  Record Details --------------\r\n");
 
@@ -470,7 +479,7 @@ namespace YardiData
                             if (de.Attribute("location").Value.Equals("Contact/Phone/PhoneNumber") &&
                                 de.Attribute("phonetype") != null)
                             {
-                                if (contactph.IdValues .Count > 0)
+                                if (contactph.IdValues.Count > 0)
                                     st.Add(de.Attribute("outputname").Value, contactph.IdValues[de.Attribute("phonetype").Value]);
                                 else
                                 {
@@ -511,7 +520,7 @@ namespace YardiData
         private int GetElementsMaxCount(string section)
         {
             int max = 0;
-            XDocument decfg = XDocument.Load("dataelements.xml");
+            XDocument decfg = _cli;
 
             XElement deSec = decfg.Descendants(section).FirstOrDefault();
             if  (deSec == null) 
@@ -523,7 +532,7 @@ namespace YardiData
         }
         private IEnumerable<XElement> GetElements(string section)
         {
-            XDocument decfg = XDocument.Load("dataelements.xml");
+            XDocument decfg = _cli;
 
             XElement deSumm = decfg.Descendants(section).FirstOrDefault();
             if (deSumm == null)
@@ -536,7 +545,7 @@ namespace YardiData
 
         private IEnumerable<XElement> GetDateElements(string section)
         {
-            XDocument decfg = XDocument.Load("dataelements.xml");
+            XDocument decfg = _cli;
 
             XElement deSumm = decfg.Descendants(section).FirstOrDefault();
             if (deSumm == null)
@@ -548,7 +557,7 @@ namespace YardiData
         }
         private IEnumerable<XElement> GetAddressElements(string section)
         {
-            XDocument decfg = XDocument.Load("dataelements.xml");
+            XDocument decfg = _cli;
 
             XElement deSumm = decfg.Descendants(section).FirstOrDefault();
             if (deSumm == null)

@@ -933,12 +933,20 @@ namespace RealpageData
 
         private T  DeserializeNode<T>(XElement summ)
         {
-
-            var deserializer = new XmlSerializer(typeof(T));
-            TextReader reader = new StringReader(summ.ToString());
-            object val = deserializer.Deserialize(reader);
-            reader.Close();
-            return (T) val;
+            try
+            {
+                var deserializer = new XmlSerializer(typeof(T));
+                TextReader reader = new StringReader(summ.ToString());
+                object val = deserializer.Deserialize(reader);
+                reader.Close();
+                return (T)val;
+            }
+            catch (Exception ex)
+            {
+                var msg = "\n" + ex.Message + "\n" + summ;
+                throw new Exception(msg);
+            }
+  
         }
         private string ExtractSummaryHdr()
         {

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clients>
+  <client keyword="rrs162910">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>478 Highland</name>
+    <enabled>true</enabled>
+    <address>478 North Highland Avenue, Atlanta, GA 30307</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162910</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+    <firstdate>2015-08-01</firstdate>
+  </client>
+  <client keyword="rrs162912">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Amberwood Village</name>
+    <enabled>true</enabled>
+    <address>180 Flat Shoals Ave, Atlanta, GA 30316</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162912</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="rrs162933">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Beverly Hills Apartments</name>
+    <enabled>true</enabled>
+    <address>2397 Beverly Hills Drive, Atlanta, GA 30341</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162933</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="rrs162939">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Briarcliff Court Condos</name>
+    <enabled>true</enabled>
+    <address>913 Briarcliff Road, Atlanta, GA 30306</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162939</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="rrs162914">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Don Juan Duplexes</name>
+    <enabled>true</enabled>
+    <address>41 Clairview Drive, Atlanta, GA 30341</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162914</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="rrs162938">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Durand Drive Apartments</name>
+    <enabled>true</enabled>
+    <address>451 Durand Dr. NE, Atlanta, GA 30307</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162938</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="rrs162923">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Foxwood Apartments</name>
+    <enabled>true</enabled>
+    <address>3852 McElroy Road, Doraville, GA 30340</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162923</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+  <client keyword="rrs162916">
+    <companyname>Greenleaf Management, LLC Test 11799</companyname>
+    <name>Hickory Grove Apartments</name>
+    <enabled>true</enabled>
+    <address>6069 S Norcross Tucker Rd, Norcross, GA 30093</address>
+    <subdomain>greenleafmgmt-test-11799</subdomain>
+    <siteid>162916</siteid>
+    <token>cfde99dd4a57aab1ff7ba5c4933d1ec796a3fbd8</token>
+    <url>https://greenleafmgmt-test-11799.propertysolutions.com/api/leases</url>
+  </client>
+</clients>
