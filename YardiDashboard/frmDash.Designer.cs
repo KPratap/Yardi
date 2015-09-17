@@ -87,6 +87,7 @@
             this.retrieveCollectionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.retrieveAllColllectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateSitesFromLoginFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateTokenFromLoginFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabRetrieval = new System.Windows.Forms.TabPage();
             this.btnClear = new System.Windows.Forms.Button();
@@ -124,7 +125,6 @@
             this.excludeHeadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.includeHeadersToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.debugFormatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateTokenFromLoginFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.tabCtl.SuspendLayout();
             this.tabClients.SuspendLayout();
@@ -453,6 +453,7 @@
             this.cboSiteList.Name = "cboSiteList";
             this.cboSiteList.Size = new System.Drawing.Size(115, 21);
             this.cboSiteList.TabIndex = 25;
+            this.cboSiteList.SelectedIndexChanged += new System.EventHandler(this.cboSiteList_SelectedIndexChanged);
             this.cboSiteList.DisplayMemberChanged += new System.EventHandler(this.cboSiteList_DisplayMemberChanged);
             // 
             // btnRefreshClients
@@ -606,6 +607,7 @@
             this.cboSiteListPS.Name = "cboSiteListPS";
             this.cboSiteListPS.Size = new System.Drawing.Size(115, 21);
             this.cboSiteListPS.TabIndex = 34;
+            this.cboSiteListPS.SelectedIndexChanged += new System.EventHandler(this.cboSiteListPS_SelectedIndexChanged);
             // 
             // btnRefreshClientEntrata
             // 
@@ -669,7 +671,7 @@
             this.updateSitesFromLoginFileToolStripMenuItem,
             this.updateTokenFromLoginFolderToolStripMenuItem});
             this.cMenuPS.Name = "cMenuPS";
-            this.cMenuPS.Size = new System.Drawing.Size(252, 114);
+            this.cMenuPS.Size = new System.Drawing.Size(252, 92);
             // 
             // retrieveCollectionsToolStripMenuItem1
             // 
@@ -691,6 +693,13 @@
             this.updateSitesFromLoginFileToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
             this.updateSitesFromLoginFileToolStripMenuItem.Text = "Update Sites from Login File";
             this.updateSitesFromLoginFileToolStripMenuItem.Click += new System.EventHandler(this.updateSitesFromLoginFileToolStripMenuItem_Click);
+            // 
+            // updateTokenFromLoginFolderToolStripMenuItem
+            // 
+            this.updateTokenFromLoginFolderToolStripMenuItem.Name = "updateTokenFromLoginFolderToolStripMenuItem";
+            this.updateTokenFromLoginFolderToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
+            this.updateTokenFromLoginFolderToolStripMenuItem.Text = "Update Tokens from Login Folder";
+            this.updateTokenFromLoginFolderToolStripMenuItem.Click += new System.EventHandler(this.updateTokenFromLoginFolderToolStripMenuItem_Click);
             // 
             // textBox2
             // 
@@ -1065,13 +1074,6 @@
             this.debugFormatToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
             this.debugFormatToolStripMenuItem1.Text = "Debug Format";
             this.debugFormatToolStripMenuItem1.Click += new System.EventHandler(this.debugFormatToolStripMenuItem1_Click);
-            // 
-            // updateTokenFromLoginFolderToolStripMenuItem
-            // 
-            this.updateTokenFromLoginFolderToolStripMenuItem.Name = "updateTokenFromLoginFolderToolStripMenuItem";
-            this.updateTokenFromLoginFolderToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
-            this.updateTokenFromLoginFolderToolStripMenuItem.Text = "Update Tokens from Login Folder";
-            this.updateTokenFromLoginFolderToolStripMenuItem.Click += new System.EventHandler(this.updateTokenFromLoginFolderToolStripMenuItem_Click);
             // 
             // frmDash
             // 

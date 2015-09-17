@@ -194,10 +194,10 @@ namespace YardiClients
                                       ,ccfg.GetElement(el,"name").Value
                                       ,ccfg.GetElement(el,"companyname").Value
                                       ,ccfg.GetElement(el,"enabled").Value
+                                      ,ccfg.GetElement(el,"firstdate").Value
                                       ,ccfg.GetElement(el,"address").Value
                                       ,ccfg.GetElement(el,"subdomain").Value
                                       ,ccfg.GetElement(el,"token").Value
-                                      ,ccfg.GetElement(el,"firstdate").Value
                                         });
                     lvi.ForeColor = enabled ? Color.Green : Color.Gray;
                     lvClients.Items.Add(lvi);
@@ -299,10 +299,10 @@ namespace YardiClients
                             ,ccfg.GetElement(el,"name").Value
                             ,ccfg.GetElement(el,"companyname").Value
                             ,ccfg.GetElement(el,"enabled").Value
+                            ,ccfg.GetElement(el,"firstdate").Value
                             ,ccfg.GetElement(el,"address").Value
                             ,ccfg.GetElement(el,"subdomain").Value
                             ,ccfg.GetElement(el,"token").Value
-                            ,ccfg.GetElement(el,"firstdate").Value
                         });
                         rep.WriteLine(line);
                     }
@@ -362,10 +362,10 @@ namespace YardiClients
                 lvClients.Columns.Add("Prop Name", 160);
                 lvClients.Columns.Add("PMC Name", 160);
                 lvClients.Columns.Add("Enabled", 60);
+                lvClients.Columns.Add("LastPull", 100);
                 lvClients.Columns.Add("Address", 300);
                 lvClients.Columns.Add("SubDomain", 300);
                 lvClients.Columns.Add("Token", 300);
-                lvClients.Columns.Add("FirstDate", 100);
                 return;
             }
         }
@@ -409,10 +409,10 @@ namespace YardiClients
                     "Site Id",
                     "Site Name",
                     "Enabled",
+                    "First Date",
                     "Address",
                     "Subdomain",
-                    "Token",
-                    "First Date"
+                    "Token"
                 });
             }
             return string.Empty;

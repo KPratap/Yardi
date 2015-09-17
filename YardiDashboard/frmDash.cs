@@ -386,10 +386,10 @@ namespace YardiDashboard
             lvPSSites.Columns.Add("Site Name", 160);
             lvPSSites.Columns.Add("Address", 300);
             lvPSSites.Columns.Add("Enabled", 60);
+            lvPSSites.Columns.Add("Last Pull", 160);
             lvPSSites.Columns.Add("Url", 160);
             lvPSSites.Columns.Add("Subdomain", 160);
             lvPSSites.Columns.Add("Token", 160);
-            lvPSSites.Columns.Add("FirstDate", 160);
 
             Dictionary<string, string> cboDict = new Dictionary<string, string>();
             cboDict.Add("_Select Site_", string.Empty);
@@ -407,10 +407,10 @@ namespace YardiDashboard
                                       ,ccfg.GetElement(el,"name").Value
                                       ,ccfg.GetElement(el,"address").Value
                                       ,ccfg.GetElement(el,"enabled").Value
+                                      ,ccfg.GetElement(el,"firstdate").Value
                                       ,ccfg.GetElement(el,"url").Value
                                       ,ccfg.GetElement(el,"subdomain").Value
                                       ,ccfg.GetElement(el,"token").Value
-                                      ,ccfg.GetElement(el,"firstdate").Value
                                         }));
                 kwd = ccfg.GetElementAttrib(el, "keyword").Value.Replace(" ", "_");
                 if (!string.IsNullOrEmpty(kwd))
@@ -1516,7 +1516,7 @@ namespace YardiDashboard
             cl.Subdomain = clientElement.Descendants("subdomain").FirstOrDefault().Value;
             var work =clientElement.Descendants("firstdate").FirstOrDefault(); //.Value;
             cl.FirstDate = work != null
-                ? cl.FirstDate.Replace("-", "/")
+                ? work.Value.Replace("-", "/")
                 : DateTime.Today.AddDays(-30).ToString("MM-dd-yyyy");
             return cl;
         }
@@ -2009,6 +2009,22 @@ namespace YardiDashboard
                 xml.Descendants(name).First().Value = val.Trim();
         }
 
+        private void UpdateFirstDate(PSClientEntry clEntry)
+        {
+            XDocument doc = ccfg.GetConfig(pscliconfig);
+            var clients = ccfg.GetElement(doc, "clients");
+            var srchRslt =
+                clients.Descendants("client").FirstOrDefault(i => i.Attribute("keyword").Value == clEntry.RrsId);
+            if (srchRslt == null)
+            {
+                AddMessage("Last Pull Date not updatet - No entry found");
+                return;
+            }
+            AddUpdateChild(srchRslt, "firstdate", DateTime.Today.ToString("yyyy-MM-dd"));
+            clients.Save(pscliconfig);
+            doc = ccfg.GetConfig(pscliconfig);
+            LoadClients_PS(doc);
+        }
 
 
         private void retrieveCollectionsToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -2058,6 +2074,7 @@ namespace YardiDashboard
                     AddMessage(errMsg);
                     return;
                 }
+                UpdateFirstDate(clEntry);
                 var succMsg = ParseSuccessResponse(respXml);
                 if (!string.IsNullOrEmpty(succMsg))
                 {
@@ -2070,6 +2087,7 @@ namespace YardiDashboard
                     AddMessage("No lease files found in site " + clEntry.SiteId + ", file not created");
                     return;
                 }
+
 
                 string dir = GetOutputFolderPS(txtRawXML.Text, clEntry);
 
@@ -2088,6 +2106,8 @@ namespace YardiDashboard
                 Cursor.Current = Cursors.Default;
             }
         }
+
+
 
         private void RetrieveLeaseDocumentsPS(PSClientEntry clEntry)
         {
@@ -2387,9 +2407,9 @@ namespace YardiDashboard
             cl.SiteId = row.SubItems[1].Text;
             cl.SiteName = row.SubItems[2].Text;
             cl.Enabled = Convert.ToBoolean(row.SubItems[4].Text);
-            cl.Subdomain = row.SubItems[6].Text;
-            cl.Token = row.SubItems[7].Text;
-            cl.FirstDate = row.SubItems[8].Text.Replace("-", "/");
+            cl.FirstDate = row.SubItems[5].Text.Replace("-", "/");
+            cl.Subdomain = row.SubItems[7].Text;
+            cl.Token = row.SubItems[8].Text;
             return cl;
         }
 
@@ -2686,6 +2706,17 @@ namespace YardiDashboard
             }
 
         }
+
+        private void cboSiteListPS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtPSLeaseId.Focus();
+        }
+
+        private void cboSiteList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtReshid.Focus();
+        }
+
 
         // Backgroundworker methods
         //private void BwInit(BackgroundWorker bw)

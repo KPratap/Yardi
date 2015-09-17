@@ -101,6 +101,9 @@
             this.lblInactiveCli = new System.Windows.Forms.Label();
             this.saveReport = new System.Windows.Forms.SaveFileDialog();
             this.pnlDetlEntrata = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtFirstDate_PS = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.txtToken_PS = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -118,9 +121,6 @@
             this.txtPMCName_PS = new System.Windows.Forms.TextBox();
             this.txtInternalId_PS = new System.Windows.Forms.TextBox();
             this.txtPropId_PS = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtFirstDate_PS = new System.Windows.Forms.TextBox();
             this.cmenuClient.SuspendLayout();
             this.pnlDetl.SuspendLayout();
             this.pnlDetlRP.SuspendLayout();
@@ -811,6 +811,32 @@
             this.pnlDetlEntrata.TabStop = false;
             this.pnlDetlEntrata.Text = "Client Details - Entrata";
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(234, 189);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(75, 13);
+            this.label28.TabIndex = 47;
+            this.label28.Text = "YYYY-MM-DD";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(56, 188);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(47, 13);
+            this.label29.TabIndex = 46;
+            this.label29.Text = "Last Pull";
+            // 
+            // txtFirstDate_PS
+            // 
+            this.txtFirstDate_PS.Location = new System.Drawing.Point(113, 184);
+            this.txtFirstDate_PS.MaxLength = 50;
+            this.txtFirstDate_PS.Name = "txtFirstDate_PS";
+            this.txtFirstDate_PS.Size = new System.Drawing.Size(115, 20);
+            this.txtFirstDate_PS.TabIndex = 45;
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -954,32 +980,6 @@
             this.txtPropId_PS.Name = "txtPropId_PS";
             this.txtPropId_PS.Size = new System.Drawing.Size(84, 20);
             this.txtPropId_PS.TabIndex = 2;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(234, 189);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(75, 13);
-            this.label28.TabIndex = 47;
-            this.label28.Text = "YYYY-MM-DD";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(56, 188);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(52, 13);
-            this.label29.TabIndex = 46;
-            this.label29.Text = "First Date";
-            // 
-            // txtFirstDate_PS
-            // 
-            this.txtFirstDate_PS.Location = new System.Drawing.Point(113, 184);
-            this.txtFirstDate_PS.MaxLength = 50;
-            this.txtFirstDate_PS.Name = "txtFirstDate_PS";
-            this.txtFirstDate_PS.Size = new System.Drawing.Size(115, 20);
-            this.txtFirstDate_PS.TabIndex = 45;
             // 
             // frmClients
             // 
